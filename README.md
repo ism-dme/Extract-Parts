@@ -12,7 +12,7 @@ For example, let's extract a first clarinet from the Symphonie by W. A. Mozart, 
 
 Select the `3.1` option in `./config/config.xml` (third `<staff>`, second `<layer>`).
 
-<img width="700" alt="config.xml" src="https://github.com/user-attachments/assets/6c4bd25c-2d3b-4244-880c-b298b44d8584">
+<img width="700" alt="config.xml" src="https://github.com/user-attachments/assets/8a661ab1-62ec-4c84-90f2-3ce8e04d9df8">
 
 Apply the transformation scenario `extract-parts` on the file `550-001.mei`:
 
