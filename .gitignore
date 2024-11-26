@@ -1,0 +1,19 @@
+#  XSLT unit testing
+/**/xspec
+/**/*report.html 
+/**/*result.html
+
+# IDEs
+.idea
+.vscode
+*code-workspace
+
+# pyhon, nodeJS, etc.
+**/venv
+/**/__pycache__
+node_modules/
+
+# Develop
+/**/debug
+materials/
+out
