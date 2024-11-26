@@ -1,7 +1,28 @@
 ﻿# Extract-parts
 
-The tool extracts one or more parts from a musical score such as _clarinet I. + basson II_., etc.. For the demonstration purpose you may try the data in 
-`./tests/data/*`. For instance, extract a second oboe from the symphonie by W.A. Mozart, K. 550.
+The tool extracts one or more parts from a musical score such as _clarinet I. + basson II_., etc.. 
+
+## Usage
+
+For testing purposes, you can first try the data in `./tests/data/*`. 
+
+For example, let's extract a first clarinet from the Symphonie by W. A. Mozart, K. 550 (`./tests/data/550-001.mei`):
+
+<img width="700" alt="K. 550-001" src="https://github.com/user-attachments/assets/bd269f87-4cc1-4b5f-bd8b-8cbfce093827">
+
+Select the `3.1` option in `./config/config.xml` (third `<staff>`, second `<layer>`).
+
+<img width="700" alt="config.xml" src="https://github.com/user-attachments/assets/6c4bd25c-2d3b-4244-880c-b298b44d8584">
+
+Apply the transformation scenario `extract-parts` on the file `550-001.mei`:
+
+<img width="700" alt="Configure transformation scenario." src="https://github.com/user-attachments/assets/d3a35d50-4aa5-477b-865d-6bcff4a864ac">
+
+The output will be a file `550-001_3.1.mei` in the same repository:
+
+<img width="700" alt="Clarinetto I" src="https://github.com/user-attachments/assets/53a693f3-2c9c-43ee-a1a3-03a304f895c6">
+
+
 
 
 ## Parameters:
