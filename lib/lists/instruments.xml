@@ -25,11 +25,6 @@
         <label label.abbr="(B hoch)" xml:lang="DE">in B hoch</label>
         <label label.abbr="(high B&#9837;)" xml:lang="EN">in high B&#9837;</label>
       </transposition>
-      <transposition trans.diat="-2" trans.semi="-3">
-        <label label.abbr="(La)" xml:lang="IT">in La</label>
-        <label label.abbr="(A)" xml:lang="DE">in A</label>
-        <label label.abbr="(A)" xml:lang="EN">in A</label>
-      </transposition>
       <transposition trans.diat="-3" trans.semi="-5">
         <label label.abbr="(Sol)" xml:lang="IT">in Sol</label>
         <label label.abbr="(G)" xml:lang="DE">in G</label>
@@ -45,16 +40,11 @@
         <label label.abbr="(Es)" xml:lang="DE">in Es</label>
         <label label.abbr="(E&#9837;)" xml:lang="EN">in E&#9837;</label>
       </transposition>
-      <transposition trans.diat="-6" trans.semi="-10">
-        <label label.abbr="(Re)" xml:lang="IT">in Re</label>
-        <label label.abbr="(D)" xml:lang="DE">in D</label>
-        <label label.abbr="(D)" xml:lang="EN">in D</label>
-      </transposition>
     </item>
     <item dme.db="clno" loc.codedval="bb" xml:id="Clarino">
-      <name label.abbr="Clno" xml:lang="IT">Clarino</name>
-      <name label.abbr="Clno" xml:lang="DE">Clarino</name>
-      <name label.abbr="Clno" xml:lang="EN">Clarino</name>
+      <name label.abbr="Clar" xml:lang="IT">Clarino</name>
+      <name label.abbr="Clar" xml:lang="DE">Clarino</name>
+      <name label.abbr="Clar" xml:lang="EN">Clarino</name>
       <transposition trans.diat="0" trans.semi="0">
         <label label.abbr="(Do)" xml:lang="IT">in Do</label>
         <label label.abbr="(C)" xml:lang="DE">in C</label>
@@ -80,11 +70,6 @@
       <name label.abbr="Tr" xml:lang="IT">Tromba</name>
       <name label.abbr="Tr" xml:lang="DE">Trompete</name>
       <name label.abbr="Tr" xml:lang="EN">Trumpet</name>
-      <transposition trans.diat="0" trans.semi="0">
-        <label label.abbr="(Do)" xml:lang="IT">in Do</label>
-        <label label.abbr="(C)" xml:lang="DE">in C</label>
-        <label label.abbr="(C)" xml:lang="EN">in C</label>
-      </transposition>
       <transposition trans.diat="-1" trans.semi="-2">
         <label label.abbr="(Si&#9837;)" xml:lang="IT">in Si&#9837;</label>
         <label label.abbr="(B)" xml:lang="DE">in B</label>
@@ -100,56 +85,43 @@
         <label label.abbr="(D)" xml:lang="DE">in D</label>
         <label label.abbr="(D)" xml:lang="EN">in D</label>
       </transposition>
-    </item>
-    <item dme.db="cordipost" loc.codedval="bz" xml:id="Cornetta di postiglione">
-      <name label.abbr="CorPost" xml:lang="IT">Corno di posta</name>
-      <name label.abbr="PostHr" xml:lang="DE">Posthorn</name>
-      <name label.abbr="PostHr" xml:lang="EN">Post horn</name>
-      <transposition trans.diat="-1" trans.semi="-2">
-        <label label.abbr="(Si&#9837;)" xml:lang="IT">in Si&#9837;</label>
-        <label label.abbr="(B)" xml:lang="DE">in B</label>
-        <label label.abbr="(B&#9837;)" xml:lang="EN">in B&#9837;</label>
-      </transposition>
-      <transposition trans.diat="-2" trans.semi="-3">
-        <label label.abbr="(La)" xml:lang="IT">in La</label>
-        <label label.abbr="(A)" xml:lang="DE">in A</label>
-        <label label.abbr="(A)" xml:lang="EN">in A</label>
-      </transposition>
-      <transposition trans.diat="-4" trans.semi="-7">
-        <label label.abbr="(Fa)" xml:lang="IT">in Fa</label>
-        <label label.abbr="(F)" xml:lang="DE">in F</label>
-        <label label.abbr="(F)" xml:lang="EN">in F</label>
+      <transposition trans.diat="0" trans.semi="0">
+        <label label.abbr="(C)" xml:lang="IT">in Do</label>
+        <label label.abbr="(C)" xml:lang="DE">in C</label>
+        <label label.abbr="(C)" xml:lang="EN">in C</label>
       </transposition>
     </item>
-    <item dme.db="trbA" loc.codedval="bd" xml:id="Trombone alto">
-      <name label.abbr="Tbn (A)" xml:lang="IT">Trombone alto</name>
-      <name label.abbr="Pos (A)" xml:lang="DE">Altposaune</name>
-      <name label.abbr="Tbn (A)" xml:lang="EN">Alto Trombone</name>
+    <item dme.db="#" loc.codedval="bz" xml:id="Cornetta di postiglione">
+      <!--Platzhalter Posthorn-->
     </item>
-    <item dme.db="trbT" loc.codedval="bd" xml:id="Trombone tenore">
-      <name label.abbr="Tbn (T)" xml:lang="IT">Trombone tenore</name>
-      <name label.abbr="Pos (T)" xml:lang="DE">Tenorposaune</name>
-      <name label.abbr="Tbn (T)" xml:lang="EN">Tenor Trombone</name>
-    </item>
-    <item dme.db="trbB" loc.codedval="bd" xml:id="Trombone basso">
-      <name label.abbr="Tbn (B)" xml:lang="IT">Trombone basso</name>
-      <name label.abbr="Pos (B)" xml:lang="DE">Bassposaune</name>
-      <name label.abbr="Tbn (B)" xml:lang="EN">Bass Trombone</name>
+    <item dme.db="trb" loc.codedval="bd" xml:id="Trombone">
+      <item xml:id="Trombone alto">
+        <name label.abbr="Tbn (alto)" xml:lang="IT">Trombone alto</name>
+        <name label.abbr="Pos (alt)" xml:lang="DE">Altposaune</name>
+        <name label.abbr="Tbn (alto)" xml:lang="EN">Alto Trombone</name>
+      </item>
+      <item xml:id="Trombone tenore">
+        <name label.abbr="Tbn (ten)" xml:lang="IT">Trombone tenore</name>
+        <name label.abbr="Pos (etn)" xml:lang="DE">Tenorposaune</name>
+        <name label.abbr="Tbn (ten)" xml:lang="EN">Tenor Trombone</name>
+      </item>
+      <item xml:id="Trombone basso">
+        <name label.abbr="Tbn (basso)" xml:lang="IT">Trombone basso</name>
+        <name label.abbr="Pos (bass)" xml:lang="DE">Bassposaune</name>
+        <name label.abbr="Tbn (bass)" xml:lang="EN">Bass Trombone</name>
+      </item>
     </item>
   </class>
   <class label="ensembles">
     <item dme.db="orch" loc.codedval="oa" xml:id="Orchestra">
       <!--Platzhalter Orchester-->
     </item>
-    <item dme.db="MCh" loc.codedval="cc" xml:id="Coro maschile">
+    <item dme.db="MCh" loc.codedval="cc" xml:id="Coro maschile (?)">
       <!--Platzhalter Männerchor-->
-    </item>
-    <item dme.db="Coro" loc.codedval="ca" xml:id="Coro">
-      <!--Platzhalter Chor-->
     </item>
   </class>
   <class label="keyboard">
-    <item dme.db="clav" loc.codedval="ka" xml:id="Pianoforte">
+    <item dme.db="pf" loc.codedval="ka" xml:id="Pianoforte">
       <name label.abbr="Pf" xml:lang="IT">Pianoforte</name>
       <name label.abbr="Clav" xml:lang="DE">Clavier</name>
       <name label.abbr="Kbd" xml:lang="EN">Keyboard</name>
@@ -170,14 +142,12 @@
       <name label.abbr="Harps" xml:lang="EN">Harpsichord</name>
     </item>
     <item dme.db="glasharm" loc.codedval="kz" xml:id="Glassarmonica">
-      <name label.abbr="Arm" xml:lang="IT">Glassarmonica</name>
-      <name label.abbr="Harm" xml:lang="DE">Glasharmonika</name>
-      <name label.abbr="Harm" xml:lang="EN">Glass harmonica</name>
+      <name label.abbr="G Arm" xml:lang="IT">Glassarmonica</name>
+      <name label.abbr="G Harm" xml:lang="DE">Glasharmonika</name>
+      <name label.abbr="G Harm" xml:lang="EN">Glass harmonica</name>
     </item>
     <item dme.db="harm" loc.codedval="kz" xml:id="Harmoniale">
-      <name label.abbr="Harmon" xml:lang="IT">Harmoniale</name>
-      <name label.abbr="Harmon" xml:lang="DE">Harmoniale</name>
-      <name label.abbr="Harmon" xml:lang="EN">Harmoniale</name>
+      <!--Platzhalter Harmoniale-->
     </item>
   </class>
   <class label="percussion">
@@ -195,39 +165,21 @@
         <label label.abbr="(Es-B)" xml:lang="DE">in Es-B</label>
         <label label.abbr="(E&#9837;-B&#9837;)" xml:lang="EN">in E&#9837;-B&#9837;</label>
       </transposition>
-      <transposition trans.diat="4" trans.semi="7">
-        <label label.abbr="(Sol-Re)" xml:lang="IT">in Sol-Re</label>
-        <label label.abbr="(G-D)" xml:lang="DE">in G-D</label>
-        <label label.abbr="(G-D)" xml:lang="EN">in G-D</label>
-      </transposition>
-    </item>
-    <item dme.db="tri" loc.codedval="pz" xml:id="Triangoli">
-      <name label.abbr="Tri" xml:lang="IT">Triangoli</name>
-      <name label.abbr="Tri" xml:lang="DE">Triangel</name>
-      <name label.abbr="Tri" xml:lang="EN">Triangel</name>
-    </item>
-    <item dme.db="piat" loc.codedval="pz" xml:id="Piatti">
-      <name label.abbr="Pt" xml:lang="IT">Piatti</name>
-      <name label.abbr="Bck" xml:lang="DE">Becken</name>
-      <name label.abbr="Cymb" xml:lang="EN">Cymbals</name>
-    </item>
-    <item dme.db="trm" loc.codedval="pz" xml:id="Tamburo">
-      <name label.abbr="Tam" xml:lang="IT">Tamburo</name>
-      <name label.abbr="Trom" xml:lang="DE">Trommel</name>
-      <name label.abbr="Dr" xml:lang="EN">Drum</name>
-    </item>
-    <item dme.db="tambgrd" loc.codedval="pz" xml:id="Tamburo grande">
-      <name label.abbr="TamGr" xml:lang="IT">Tamburo grande</name>
-      <name label.abbr="GrTrom" xml:lang="DE">Große Trommel</name>
-      <name label.abbr="BDr" xml:lang="EN">Bass Drum</name>
-    </item>
-    <item dme.db="son" loc.codedval="pz" xml:id="Sonaglio">
-      <name label.abbr="Son" xml:lang="IT">Sonaglio</name>
-      <name label.abbr="Schel" xml:lang="DE">Schellen</name>
-      <name label.abbr="JingB" xml:lang="EN">Jingle Bells</name>
-      <transposition>
-        <!--Vgl: https://gitlab.mozarteum.at/dme/dime/dime-mei-edition/-/issues/206-->
-      </transposition>
+      <item dme.db="#" loc.codedval="pz" xml:id="Triangoli">
+        <!--Platzhalter Triangel-->
+      </item>
+      <item dme.db="cimb" loc.codedval="pz" xml:id="Piatti">
+        <!--Platzhalter Becken, Cinelli, Piatti -->
+      </item>
+      <item dme.db="#" loc.codedval="pz" xml:id="Tamburo grande">
+        <!--Platzhalter große Trommel -->
+      </item>
+      <item dme.db="trm" loc.codedval="pz" xml:id="Tamburo">
+        <!--Platzhalter Trommel -->
+      </item>
+      <item dme.db="#" loc.codedval="pz" xml:id="Sonaglio">
+        <!--Platzhalter Schellen -->
+      </item>
     </item>
   </class>
   <class label="strings">
@@ -250,9 +202,9 @@
       <name label.abbr="Bs" xml:lang="IT">Basso</name>
       <name label.abbr="Bs" xml:lang="DE">Kontrabass</name>
       <name label.abbr="Bs" xml:lang="EN">Double Bass</name>
-      <transposition trans.diat="-7" trans.semi="-12"><label label.abbr="(Do)" xml:lang="IT">in Do</label></transposition>
+      <transposition trans.diat="-7" trans.semi="-12"/>
     </item>
-    <item dme.db="arp" loc.codedval="ta" xml:id="Arpa">
+    <item dme.db="hp" loc.codedval="ta" xml:id="Arpa">
       <name label.abbr="Arp" xml:lang="IT">Arpa</name>
       <name label.abbr="Har" xml:lang="DE">Harfe</name>
       <name label.abbr="Har" xml:lang="EN">Harp</name>
@@ -262,15 +214,10 @@
       <name label.abbr="Mand" xml:lang="DE">Mandoline</name>
       <name label.abbr="Mand" xml:lang="EN">Mandolin</name>
     </item>
-    <item dme.db="Lira" loc.codedval="sz" xml:id="Lira">
-      <!--Platzhalter Lira-->
-    </item>
   </class>
   <class label="undefined">
-    <item dme.db="sDes" loc.codedval="zn" xml:id="senza designazione">
-      <name label.abbr="sDes" xml:lang="IT">senza designazione</name>
-      <name label.abbr="oBez" xml:lang="DE">ohne Bezeichnung</name>
-      <name label.abbr="wDes" xml:lang="EN">without designation</name>
+    <item dme.db="oBez" loc.codedval="zn" xml:id="undefined Instrument">
+      <!--Platzhalter ohne Bezeichnung-->
     </item>
   </class>
   <class label="voices">
@@ -307,11 +254,11 @@
       <name label.abbr="Fl" xml:lang="EN">Flute</name>
     </item>
     <item dme.db="flpicc" loc.codedval="we" xml:id="Flauto piccolo">
+      <!--RMG: mögliche Transpositionen überprüfen-->
       <name label.abbr="Pic" xml:lang="IT">Flauto piccolo</name>
       <name label.abbr="Pic" xml:lang="DE">Piccolo</name>
       <name label.abbr="Pic" xml:lang="EN">Piccolo</name>
       <transposition trans.diat="7" trans.semi="12"/>
-      <!--RMG: mögliche Transpositionen überprüfen-->
     </item>
     <item dme.db="ob" loc.codedval="wb" xml:id="Oboe">
       <name label.abbr="Ob" xml:lang="IT">Oboe</name>
@@ -343,20 +290,18 @@
         <label label.abbr="(A)" xml:lang="EN">in A</label>
       </transposition>
     </item>
-    <item dme.db="fag" loc.codedval="wd" xml:id="Fagotto">
+    <item dme.db="fag" loc.codedval="wd" xml:id="Fagotto grande">
+      <!--Platzhalter Kontrafagott-->
+    </item>
+    <item dme.db="#" loc.codedval="wd" xml:id="Fagotto">
       <name label.abbr="Fag" xml:lang="IT">Fagotto</name>
       <name label.abbr="Fag" xml:lang="DE">Fagott</name>
       <name label.abbr="Bsn" xml:lang="EN">Bassoon</name>
     </item>
-    <item dme.db="faggrd" loc.codedval="wz" xml:id="Gran Fagotto">
-      <name label.abbr="GFag" xml:lang="IT">Gran Fagotto</name>
-      <name label.abbr="GFag" xml:lang="DE">Gran Fagotto</name>
-      <name label.abbr="GFag" xml:lang="EN">Gran Fagotto</name>
-    </item>
-    <item dme.db="corIng" loc.codedval="wf" xml:id="Corno inglese">
-      <name label.abbr="CorIng" xml:lang="IT">Corno inglese</name>
-      <name label.abbr="EngHr" xml:lang="DE">Englischhorn</name>
-      <name label.abbr="CorAng" xml:lang="EN">Cor anglais</name>
+    <item dme.db="coringl" loc.codedval="wf" xml:id="Corno inglese">
+      <name label.abbr="CorIngl" xml:lang="IT">Corno inglese</name>
+      <name label.abbr="CorIngl" xml:lang="DE">Englischhorn</name>
+      <name label.abbr="CorIngl" xml:lang="EN">Cor anglais</name>
       <transposition trans.diat="-4" trans.semi="-7">
         <label label.abbr="(Fa)" xml:lang="IT">in Fa</label>
         <label label.abbr="(F)" xml:lang="DE">in F</label>
@@ -365,8 +310,8 @@
     </item>
     <item dme.db="cordib" loc.codedval="wz" xml:id="Corno di Bassetto">
       <name label.abbr="CorB" xml:lang="IT">Corno di Bassetto</name>
-      <name label.abbr="BHr" xml:lang="DE">Bassetthorn</name>
-      <name label.abbr="BHr" xml:lang="EN">Basset Horn</name>
+      <name label.abbr="CorB" xml:lang="DE">Bassetthorn</name>
+      <name label.abbr="CorB" xml:lang="EN">Basset Horn</name>
       <transposition trans.diat="-4" trans.semi="-7" xml:id="wz_f">
         <label label.abbr="(Fa)" xml:lang="IT">in Fa</label>
         <label label.abbr="(F)" xml:lang="DE">in F</label>

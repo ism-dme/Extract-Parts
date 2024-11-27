@@ -10223,6 +10223,46 @@ ${caret}</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>tests/data/550-001_mm14-20.mei</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>extract-parts</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>tests/data/550-001.mei</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>extract-parts</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>tests/data/527-07_mm41-50.mei</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -10288,66 +10328,6 @@ ${caret}</String>
                                 <field name="scenarioIds">
                                     <list>
                                         <String>extract-parts</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>tests/data/551-001_m93.mei</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/extract-parts</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>tests/data/527-07_mm4-5_8-9_fagotti.mei</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/extract-parts</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../../dime-mei-edition/439_5278/dmeref_439-001_5278.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -10443,146 +10423,6 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>../../../dime-mei-edition/165_2625/dmeref_165-001_2626.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../../dime-mei-edition/550_11586/dmeref_550-001_6310.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../../dime-mei-edition/160_2635/dmeref_160-001_2636.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../../dime-mei-edition/165_2625/dmeref_165-004_2629.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../../dime-mei-edition/165_2625/dmeref_165-003_2628.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../../dime-mei-edition/165_2625/dmeref_165-002_2627.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../../dime-mei-edition/266_3761/dmeref_266-002_3763.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>unit_tests/test_data/db-api-data/scripts/XQuery/movementNr.xquery</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -10593,26 +10433,6 @@ ${caret}</String>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XQUERY</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../../dime-mei-edition/266_3761/dmeref_266-001_3762.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>3/DIME/DIME.framework/DIME/meiHead-inject</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -21940,6 +21760,26 @@ ${caret}</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>../../../../konferenzen_vortraege_publikationen/2024/DIME/original_scoring_2024-11/origScoring/01/dmeedtA_165-001_2626_(1)-(2)-(3)-(4-split)-(5)-(6)-(7).mei</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>3/DIME/DIME.framework/edition/MEI 5.0 (reference texts) (DIME schema + schematron)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>../../DEVELOPMENT/DIME/dime-mei-edition/621_7241/dmeref_621-023_7300.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -25918,26 +25758,6 @@ ${caret}</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../../DEVELOPMENT/DIME/dime-mei-edition/173_2793/dmeref_173-004_2799.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>MEI-v5.0.0_DIME + DIME schematron</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>Validation_scenario</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
                         </scenarioAssociation-array>
                     </entry>
                     <entry>
@@ -26347,488 +26167,8 @@ ${caret}</String>
         <folder masterFiles="true" name="Master Files">
             <file name="main.xsl"/>
         </folder>
-        <folder name="EDITION">
-            <folder name="Edition gefiltert">
-                <folder name="Referenztexte">
-                    <folder name="Publiziert">
-                        <folder name="MEI_v5.0">
-                            <folder idw="1484" name="046d_1484">
-                                <file idw="1485" name="../../dime-mei-edition/046d_1484/dmeref_46d-001_1485.xml"/>
-                                <file idw="12020" name="../../dime-mei-edition/046d_1484/dmeref_46d-002_12020.xml"/>
-                            </folder>
-                            <folder idw="1488" name="046e_1488">
-                                <file idw="1489" name="../../dime-mei-edition/046e_1488/dmeref_46e-001_1489.xml"/>
-                                <file idw="12019" name="../../dime-mei-edition/046e_1488/dmeref_46e-002_12019.xml"/>
-                            </folder>
-                            <folder idw="1890" name="080_1890">
-                                <file idw="1891" name="../../dime-mei-edition/080_1890/dmeref_080-001_1891.xml"/>
-                                <file idw="1892" name="../../dime-mei-edition/080_1890/dmeref_080-002_1892.xml"/>
-                                <file idw="1893" name="../../dime-mei-edition/080_1890/dmeref_080-003_1893.xml"/>
-                                <file idw="1896" name="../../dime-mei-edition/080_1890/dmeref_080-004_1896.xml"/>
-                            </folder>
-                            <folder idw="2346" name="136_2346">
-                                <file idw="2347" name="../../dime-mei-edition/136_2346/dmeref_136-001_2347.xml"/>
-                                <file idw="2348" name="../../dime-mei-edition/136_2346/dmeref_136-002_2348.xml"/>
-                                <file idw="2349" name="../../dime-mei-edition/136_2346/dmeref_136-003_2349.xml"/>
-                            </folder>
-                            <folder idw="2350" name="137_2350">
-                                <file idw="2351" name="../../dime-mei-edition/137_2350/dmeref_137-001_2351.xml"/>
-                                <file idw="2352" name="../../dime-mei-edition/137_2350/dmeref_137-002_2352.xml"/>
-                                <file idw="2353" name="../../dime-mei-edition/137_2350/dmeref_137-003_2353.xml"/>
-                            </folder>
-                            <folder idw="2354" name="138_2354">
-                                <file idw="2355" name="../../dime-mei-edition/138_2354/dmeref_138-001_2355.xml"/>
-                                <file idw="2356" name="../../dime-mei-edition/138_2354/dmeref_138-002_2356.xml"/>
-                                <file idw="2357" name="../../dime-mei-edition/138_2354/dmeref_138-003_2357.xml"/>
-                            </folder>
-                            <folder idw="2475" name="155_2475">
-                                <file idw="2476" name="../../dime-mei-edition/155_2475/dmeref_155-001_2476.xml"/>
-                                <file idw="2477" name="../../dime-mei-edition/155_2475/dmeref_155-002_2477.xml"/>
-                                <file idw="2478" name="../../dime-mei-edition/155_2475/dmeref_155-003_2478.xml"/>
-                            </folder>
-                            <folder idw="2479" name="156_2479">
-                                <file idw="2480" name="../../dime-mei-edition/156_2479/dmeref_156-001_2480.xml"/>
-                                <file idw="2481" name="../../dime-mei-edition/156_2479/dmeref_156-002_2481.xml"/>
-                                <file idw="2483" name="../../dime-mei-edition/156_2479/dmeref_156-003_2483.xml"/>
-                            </folder>
-                            <folder idw="2617" name="157_2617">
-                                <file idw="2618" name="../../dime-mei-edition/157_2617/dmeref_157-001_2618.xml"/>
-                                <file idw="2619" name="../../dime-mei-edition/157_2617/dmeref_157-002_2619.xml"/>
-                                <file idw="2620" name="../../dime-mei-edition/157_2617/dmeref_157-003_2620.xml"/>
-                            </folder>
-                            <folder idw="2621" name="158_2621">
-                                <file idw="2622" name="../../dime-mei-edition/158_2621/dmeref_158-001_2622.xml"/>
-                                <file idw="2623" name="../../dime-mei-edition/158_2621/dmeref_158-002_2623.xml"/>
-                                <file idw="2624" name="../../dime-mei-edition/158_2621/dmeref_158-003_2624.xml"/>
-                            </folder>
-                            <folder idw="2631" name="159_2631">
-                                <file idw="2632" name="../../dime-mei-edition/159_2631/dmeref_159-001_2632.xml"/>
-                                <file idw="2633" name="../../dime-mei-edition/159_2631/dmeref_159-002_2633.xml"/>
-                                <file idw="2634" name="../../dime-mei-edition/159_2631/dmeref_159-003_2634.xml"/>
-                            </folder>
-                            <folder idw="2635" name="160_2635">
-                                <file idw="2636" name="../../dime-mei-edition/160_2635/dmeref_160-001_2636.xml"/>
-                                <file idw="2637" name="../../dime-mei-edition/160_2635/dmeref_160-002_2637.xml"/>
-                                <file idw="2638" name="../../dime-mei-edition/160_2635/dmeref_160-003_2638.xml"/>
-                            </folder>
-                            <folder idw="2625" name="165_2625">
-                                <file idw="2626" name="../../dime-mei-edition/165_2625/dmeref_165-001_2626.xml"/>
-                                <file idw="2627" name="../../dime-mei-edition/165_2625/dmeref_165-002_2627.xml"/>
-                                <file idw="2628" name="../../dime-mei-edition/165_2625/dmeref_165-003_2628.xml"/>
-                                <file idw="2629" name="../../dime-mei-edition/165_2625/dmeref_165-004_2629.xml"/>
-                            </folder>
-                            <folder idw="2748" name="168_2748">
-                                <file idw="2749" name="../../dime-mei-edition/168_2748/dmeref_168-001_2749.xml"/>
-                                <file idw="2750" name="../../dime-mei-edition/168_2748/dmeref_168-002_2750.xml"/>
-                                <file idw="2751" name="../../dime-mei-edition/168_2748/dmeref_168-003_2751.xml"/>
-                                <file idw="2754" name="../../dime-mei-edition/168_2748/dmeref_168-004_2754.xml"/>
-                            </folder>
-                            <folder idw="2757" name="169_2757">
-                                <file idw="2758" name="../../dime-mei-edition/169_2757/dmeref_169-001_2758.xml"/>
-                                <file idw="2759" name="../../dime-mei-edition/169_2757/dmeref_169-002_2759.xml"/>
-                                <file idw="2760" name="../../dime-mei-edition/169_2757/dmeref_169-003_2760.xml"/>
-                                <file idw="2763" name="../../dime-mei-edition/169_2757/dmeref_169-004_2763.xml"/>
-                            </folder>
-                            <folder idw="2765" name="170_2765">
-                                <file idw="2766" name="../../dime-mei-edition/170_2765/dmeref_170-001_2766.xml"/>
-                                <file idw="2772" name="../../dime-mei-edition/170_2765/dmeref_170-002_2772.xml"/>
-                                <file idw="2775" name="../../dime-mei-edition/170_2765/dmeref_170-003_2775.xml"/>
-                                <file idw="2776" name="../../dime-mei-edition/170_2765/dmeref_170-004_2776.xml"/>
-                            </folder>
-                            <folder idw="2778" name="171_2778">
-                                <file idw="2779" name="../../dime-mei-edition/171_2778/dmeref_171-001_2779.xml"/>
-                                <file idw="2780" name="../../dime-mei-edition/171_2778/dmeref_171-002_2780.xml"/>
-                                <file idw="2783" name="../../dime-mei-edition/171_2778/dmeref_171-003_2783.xml"/>
-                                <file idw="2784" name="../../dime-mei-edition/171_2778/dmeref_171-004_2784.xml"/>
-                            </folder>
-                            <folder idw="2786" name="172_2786">
-                                <file idw="2787" name="../../dime-mei-edition/172_2786/dmeref_172-001_2787.xml"/>
-                                <file idw="2788" name="../../dime-mei-edition/172_2786/dmeref_172-002_2788.xml"/>
-                                <file idw="2789" name="../../dime-mei-edition/172_2786/dmeref_172-003_2789.xml"/>
-                                <file idw="2792" name="../../dime-mei-edition/172_2786/dmeref_172-004_2792.xml"/>
-                            </folder>
-                            <folder idw="2793" name="173_2793">
-                                <file idw="2794" name="../../dime-mei-edition/173_2793/dmeref_173-001_2794.xml"/>
-                                <file idw="2795" name="../../dime-mei-edition/173_2793/dmeref_173-002_2795.xml"/>
-                                <file idw="2796" name="../../dime-mei-edition/173_2793/dmeref_173-003_2796.xml"/>
-                                <file idw="2799" name="../../dime-mei-edition/173_2793/dmeref_173-004_2799.xml"/>
-                            </folder>
-                            <folder idw="5973" name="232_5973">
-                                <file idw="5973" name="../../dime-mei-edition/232_5973/dmeref_232-001_5973.xml"/>
-                                <file idw="5973" name="../../dime-mei-edition/232_5973/dmeref_232-01a_5973.xml"/>
-                                <file idw="5973" name="../../dime-mei-edition/232_5973/dmeref_232-01b_5973.xml"/>
-                            </folder>
-                            <folder idw="3761" name="266_3761">
-                                <file idw="3762" name="../../dime-mei-edition/266_3761/dmeref_266-001_3762.xml"/>
-                                <file idw="3763" name="../../dime-mei-edition/266_3761/dmeref_266-002_3763.xml"/>
-                                <file idw="3766" name="../../dime-mei-edition/266_3761/dmeref_266-003_3766.xml"/>
-                            </folder>
-                            <folder idw="3048" name="279_3048">
-                                <file idw="3049" name="../../dime-mei-edition/279_3048/dmeref_279-001_3049.xml"/>
-                                <file idw="3050" name="../../dime-mei-edition/279_3048/dmeref_279-002_3050.xml"/>
-                                <file idw="3051" name="../../dime-mei-edition/279_3048/dmeref_279-003_3051.xml"/>
-                            </folder>
-                            <folder idw="3052" name="280_3052">
-                                <file idw="3053" name="../../dime-mei-edition/280_3052/dmeref_280-001_3053.xml"/>
-                                <file idw="3054" name="../../dime-mei-edition/280_3052/dmeref_280-002_3054.xml"/>
-                                <file idw="3055" name="../../dime-mei-edition/280_3052/dmeref_280-003_3055.xml"/>
-                            </folder>
-                            <folder idw="3056" name="281_3056">
-                                <file idw="3057" name="../../dime-mei-edition/281_3056/dmeref_281-001_3057.xml"/>
-                                <file idw="3058" name="../../dime-mei-edition/281_3056/dmeref_281-002_3058.xml"/>
-                                <file idw="3059" name="../../dime-mei-edition/281_3056/dmeref_281-003_3059.xml"/>
-                            </folder>
-                            <folder idw="3060" name="282_3060">
-                                <file idw="3061" name="../../dime-mei-edition/282_3060/dmeref_282-001_3061.xml"/>
-                                <file idw="11716" name="../../dime-mei-edition/282_3060/dmeref_282-002_11716.xml"/>
-                                <file idw="3064" name="../../dime-mei-edition/282_3060/dmeref_282-003_3064.xml"/>
-                            </folder>
-                            <folder idw="3065" name="283_3065">
-                                <file idw="3066" name="../../dime-mei-edition/283_3065/dmeref_283-001_3066.xml"/>
-                                <file idw="3067" name="../../dime-mei-edition/283_3065/dmeref_283-002_3067.xml"/>
-                                <file idw="3068" name="../../dime-mei-edition/283_3065/dmeref_283-003_3068.xml"/>
-                            </folder>
-                            <folder idw="3290" name="284_3290">
-                                <file idw="3291" name="../../dime-mei-edition/284_3290/dmeref_284-001_3291.xml"/>
-                                <file idw="3293" name="../../dime-mei-edition/284_3290/dmeref_284-002_3293.xml"/>
-                                <file idw="3294" name="../../dime-mei-edition/284_3290/dmeref_284-003_3294.xml"/>
-                            </folder>
-                            <folder idw="2727" name="290_2727">
-                                <file idw="2727" name="../../dime-mei-edition/290_2727/dmeref_290-001_2727.xml"/>
-                            </folder>
-                            <folder idw="3268" name="292_3268">
-                                <file idw="3269" name="../../dime-mei-edition/292_3268/dmeref_292-001_3269.xml"/>
-                                <file idw="3270" name="../../dime-mei-edition/292_3268/dmeref_292-002_3270.xml"/>
-                                <file idw="3271" name="../../dime-mei-edition/292_3268/dmeref_292-003_3271.xml"/>
-                            </folder>
-                            <folder idw="3836" name="309_3836">
-                                <file idw="3837" name="../../dime-mei-edition/309_3836/dmeref_309-001_3837.xml"/>
-                                <file idw="3838" name="../../dime-mei-edition/309_3836/dmeref_309-002_3838.xml"/>
-                                <file idw="3839" name="../../dime-mei-edition/309_3836/dmeref_309-003_3839.xml"/>
-                            </folder>
-                            <folder idw="4052" name="310_4052">
-                                <file idw="4053" name="../../dime-mei-edition/310_4052/dmeref_310-001_4053.xml"/>
-                                <file idw="4054" name="../../dime-mei-edition/310_4052/dmeref_310-002_4054.xml"/>
-                                <file idw="4055" name="../../dime-mei-edition/310_4052/dmeref_310-003_4055.xml"/>
-                            </folder>
-                            <folder idw="3842" name="311_3842">
-                                <file idw="3843" name="../../dime-mei-edition/311_3842/dmeref_311-001_3843.xml"/>
-                                <file idw="3844" name="../../dime-mei-edition/311_3842/dmeref_311-002_3844.xml"/>
-                                <file idw="3845" name="../../dime-mei-edition/311_3842/dmeref_311-003_3845.xml"/>
-                            </folder>
-                            <folder idw="4087" name="330_4087">
-                                <file idw="4088" name="../../dime-mei-edition/330_4087/dmeref_330-001_4088.xml"/>
-                                <file idw="4089" name="../../dime-mei-edition/330_4087/dmeref_330-002_4089.xml"/>
-                                <file idw="4090" name="../../dime-mei-edition/330_4087/dmeref_330-003_4090.xml"/>
-                            </folder>
-                            <folder idw="4091" name="331_4091">
-                                <file idw="4092" name="../../dime-mei-edition/331_4091/dmeref_331-001_4092.xml"/>
-                                <file idw="4100" name="../../dime-mei-edition/331_4091/dmeref_331-002_4100.xml"/>
-                                <file idw="4103" name="../../dime-mei-edition/331_4091/dmeref_331-003_4103.xml"/>
-                            </folder>
-                            <folder idw="4105" name="332_4105">
-                                <file idw="4106" name="../../dime-mei-edition/332_4105/dmeref_332-001_4106.xml"/>
-                                <file idw="4107" name="../../dime-mei-edition/332_4105/dmeref_332-002_4107.xml"/>
-                                <file idw="4108" name="../../dime-mei-edition/332_4105/dmeref_332-003_4108.xml"/>
-                            </folder>
-                            <folder idw="4135" name="333_4135">
-                                <file idw="4136" name="../../dime-mei-edition/333_4135/dmeref_333-001_4136.xml"/>
-                                <file idw="4137" name="../../dime-mei-edition/333_4135/dmeref_333-002_4137.xml"/>
-                                <file idw="4138" name="../../dime-mei-edition/333_4135/dmeref_333-003_4138.xml"/>
-                            </folder>
-                            <folder idw="7131" name="356_7131">
-                                <file idw="7131" name="../../dime-mei-edition/356_7131/dmeref_356-001_7131.xml"/>
-                            </folder>
-                            <folder idw="4994" name="387_4994">
-                                <file idw="4995" name="../../dime-mei-edition/387_4994/dmeref_387-001_4995.xml"/>
-                                <file idw="4996" name="../../dime-mei-edition/387_4994/dmeref_387-002_4996.xml"/>
-                                <file idw="4997" name="../../dime-mei-edition/387_4994/dmeref_387-003_4997.xml"/>
-                                <file idw="4998" name="../../dime-mei-edition/387_4994/dmeref_387-004_4998.xml"/>
-                            </folder>
-                            <folder idw="4985" name="407_4985">
-                                <file idw="4986" name="../../dime-mei-edition/407_4985/dmeref_407-001_4986.xml"/>
-                                <file idw="4987" name="../../dime-mei-edition/407_4985/dmeref_407-002_4987.xml"/>
-                                <file idw="4988" name="../../dime-mei-edition/407_4985/dmeref_407-003_4988.xml"/>
-                            </folder>
-                            <folder idw="5627" name="410_5627">
-                                <file idw="5627" name="../../dime-mei-edition/410_5627/dmeref_410-001_5627.xml"/>
-                            </folder>
-                            <folder idw="5151" name="421_5151">
-                                <file idw="5152" name="../../dime-mei-edition/421_5151/dmeref_421-001_5152.xml"/>
-                                <file idw="5153" name="../../dime-mei-edition/421_5151/dmeref_421-002_5153.xml"/>
-                                <file idw="5154" name="../../dime-mei-edition/421_5151/dmeref_421-003_5154.xml"/>
-                                <file idw="5157" name="../../dime-mei-edition/421_5151/dmeref_421-004_5157.xml"/>
-                            </folder>
-                            <folder idw="5210" name="423_5210">
-                                <file idw="5211" name="../../dime-mei-edition/423_5210/dmeref_423-001_5211.xml"/>
-                                <file idw="5212" name="../../dime-mei-edition/423_5210/dmeref_423-002_5212.xml"/>
-                                <file idw="5213" name="../../dime-mei-edition/423_5210/dmeref_423-003_5213.xml"/>
-                            </folder>
-                            <folder idw="5216" name="424_5216">
-                                <file idw="12024" name="../../dime-mei-edition/424_5216/dmeref_424-001_12024.xml"/>
-                                <file idw="5219" name="../../dime-mei-edition/424_5216/dmeref_424-002_5219.xml"/>
-                                <file idw="5220" name="../../dime-mei-edition/424_5216/dmeref_424-003_5220.xml"/>
-                            </folder>
-                            <folder idw="5183" name="428_5183">
-                                <file idw="5184" name="../../dime-mei-edition/428_5183/dmeref_428-001_5184.xml"/>
-                                <file idw="5185" name="../../dime-mei-edition/428_5183/dmeref_428-002_5185.xml"/>
-                                <file idw="5186" name="../../dime-mei-edition/428_5183/dmeref_428-003_5186.xml"/>
-                                <file idw="5189" name="../../dime-mei-edition/428_5183/dmeref_428-004_5189.xml"/>
-                            </folder>
-                            <folder idw="5278" name="439_5278">
-                                <file idw="5278" name="../../dime-mei-edition/439_5278/dmeref_439-001_5278.xml"/>
-                            </folder>
-                            <folder idw="5280" name="439b_5280">
-                                <file idw="5281" name="../../dime-mei-edition/439b_5280/dmeref_439b-001_5281.xml"/>
-                                <file idw="5282" name="../../dime-mei-edition/439b_5280/dmeref_439b-002_5282.xml"/>
-                                <file idw="5285" name="../../dime-mei-edition/439b_5280/dmeref_439b-003_5285.xml"/>
-                                <file idw="5286" name="../../dime-mei-edition/439b_5280/dmeref_439b-004_5286.xml"/>
-                                <file idw="5289" name="../../dime-mei-edition/439b_5280/dmeref_439b-005_5289.xml"/>
-                                <file idw="5290" name="../../dime-mei-edition/439b_5280/dmeref_439b-006_5290.xml"/>
-                                <file idw="5291" name="../../dime-mei-edition/439b_5280/dmeref_439b-007_5291.xml"/>
-                                <file idw="5292" name="../../dime-mei-edition/439b_5280/dmeref_439b-008_5292.xml"/>
-                                <file idw="5293" name="../../dime-mei-edition/439b_5280/dmeref_439b-009_5293.xml"/>
-                                <file idw="5301" name="../../dime-mei-edition/439b_5280/dmeref_439b-010a_5301.xml"/>
-                                <file idw="5296" name="../../dime-mei-edition/439b_5280/dmeref_439b-010_5296.xml"/>
-                                <file idw="5297" name="../../dime-mei-edition/439b_5280/dmeref_439b-011_5297.xml"/>
-                                <file idw="5298" name="../../dime-mei-edition/439b_5280/dmeref_439b-012_5298.xml"/>
-                                <file idw="5302" name="../../dime-mei-edition/439b_5280/dmeref_439b-013_5302.xml"/>
-                                <file idw="5303" name="../../dime-mei-edition/439b_5280/dmeref_439b-014_5303.xml"/>
-                                <file idw="5306" name="../../dime-mei-edition/439b_5280/dmeref_439b-015_5306.xml"/>
-                                <file idw="5307" name="../../dime-mei-edition/439b_5280/dmeref_439b-016_5307.xml"/>
-                                <file idw="5308" name="../../dime-mei-edition/439b_5280/dmeref_439b-017_5308.xml"/>
-                                <file idw="5309" name="../../dime-mei-edition/439b_5280/dmeref_439b-018_5309.xml"/>
-                                <file idw="5312" name="../../dime-mei-edition/439b_5280/dmeref_439b-019_5312.xml"/>
-                                <file idw="5313" name="../../dime-mei-edition/439b_5280/dmeref_439b-020_5313.xml"/>
-                                <file idw="5314" name="../../dime-mei-edition/439b_5280/dmeref_439b-021_5314.xml"/>
-                                <file idw="5315" name="../../dime-mei-edition/439b_5280/dmeref_439b-022_5315.xml"/>
-                                <file idw="5318" name="../../dime-mei-edition/439b_5280/dmeref_439b-023_5318.xml"/>
-                                <file idw="5319" name="../../dime-mei-edition/439b_5280/dmeref_439b-024_5319.xml"/>
-                                <file idw="5320" name="../../dime-mei-edition/439b_5280/dmeref_439b-025_5320.xml"/>
-                            </folder>
-                            <folder idw="5487" name="457_5487">
-                                <file idw="5488" name="../../dime-mei-edition/457_5487/dmeref_457-001_5488.xml"/>
-                                <file idw="5489" name="../../dime-mei-edition/457_5487/dmeref_457-002_5489.xml"/>
-                                <file idw="5490" name="../../dime-mei-edition/457_5487/dmeref_457-003_5490.xml"/>
-                            </folder>
-                            <folder idw="5492" name="458_5492">
-                                <file idw="5493" name="../../dime-mei-edition/458_5492/dmeref_458-001_5493.xml"/>
-                                <file idw="5494" name="../../dime-mei-edition/458_5492/dmeref_458-002_5494.xml"/>
-                                <file idw="5497" name="../../dime-mei-edition/458_5492/dmeref_458-003_5497.xml"/>
-                                <file idw="5499" name="../../dime-mei-edition/458_5492/dmeref_458-004_5499.xml"/>
-                            </folder>
-                            <folder idw="5517" name="464_5517">
-                                <file idw="5518" name="../../dime-mei-edition/464_5517/dmeref_464-001_5518.xml"/>
-                                <file idw="5519" name="../../dime-mei-edition/464_5517/dmeref_464-002_5519.xml"/>
-                                <file idw="5522" name="../../dime-mei-edition/464_5517/dmeref_464-003_5522.xml"/>
-                                <file idw="5523" name="../../dime-mei-edition/464_5517/dmeref_464-004_5523.xml"/>
-                            </folder>
-                            <folder idw="5528" name="465_5528">
-                                <file idw="5529" name="../../dime-mei-edition/465_5528/dmeref_465-001_5529.xml"/>
-                                <file idw="5530" name="../../dime-mei-edition/465_5528/dmeref_465-002_5530.xml"/>
-                                <file idw="5531" name="../../dime-mei-edition/465_5528/dmeref_465-003_5531.xml"/>
-                                <file idw="5534" name="../../dime-mei-edition/465_5528/dmeref_465-004_5534.xml"/>
-                            </folder>
-                            <folder idw="5581" name="475_5581">
-                                <file idw="5581" name="../../dime-mei-edition/475_5581/dmeref_475-001_5581.xml"/>
-                            </folder>
-                            <folder idw="5813" name="487_5813">
-                                <file idw="5814" name="../../dime-mei-edition/487_5813/dmeref_487-001_5814.xml"/>
-                                <file idw="5815" name="../../dime-mei-edition/487_5813/dmeref_487-002_5815.xml"/>
-                                <file idw="5818" name="../../dime-mei-edition/487_5813/dmeref_487-003_5818.xml"/>
-                                <file idw="5819" name="../../dime-mei-edition/487_5813/dmeref_487-004_5819.xml"/>
-                                <file idw="5820" name="../../dime-mei-edition/487_5813/dmeref_487-005_5820.xml"/>
-                                <file idw="5821" name="../../dime-mei-edition/487_5813/dmeref_487-006_5821.xml"/>
-                                <file idw="5824" name="../../dime-mei-edition/487_5813/dmeref_487-007_5824.xml"/>
-                                <file idw="5825" name="../../dime-mei-edition/487_5813/dmeref_487-008_5825.xml"/>
-                                <file idw="5826" name="../../dime-mei-edition/487_5813/dmeref_487-009_5826.xml"/>
-                                <file idw="5829" name="../../dime-mei-edition/487_5813/dmeref_487-010_5829.xml"/>
-                                <file idw="5830" name="../../dime-mei-edition/487_5813/dmeref_487-011_5830.xml"/>
-                                <file idw="5833" name="../../dime-mei-edition/487_5813/dmeref_487-012_5833.xml"/>
-                            </folder>
-                            <folder idw="11612" name="494_11612">
-                                <file idw="5789" name="../../dime-mei-edition/494_11612/dmeref_494-001_5789.xml"/>
-                            </folder>
-                            <folder idw="5854" name="499_5854">
-                                <file idw="5855" name="../../dime-mei-edition/499_5854/dmeref_499-001_5855.xml"/>
-                                <file idw="5856" name="../../dime-mei-edition/499_5854/dmeref_499-002_5856.xml"/>
-                                <file idw="5859" name="../../dime-mei-edition/499_5854/dmeref_499-003_5859.xml"/>
-                                <file idw="5860" name="../../dime-mei-edition/499_5854/dmeref_499-004_5860.xml"/>
-                            </folder>
-                            <folder idw="6049" name="525_6049">
-                                <file idw="6050" name="../../dime-mei-edition/525_6049/dmeref_525-001_6050.xml"/>
-                                <file idw="6051" name="../../dime-mei-edition/525_6049/dmeref_525-002_6051.xml"/>
-                                <file idw="6052" name="../../dime-mei-edition/525_6049/dmeref_525-003_6052.xml"/>
-                                <file idw="6055" name="../../dime-mei-edition/525_6049/dmeref_525-004_6055.xml"/>
-                            </folder>
-                            <folder idw="6065" name="527_6065">
-                                <file idw="6085" name="../../dime-mei-edition/527_6065/dmeref_527-007_6085.xml"/>
-                            </folder>
-                            <folder idw="6174" name="533_6174">
-                                <file idw="6175" name="../../dime-mei-edition/533_6174/dmeref_533-001_6175.xml"/>
-                                <file idw="6176" name="../../dime-mei-edition/533_6174/dmeref_533-002_6176.xml"/>
-                            </folder>
-                            <folder idw="6244" name="543_6244">
-                                <file idw="6245" name="../../dime-mei-edition/543_6244/dmeref_543-001_6245.xml"/>
-                                <file idw="6248" name="../../dime-mei-edition/543_6244/dmeref_543-002_6248.xml"/>
-                                <file idw="6249" name="../../dime-mei-edition/543_6244/dmeref_543-003_6249.xml"/>
-                                <file idw="6252" name="../../dime-mei-edition/543_6244/dmeref_543-004_6252.xml"/>
-                            </folder>
-                            <folder idw="6255" name="545_6255">
-                                <file idw="6256" name="../../dime-mei-edition/545_6255/dmeref_545-001_6256.xml"/>
-                                <file idw="6257" name="../../dime-mei-edition/545_6255/dmeref_545-002_6257.xml"/>
-                                <file idw="6258" name="../../dime-mei-edition/545_6255/dmeref_545-003_6258.xml"/>
-                            </folder>
-                            <folder idw="6309" name="550_11586">
-                                <file idw="6310" name="../../dime-mei-edition/550_11586/dmeref_550-001_6310.xml"/>
-                                <file idw="6311" name="../../dime-mei-edition/550_11586/dmeref_550-002_6311.xml"/>
-                                <file idw="6314" name="../../dime-mei-edition/550_11586/dmeref_550-003_6314.xml"/>
-                                <file idw="6317" name="../../dime-mei-edition/550_11586/dmeref_550-004_6317.xml"/>
-                            </folder>
-                            <folder idw="6326" name="551_6326">
-                                <file idw="6327" name="../../dime-mei-edition/551_6326/dmeref_551-001_6327.xml"/>
-                                <file idw="6328" name="../../dime-mei-edition/551_6326/dmeref_551-002_6328.xml"/>
-                                <file idw="6331" name="../../dime-mei-edition/551_6326/dmeref_551-003_6331.xml"/>
-                                <file idw="6334" name="../../dime-mei-edition/551_6326/dmeref_551-004_6334.xml"/>
-                            </folder>
-                            <folder idw="6343" name="554_6343">
-                                <file idw="6343" name="../../dime-mei-edition/554_6343/dmeref_554-001_6343.xml"/>
-                            </folder>
-                            <folder idw="6346" name="556_6346">
-                                <file idw="6346" name="../../dime-mei-edition/556_6346/dmeref_556-001_6346.xml"/>
-                            </folder>
-                            <folder idw="6353" name="558_6353">
-                                <file idw="6353" name="../../dime-mei-edition/558_6353/dmeref_558-001_6353.xml"/>
-                            </folder>
-                            <folder idw="6358" name="559_6358">
-                                <file idw="6358" name="../../dime-mei-edition/559_6358/dmeref_559-001_6358.xml"/>
-                            </folder>
-                            <folder idw="11611" name="560_11611">
-                                <file idw="6362" name="../../dime-mei-edition/560_11611/dmeref_560a-001_6362.xml"/>
-                                <file idw="6363" name="../../dime-mei-edition/560_11611/dmeref_560b-001_6363.xml"/>
-                            </folder>
-                            <folder idw="6366" name="561_6366">
-                                <file idw="6366" name="../../dime-mei-edition/561_6366/dmeref_561-001_6366.xml"/>
-                            </folder>
-                            <folder idw="6374" name="562e_6374">
-                                <file idw="6374" name="../../dime-mei-edition/562e_6374/dmeref_562e-001_6374.xml"/>
-                            </folder>
-                            <folder idw="6375" name="563_6375">
-                                <file idw="6376" name="../../dime-mei-edition/563_6375/dmeref_563-001_6376.xml"/>
-                                <file idw="6377" name="../../dime-mei-edition/563_6375/dmeref_563-002_6377.xml"/>
-                                <file idw="6378" name="../../dime-mei-edition/563_6375/dmeref_563-003_6378.xml"/>
-                                <file idw="6381" name="../../dime-mei-edition/563_6375/dmeref_563-004_6381.xml"/>
-                                <file idw="6382" name="../../dime-mei-edition/563_6375/dmeref_563-005_6382.xml"/>
-                                <file idw="6386" name="../../dime-mei-edition/563_6375/dmeref_563-006_6386.xml"/>
-                            </folder>
-                            <folder idw="6507" name="570_6507">
-                                <file idw="6508" name="../../dime-mei-edition/570_6507/dmeref_570-001_6508.xml"/>
-                                <file idw="6509" name="../../dime-mei-edition/570_6507/dmeref_570-002_6509.xml"/>
-                                <file idw="6510" name="../../dime-mei-edition/570_6507/dmeref_570-003_6510.xml"/>
-                            </folder>
-                            <folder idw="6619" name="575_6619">
-                                <file idw="6620" name="../../dime-mei-edition/575_6619/dmeref_575-001_6620.xml"/>
-                                <file idw="6621" name="../../dime-mei-edition/575_6619/dmeref_575-002_6621.xml"/>
-                                <file idw="6622" name="../../dime-mei-edition/575_6619/dmeref_575-003_6622.xml"/>
-                                <file idw="6625" name="../../dime-mei-edition/575_6619/dmeref_575-004_6625.xml"/>
-                            </folder>
-                            <folder idw="6628" name="576_6628">
-                                <file idw="6629" name="../../dime-mei-edition/576_6628/dmeref_576-001_6629.xml"/>
-                                <file idw="6630" name="../../dime-mei-edition/576_6628/dmeref_576-002_6630.xml"/>
-                                <file idw="6631" name="../../dime-mei-edition/576_6628/dmeref_576-003_6631.xml"/>
-                            </folder>
-                            <folder idw="6653" name="581_6653">
-                                <file idw="6654" name="../../dime-mei-edition/581_6653/dmeref_581-001_6654.xml"/>
-                                <file idw="6655" name="../../dime-mei-edition/581_6653/dmeref_581-002_6655.xml"/>
-                                <file idw="6656" name="../../dime-mei-edition/581_6653/dmeref_581-003_6656.xml"/>
-                                <file idw="6660" name="../../dime-mei-edition/581_6653/dmeref_581-004_6660.xml"/>
-                            </folder>
-                            <folder idw="6866" name="589_6866">
-                                <file idw="6867" name="../../dime-mei-edition/589_6866/dmeref_589-001_6867.xml"/>
-                                <file idw="6868" name="../../dime-mei-edition/589_6866/dmeref_589-002_6868.xml"/>
-                                <file idw="6869" name="../../dime-mei-edition/589_6866/dmeref_589-003_6869.xml"/>
-                                <file idw="6872" name="../../dime-mei-edition/589_6866/dmeref_589-004_6872.xml"/>
-                            </folder>
-                            <folder idw="6877" name="590_6877">
-                                <file idw="6878" name="../../dime-mei-edition/590_6877/dmeref_590-001_6878.xml"/>
-                                <file idw="6879" name="../../dime-mei-edition/590_6877/dmeref_590-002_6879.xml"/>
-                                <file idw="6880" name="../../dime-mei-edition/590_6877/dmeref_590-003_6880.xml"/>
-                                <file idw="6884" name="../../dime-mei-edition/590_6877/dmeref_590-004_6884.xml"/>
-                            </folder>
-                            <folder idw="7132" name="618_7132">
-                                <file idw="7132" name="../../dime-mei-edition/618_7132/dmeref_618-001_7132.xml"/>
-                            </folder>
-                            <folder idw="7241" name="621_7241">
-                                <file idw="7300" name="../../dime-mei-edition/621_7241/dmeref_621-023_7300.xml"/>
-                            </folder>
-                        </folder>
-                    </folder>
-                    <folder name="In Bearbeitung">
-                        <folder idw="4893" name="388_4893">
-                            <file idw="4894" name="../../dime-mei-edition/388_4893/dmeref_388-001_4894.xml"/>
-                            <file idw="4895" name="../../dime-mei-edition/388_4893/dmeref_388-001_4895.xml"/>
-                            <file idw="4896" name="../../dime-mei-edition/388_4893/dmeref_388-002_4896.xml"/>
-                            <file idw="4899" name="../../dime-mei-edition/388_4893/dmeref_388-004_4899.xml"/>
-                        </folder>
-                        <folder idw="6012" name="406_6012">
-                            <file idw="6013" name="../../dime-mei-edition/406_6012/dmeref_406-001_6013.xml"/>
-                            <file idw="6014" name="../../dime-mei-edition/406_6012/dmeref_406-002_6014.xml"/>
-                            <file idw="6015" name="../../dime-mei-edition/406_6012/dmeref_406-003_6015.xml"/>
-                            <file idw="6018" name="../../dime-mei-edition/406_6012/dmeref_406-004_6018.xml"/>
-                        </folder>
-                        <folder idw="6353" name="558_6353">
-                            <file idw="6354" name="../../dime-mei-edition/558_6353/dmeref_558_01sketch_6354.xml"/>
-                        </folder>
-                        <folder idw="6358" name="559_6358">
-                            <file idw="6359" name="../../dime-mei-edition/559_6358/dmeref_559-01sketch_6359.xml"/>
-                        </folder>
-                    </folder>
-                </folder>
-                <folder name="Alternativtexte">
-                    <folder name="Publiziert">
-                        <folder name="MEI_v3.0.0">
-                            <folder idw="4994" name="387_4994">
-                                <file idw="4995" name="../../dime-mei-edition/387_4994/dmeedtB1_387-001_4995.xml"/>
-                                <file idw="4996" name="../../dime-mei-edition/387_4994/dmeedtB1_387-002_4996.xml"/>
-                                <file idw="4997" name="../../dime-mei-edition/387_4994/dmeedtB1_387-003_4997.xml"/>
-                                <file idw="4998" name="../../dime-mei-edition/387_4994/dmeedtB1_387-004_4998.xml"/>
-                            </folder>
-                            <folder idw="5151" name="421_5151">
-                                <file idw="5152" name="../../dime-mei-edition/421_5151/dmeedtB1_421-001_5152.xml"/>
-                                <file idw="5153" name="../../dime-mei-edition/421_5151/dmeedtB1_421-002_5153.xml"/>
-                                <file idw="5154" name="../../dime-mei-edition/421_5151/dmeedtB1_421-003_5154.xml"/>
-                                <file idw="5157" name="../../dime-mei-edition/421_5151/dmeedtB1_421-004_5157.xml"/>
-                            </folder>
-                            <folder idw="5492" name="458_5492">
-                                <file idw="5493" name="../../dime-mei-edition/458_5492/dmeedtA_458-001_5493.xml"/>
-                                <file idw="5493" name="../../dime-mei-edition/458_5492/dmeedtB1_458-001_5493.xml"/>
-                                <file idw="5494" name="../../dime-mei-edition/458_5492/dmeedtB1_458-002_5494.xml"/>
-                                <file idw="5497" name="../../dime-mei-edition/458_5492/dmeedtB1_458-003_5497.xml"/>
-                                <file idw="5499" name="../../dime-mei-edition/458_5492/dmeedtB1_458-004_5499.xml"/>
-                            </folder>
-                            <folder idw="7568" name="626b_7568">
-                                <file idw="7568" name="../../dime-mei-edition/626b_7568/dmeedtA_626b-016_7568.xml"/>
-                            </folder>
-                        </folder>
-                    </folder>
-                    <folder name="In Bearbeitung">
-                        <folder name="MEI_v4.0.1">
-                            <folder idw="2625" name="165_2625">
-                                <file idw="2626" name="../../dime-mei-edition/165_2625/dmeedtA_165-001_2626.xml"/>
-                                <file idw="2628" name="../../dime-mei-edition/165_2625/dmeedtA_165-003_2628.xml"/>
-                                <file idw="2629" name="../../dime-mei-edition/165_2625/dmeedtA_165-004_2629.xml"/>
-                            </folder>
-                        </folder>
-                    </folder>
-                </folder>
-            </folder>
-            <folder path="../../dime-mei-edition/"/>
-            <folder path="file:/K:/PROJEKTE/KV/_Aktuelle_Gesamtfiles/"/>
-        </folder>
-        <folder path="../../DEBUG/"/>
         <folder path="."/>
         <folder path="tests/"/>
         <file name="config/config.xml"/>
-        <file name="../../dime-mei-edition/edition-filtered.xml"/>
     </projectTree>
 </project>
