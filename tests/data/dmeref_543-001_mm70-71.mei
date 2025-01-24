@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
   <meiHead>
     <fileDesc>
@@ -183,7 +183,7 @@
                     <layer n="1" xml:id="layer_2658">
                       <rest dur="4" tstamp="1" xml:id="rest_2664"/>
                       <note dur="4" oct="4" pname="g" tstamp="2" xml:id="note_2670">
-                        <supplied sameas="#supplied_2718" resp="#NMA-editors" xml:id="supplied_2676"/>
+                        <supplied resp="#NMA-editors" sameas="#supplied_2718" xml:id="supplied_2676"/>
                       </note>
                       <note dur="4" oct="4" pname="g" tstamp="3" xml:id="note_2694">
                         <supplied sameas="#supplied_2730" xml:id="supplied_2688"/>

@@ -10223,6 +10223,26 @@ ${caret}</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>../../tools/extract-parts/tests/data/K165/01/dmeedtA_165-001.mei</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>extract-parts</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>tests/data/550-001_mm14-20.mei</String>
                                 </field>
                                 <field name="scenarioIds">

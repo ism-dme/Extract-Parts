@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
   <meiHead>
     <fileDesc>
@@ -262,16 +262,16 @@
                 <app xml:id="app_15588">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg_15594"/>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg_15600">
-                    <slur curvedir="above" endid="#note_16158" staff="2" startid="#note_15222" xml:id="slur_15606"/>
+                    <slur curvedir="above" endid="#note_16158" layer="1" staff="2" startid="#note_15222" xml:id="slur_15606"/>
                   </rdg>
                 </app>
                 <app xml:id="app_15612">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg_15618">
-                    <slur endid="#note_16242" staff="3" startid="#note_15282" xml:id="slur_15624"/>
+                    <slur endid="#note_16242" layer="1" staff="3" startid="#note_15282" xml:id="slur_15624"/>
                   </rdg>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg_15630"/>
                 </app>
-                <slur endid="#note_16296" staff="4" startid="#note_15336" xml:id="slur_15636"/>
+                <slur endid="#note_16296" layer="1" staff="4" startid="#note_15336" xml:id="slur_15636"/>
                 <slur endid="#note_16392" staff="7" startid="#note_15414" xml:id="slur_15642"/>
                 <slur endid="#note_16470" staff="8" startid="#note_15432" xml:id="slur_15648"/>
                 <slur endid="#note_16548" staff="9" startid="#note_15450" xml:id="slur_15654"/>
@@ -525,22 +525,22 @@
                 <dynam doxml.id="d28e1683" staff="9" startid="#note_16566" xml:id="dynam_16746">f</dynam>
                 <dynam doxml.id="d28e1733" layer="1 2" staff="10" startid="#note_16608" xml:id="dynam_16758">f</dynam>
                 <slur endid="#note_16896" staff="1" startid="#note_16116" xml:id="slur_16770"/>
-                <slur endid="#note_16926" staff="2" startid="#note_16170" xml:id="slur_16776"/>
-                <slur endid="#note_16950" staff="2" startid="#note_16212" xml:id="slur_16788"/>
+                <slur endid="#note_16926" layer="1" staff="2" startid="#note_16170" xml:id="slur_16776"/>
+                <slur endid="#note_16950" layer="2" staff="2" startid="#note_16212" xml:id="slur_16788"/>
                 <app xml:id="app_16794">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg_16800">
-                    <slur endid="#note_16992" staff="3" startid="#note_16254" xml:id="slur_16806"/>
+                    <slur endid="#note_16992" layer="1" staff="3" startid="#note_16254" xml:id="slur_16806"/>
                   </rdg>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg_16812"/>
                 </app>
                 <app xml:id="app_16818">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg_16824">
-                    <slur endid="#note_17016" staff="3" startid="#note_16272" xml:id="slur_16830"/>
+                    <slur endid="#note_17016" layer="2" staff="3" startid="#note_16272" xml:id="slur_16830"/>
                   </rdg>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg_16836"/>
                 </app>
-                <slur endid="#note_17052" staff="4" startid="#note_16308" xml:id="slur_16842"/>
-                <slur endid="#note_17076" staff="4" startid="#note_16326" xml:id="slur_16848"/>
+                <slur endid="#note_17052" layer="1" staff="4" startid="#note_16308" xml:id="slur_16842"/>
+                <slur endid="#note_17076" layer="2" staff="4" startid="#note_16326" xml:id="slur_16848"/>
                 <supplied resp="#NMA-editors" xml:id="supplied_16854">
                   <slur endid="#note_17106" lform="dotted" staff="5" startid="#note_16350" xml:id="slur_16860"/>
                 </supplied>
@@ -669,22 +669,22 @@
                   <layer n="2" sameas="#layer_17358" xml:id="layer_17394"/>
                 </staff>
                 <slur endid="#note_17526" staff="1" startid="#note_16908" xml:id="slur_17400"/>
-                <slur endid="#note_17556" staff="2" startid="#note_16938" xml:id="slur_17412"/>
-                <slur endid="#note_17580" staff="2" startid="#note_16962" xml:id="slur_17418"/>
+                <slur endid="#note_17556" layer="1" staff="2" startid="#note_16938" xml:id="slur_17412"/>
+                <slur endid="#note_17580" layer="2" staff="2" startid="#note_16962" xml:id="slur_17418"/>
                 <app xml:id="app_17424">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg_17430">
-                    <slur endid="#note_17622" staff="3" startid="#note_17004" xml:id="slur_17436"/>
+                    <slur endid="#note_17622" layer="1" staff="3" startid="#note_17004" xml:id="slur_17436"/>
                   </rdg>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg_17442"/>
                 </app>
                 <app xml:id="app_17448">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg_17454">
-                    <slur endid="#note_17646" staff="3" startid="#note_17028" xml:id="slur_17460"/>
+                    <slur endid="#note_17646" layer="2" staff="3" startid="#note_17028" xml:id="slur_17460"/>
                   </rdg>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg_17466"/>
                 </app>
-                <slur endid="#note_17682" staff="4" startid="#note_17064" xml:id="slur_17472"/>
-                <slur endid="#note_17706" staff="4" startid="#note_17088" xml:id="slur_17478"/>
+                <slur endid="#note_17682" layer="1" staff="4" startid="#note_17064" xml:id="slur_17472"/>
+                <slur endid="#note_17706" layer="2" staff="4" startid="#note_17088" xml:id="slur_17478"/>
                 <supplied resp="#NMA-editors" xml:id="supplied_17484">
                   <slur endid="#note_17736" lform="dotted" staff="5" startid="#note_17118" xml:id="slur_17490"/>
                 </supplied>
@@ -813,22 +813,22 @@
                   <layer n="2" sameas="#layer_17988" xml:id="layer_18024"/>
                 </staff>
                 <slur endid="#note_18168" staff="1" startid="#note_17538" xml:id="slur_18030"/>
-                <slur endid="#note_18240" staff="2" startid="#note_17568" xml:id="slur_18042"/>
-                <slur endid="#note_18240" staff="2" startid="#note_17592" xml:id="slur_18048"/>
+                <slur endid="#note_18240" layer="1" staff="2" startid="#note_17568" xml:id="slur_18042"/>
+                <slur endid="#note_18240" layer="2" staff="2" startid="#note_17592" xml:id="slur_18048"/>
                 <app xml:id="app_18054">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg_18060">
-                    <slur endid="#note_18390" staff="3" startid="#note_17634" xml:id="slur_18066"/>
+                    <slur endid="#note_18390" layer="1" staff="3" startid="#note_17634" xml:id="slur_18066"/>
                   </rdg>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg_18072"/>
                 </app>
                 <app xml:id="app_18078">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg_18084">
-                    <slur endid="#note_18468" staff="3" startid="#note_17658" xml:id="slur_18090"/>
+                    <slur endid="#note_18468" layer="2" staff="3" startid="#note_17658" xml:id="slur_18090"/>
                   </rdg>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg_18096"/>
                 </app>
-                <slur endid="#note_18558" staff="4" startid="#note_17694" xml:id="slur_18102"/>
-                <slur endid="#note_18624" staff="4" startid="#note_17718" xml:id="slur_18108"/>
+                <slur endid="#note_18558" layer="1" staff="4" startid="#note_17694" xml:id="slur_18102"/>
+                <slur endid="#note_18624" layer="2" staff="4" startid="#note_17718" xml:id="slur_18108"/>
                 <supplied resp="#NMA-editors" xml:id="supplied_18114">
                   <slur endid="#note_18696" lform="dotted" staff="5" startid="#note_17748" xml:id="slur_18120"/>
                 </supplied>
@@ -1221,9 +1221,9 @@
                 <dynam doxml.id="d28e1948" layer="1 2" staff="4" startid="#note_19380" xml:id="dynam_19644">p</dynam>
                 <dynam doxml.id="d28e2088" layer="1" staff="7" startid="#note_19476" xml:id="dynam_19662">p</dynam>
                 <dynam doxml.id="d28e2184" layer="1" staff="8" startid="#note_19548" xml:id="dynam_19674">p</dynam>
-                <slur endid="#note_19824" staff="4" startid="#note_19374" xml:id="slur_19686"/>
+                <slur endid="#note_19824" layer="1" staff="4" startid="#note_19374" xml:id="slur_19686"/>
                 <supplied resp="#NMA-editors" xml:id="supplied_19692">
-                  <slur endid="#note_19842" lform="dotted" staff="4" startid="#note_19392" xml:id="slur_19698"/>
+                  <slur endid="#note_19842" layer="2" lform="dotted" staff="4" startid="#note_19392" xml:id="slur_19698"/>
                 </supplied>
                 <slur endid="#note_19482" staff="7" startid="#note_19476" xml:id="slur_19704"/>
                 <slur endid="#note_19554" staff="8" startid="#note_19548" xml:id="slur_19710"/>

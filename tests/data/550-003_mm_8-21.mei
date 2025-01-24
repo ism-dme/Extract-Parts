@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
   <meiHead>
     <fileDesc>
@@ -526,8 +526,8 @@
                     <note artic="spicc" doxml.id="d28e1235" dur="4" oct="3" pname="d" tstamp="3" xml:id="note_8814"/>
                   </layer>
                 </staff>
-                <tie endid="#note_8898" staff="2" startid="#note_8556" xml:id="tie_8820"/>
-                <tie endid="#note_8946" staff="3" startid="#note_8610" xml:id="tie_8826"/>
+                <tie endid="#note_8898" layer="2" staff="2" startid="#note_8556" xml:id="tie_8820"/>
+                <tie endid="#note_8946" layer="2" staff="3" startid="#note_8610" xml:id="tie_8826"/>
               </measure>
               <measure n="12" xml:id="m12_k550_003_a">
                 <staff dme.parts="1" n="1" xml:id="staff_8838">
@@ -607,8 +607,8 @@
                     <note accid.ges="f" artic="spicc" doxml.id="d28e1244" dur="4" oct="2" pname="b" tstamp="3" xml:id="note_9138"/>
                   </layer>
                 </staff>
-                <slur endid="#note_8904" staff="2" startid="#note_8898" xml:id="slur_9144"/>
-                <slur endid="#note_8952" staff="3" startid="#note_8946" xml:id="slur_9150"/>
+                <slur endid="#note_8904" layer="2" staff="2" startid="#note_8898" xml:id="slur_9144"/>
+                <slur endid="#note_8952" layer="2" staff="3" startid="#note_8946" xml:id="slur_9150"/>
               </measure>
               <measure n="13" xml:id="m13_k550_003_a">
                 <staff dme.parts="1" n="1" xml:id="staff_9162">
@@ -698,10 +698,10 @@
                   </layer>
                 </staff>
                 <slur endid="#note_9180" staff="1" startid="#note_9174" xml:id="slur_9450"/>
-                <slur endid="#note_9210" staff="2" startid="#note_9204" xml:id="slur_9456"/>
-                <slur endid="#note_9228" staff="2" startid="#note_9222" xml:id="slur_9468"/>
-                <slur endid="#note_9252" staff="3" startid="#note_9246" xml:id="slur_9474"/>
-                <slur endid="#note_9270" staff="3" startid="#note_9264" xml:id="slur_9480"/>
+                <slur endid="#note_9210" layer="1" staff="2" startid="#note_9204" xml:id="slur_9456"/>
+                <slur endid="#note_9228" layer="2" staff="2" startid="#note_9222" xml:id="slur_9468"/>
+                <slur endid="#note_9252" layer="1" staff="3" startid="#note_9246" xml:id="slur_9474"/>
+                <slur endid="#note_9270" layer="2" staff="3" startid="#note_9264" xml:id="slur_9480"/>
                 <slur endid="#note_9354" staff="6" startid="#note_9348" xml:id="slur_9486"/>
                 <slur endid="#note_9384" staff="7" startid="#note_9378" xml:id="slur_9492"/>
               </measure>
@@ -827,7 +827,7 @@
                     <note doxml.id="d28e1865" dur="4" oct="3" pname="f" tstamp="1" xml:id="note_9912"/>
                   </layer>
                 </staff>
-                <dir doxml.id="d28e1359"  place="above" staff="2" tstamp="1" xml:id="dir_9918">
+                <dir doxml.id="d28e1359" layer="1 2" place="above" staff="2" tstamp="1" type="staff" xml:id="dir_9918">
                   <rend fontstyle="normal" xml:id="rend_9924">a&#8198;2</rend>
                 </dir>
                 <dir doxml.id="d28e1448" layer="1 2" place="above" staff="3" tstamp="1" xml:id="dir_9936">
@@ -902,7 +902,7 @@
                 <tie endid="#note_10308" layer="1 2" staff="2" startid="#note_10002" xml:id="tie_10218"/>
                 <tie endid="#note_10356" layer="1 2" staff="3" startid="#note_10026" xml:id="tie_10224"/>
                 <tie endid="#note_10476" staff="8" startid="#note_10158" xml:id="tie_10230"/>
-                <tie endid="#note_10524" staff="9" startid="#note_10182" xml:id="tie_10236"/>
+                <tie endid="#note_10524" layer="1" staff="9" startid="#note_10182" xml:id="tie_10236"/>
               </measure>
               <measure n="16" xml:id="m16_k550_003_a">
                 <staff dme.parts="1" n="1" xml:id="staff_10248">
@@ -1150,12 +1150,12 @@
                   </layer>
                 </staff>
                 <tie endid="#note_11298" staff="1" startid="#note_10950" xml:id="tie_11232"/>
-                <tie endid="#note_11346" staff="2" startid="#note_10974" xml:id="tie_11238"/>
-                <tie endid="#note_11382" staff="2" startid="#note_10992" xml:id="tie_11250"/>
-                <tie endid="#note_11424" staff="3" startid="#note_11016" xml:id="tie_11256"/>
-                <tie endid="#note_11460" staff="3" startid="#note_11034" xml:id="tie_11262"/>
+                <tie endid="#note_11346" layer="1" staff="2" startid="#note_10974" xml:id="tie_11238"/>
+                <tie endid="#note_11382" layer="2" staff="2" startid="#note_10992" xml:id="tie_11250"/>
+                <tie endid="#note_11424" layer="1" staff="3" startid="#note_11016" xml:id="tie_11256"/>
+                <tie endid="#note_11460" layer="2" staff="3" startid="#note_11034" xml:id="tie_11262"/>
                 <tie endid="#note_11610" staff="8" startid="#note_11202" xml:id="tie_11268"/>
-                <tie endid="#note_11658" staff="9" startid="#note_11226" xml:id="tie_11274"/>
+                <tie endid="#note_11658" layer="1" staff="9" startid="#note_11226" xml:id="tie_11274"/>
               </measure>
               <measure n="19" xml:id="m19_k550_003_a">
                 <staff dme.parts="1" n="1" xml:id="staff_11286">
@@ -1424,7 +1424,7 @@
                 <tie endid="#note_12474" layer="1 2" staff="2" startid="#note_12180" xml:id="tie_12372"/>
                 <tie endid="#note_12522" layer="1 2" staff="3" startid="#note_12204" xml:id="tie_12384"/>
                 <tie endid="#note_12642" staff="8" startid="#note_12336" xml:id="tie_12390"/>
-                <tie endid="#note_12690" staff="9" startid="#note_12360" xml:id="tie_12396"/>
+                <tie endid="#note_12690" layer="1" staff="9" startid="#note_12360" xml:id="tie_12396"/>
               </measure>
               <sb xml:id="sb_12402"/>
               <measure n="22" xml:id="m22_k550_003_a">
@@ -2027,9 +2027,9 @@
                     <note doxml.id="d28e2565" dur="4" oct="3" pname="g" tstamp="3" xml:id="note_14844"/>
                   </layer>
                 </staff>
-                <tie endid="#note_14928" staff="2" startid="#note_14580" xml:id="tie_14850"/>
-                <tie endid="#note_14994" staff="3" startid="#note_14628" xml:id="tie_14856"/>
-                <tie endid="#note_15060" staff="4" startid="#note_14676" xml:id="tie_14868"/>
+                <tie endid="#note_14928" layer="1" staff="2" startid="#note_14580" xml:id="tie_14850"/>
+                <tie endid="#note_14994" layer="1" staff="3" startid="#note_14628" xml:id="tie_14856"/>
+                <tie endid="#note_15060" layer="1" staff="4" startid="#note_14676" xml:id="tie_14868"/>
                 <tie endid="#note_15144" staff="6" startid="#note_14754" xml:id="tie_14874"/>
               </measure>
               <pb n="163" xml:id="pb_14880"/>
@@ -2123,9 +2123,9 @@
                   </layer>
                 </staff>
                 <tie endid="#note_15324" staff="1" startid="#note_14910" xml:id="tie_15264"/>
-                <tie endid="#note_15390" staff="2" startid="#note_14976" xml:id="tie_15270"/>
-                <tie endid="#note_15456" staff="3" startid="#note_15042" xml:id="tie_15282"/>
-                <tie endid="#note_15522" staff="4" startid="#note_15108" xml:id="tie_15288"/>
+                <tie endid="#note_15390" layer="2" staff="2" startid="#note_14976" xml:id="tie_15270"/>
+                <tie endid="#note_15456" layer="2" staff="3" startid="#note_15042" xml:id="tie_15282"/>
+                <tie endid="#note_15522" layer="2" staff="4" startid="#note_15108" xml:id="tie_15288"/>
                 <tie endid="#note_15636" staff="7" startid="#note_15198" xml:id="tie_15294"/>
                 <tie endid="#note_15684" staff="8" startid="#note_15228" xml:id="tie_15300"/>
               </measure>
@@ -2227,9 +2227,9 @@
                     <note accid="s" doxml.id="d28e3236" dur="4" oct="3" pname="f" tstamp="3" xml:id="note_15726"/>
                   </layer>
                 </staff>
-                <tie endid="#note_15810" staff="2" startid="#note_15378" xml:id="tie_15732"/>
-                <tie endid="#note_15876" staff="3" startid="#note_15444" xml:id="tie_15738"/>
-                <tie endid="#note_15942" staff="4" startid="#note_15510" xml:id="tie_15750"/>
+                <tie endid="#note_15810" layer="1" staff="2" startid="#note_15378" xml:id="tie_15732"/>
+                <tie endid="#note_15876" layer="1" staff="3" startid="#note_15444" xml:id="tie_15738"/>
+                <tie endid="#note_15942" layer="1" staff="4" startid="#note_15510" xml:id="tie_15750"/>
                 <tie endid="#note_16038" staff="6" startid="#note_15618" xml:id="tie_15756"/>
                 <tie endid="#note_16110" staff="8" startid="#note_15696" xml:id="tie_15762"/>
               </measure>
@@ -2325,9 +2325,9 @@
                   </layer>
                 </staff>
                 <tie endid="#note_16218" staff="1" startid="#note_15792" xml:id="tie_16158"/>
-                <tie endid="#note_16284" staff="2" startid="#note_15858" xml:id="tie_16164"/>
-                <tie endid="#note_16350" staff="3" startid="#note_15924" xml:id="tie_16176"/>
-                <tie endid="#note_16416" staff="4" startid="#note_15990" xml:id="tie_16182"/>
+                <tie endid="#note_16284" layer="2" staff="2" startid="#note_15858" xml:id="tie_16164"/>
+                <tie endid="#note_16350" layer="2" staff="3" startid="#note_15924" xml:id="tie_16176"/>
+                <tie endid="#note_16416" layer="2" staff="4" startid="#note_15990" xml:id="tie_16182"/>
                 <tie endid="#note_16506" staff="7" startid="#note_16092" xml:id="tie_16188"/>
                 <tie endid="#note_16554" staff="8" startid="#note_16122" xml:id="tie_16194"/>
               </measure>
@@ -2425,9 +2425,9 @@
                     <note doxml.id="d28e3253" dur="4" oct="2" pname="g" tstamp="3" xml:id="note_16596"/>
                   </layer>
                 </staff>
-                <tie endid="#note_16680" staff="2" startid="#note_16272" xml:id="tie_16602"/>
-                <tie endid="#note_16728" staff="3" startid="#note_16338" xml:id="tie_16608"/>
-                <tie endid="#note_16776" staff="4" startid="#note_16404" xml:id="tie_16620"/>
+                <tie endid="#note_16680" layer="1" staff="2" startid="#note_16272" xml:id="tie_16602"/>
+                <tie endid="#note_16728" layer="1" staff="3" startid="#note_16338" xml:id="tie_16608"/>
+                <tie endid="#note_16776" layer="1" staff="4" startid="#note_16404" xml:id="tie_16620"/>
                 <tie endid="#note_16908" staff="6" startid="#note_16488" xml:id="tie_16626"/>
               </measure>
               <measure n="33" xml:id="m33_k550_003_a">
@@ -2810,8 +2810,8 @@
                 <dynam doxml.id="d28e3314" staff="1" startid="#note_17820" xml:id="dynam_18162">p</dynam>
                 <dynam doxml.id="d28e3424" layer="1" place="above" staff="3" startid="#note_17904" xml:id="dynam_18174">p</dynam>
                 <dynam doxml.id="d28e3516" layer="1" place="above" staff="4" startid="#note_17952" xml:id="dynam_18192">p</dynam>
-                <slur endid="#note_18282" staff="3" startid="#note_17904" xml:id="slur_18204"/>
-                <slur endid="#note_18642" staff="4" startid="#note_17952" xml:id="slur_18210"/>
+                <slur endid="#note_18282" layer="1" staff="3" startid="#note_17904" xml:id="slur_18204"/>
+                <slur endid="#note_18642" layer="1" staff="4" startid="#note_17952" xml:id="slur_18210"/>
               </measure>
               <measure n="37" xml:id="m37_k550_003_a">
                 <staff dme.parts="1" n="1" xml:id="staff_18222">
@@ -2875,9 +2875,9 @@
                   </layer>
                 </staff>
                 <dynam doxml.id="d28e3441" layer="1 2" staff="3" startid="#note_18288" xml:id="dynam_18450">p</dynam>
-                <slur endid="#note_18594" staff="3" startid="#note_18312" xml:id="slur_18462"/>
+                <slur endid="#note_18594" layer="2" staff="3" startid="#note_18312" xml:id="slur_18462"/>
                 <tie endid="#note_18504" staff="1" startid="#note_18240" xml:id="tie_18474"/>
-                <tie endid="#note_18570" staff="3" startid="#note_18288" xml:id="tie_18480"/>
+                <tie endid="#note_18570" layer="1" staff="3" startid="#note_18288" xml:id="tie_18480"/>
               </measure>
               <measure n="38" xml:id="m38_k550_003_a">
                 <staff dme.parts="1" n="1" xml:id="staff_18492">
@@ -2949,7 +2949,7 @@
                     <mRest tstamp="1" xml:id="mRest_18756"/>
                   </layer>
                 </staff>
-                <slur endid="#note_18576" staff="3" startid="#note_18570" xml:id="slur_18762"/>
+                <slur endid="#note_18576" layer="1" staff="3" startid="#note_18570" xml:id="slur_18762"/>
               </measure>
               <measure n="39" xml:id="m39_k550_003_a">
                 <staff dme.parts="1" n="1" xml:id="staff_18774">
@@ -3009,8 +3009,8 @@
                     <mRest tstamp="1" xml:id="mRest_18978"/>
                   </layer>
                 </staff>
-                <slur endid="#note_19056" staff="3" startid="#note_18834" xml:id="slur_18984"/>
-                <tie endid="#note_19080" staff="3" startid="#note_18846" xml:id="tie_18990"/>
+                <slur endid="#note_19056" layer="1" staff="3" startid="#note_18834" xml:id="slur_18984"/>
+                <tie endid="#note_19080" layer="2" staff="3" startid="#note_18846" xml:id="tie_18990"/>
               </measure>
               <measure n="40" xml:id="m40_k550_003_a">
                 <staff dme.parts="1" n="1" xml:id="staff_19002">
@@ -3096,7 +3096,7 @@
                 <dynam doxml.id="d28e3688" staff="6" startid="#note_19218" xml:id="dynam_19362">p</dynam>
                 <dynam doxml.id="d28e3738" staff="7" startid="#note_19248" xml:id="dynam_19374">p</dynam>
                 <dynam doxml.id="d28e3788" staff="8" startid="#note_19278" xml:id="dynam_19386">p</dynam>
-                <dynam doxml.id="d28e3843" staff="9" startid="#note_19308" xml:id="dynam_19398">p</dynam>
+                <dynam doxml.id="d28e3843" layer="1" staff="9" startid="#note_19308" xml:id="dynam_19398">p</dynam>
                 <tie endid="#note_19434" staff="1" startid="#note_19020" xml:id="tie_19410"/>
               </measure>
               <measure n="41" xml:id="m41_k550_003_a">
@@ -3263,7 +3263,6 @@
           </section>
         </score>
       </mdiv>
-
     </body>
   </music>
 </mei>

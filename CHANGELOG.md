@@ -1,5 +1,48 @@
 ## Version History
 
+### 5.1.1 (2025-01-24)
+- Update test data
+- Update documentation
+
+
+### 5.1.0 (2024-12-11)
+- Accept string as input for `$P_PARAMETERS` (#108)
+- #bugfix https://gitlab.mozarteum.at/dme/dime/tools/extract-parts/-/issues/74#note_8114 
+- Add `$P_LIB_PATH` (#109)
+
+### 5.0.0 (2024-11-21)
+- ControlEvents that points to an Event nested in app/choice (#92)
+- ConrolEvents nested in choice/app/supplied (#74)
+- Update allPartsRequested for split (#88)
+- controlEvents that are attached to one layer only (#89)
+- controlEvents that apply to a split stave (@tstamp) (#93)
+- Update controlEvent@staff when renumberStaves (#91)
+- Refactoring of controlEvents.xsl (#94)
+- @type=staff (#85)
+- Mandatory @layer attribute (#96)
+- Develop add-missing-layers utility (#106)
+- Processing sb/pb (#98)
+
+### 4.2.0 (2024-10-02)
+- Split <staff> (#87)
+- #bugfix: processing of ControlEvents, when one staff has `mei:mRest` (#86)
+- Enhance parameter configuration (#80) 
+
+### 4.1.0 (2024-09-17)
+- Communicate "split" (#82)
+- Renumber `<staff>`s (#73)
+- Implement 'renumberStaves' parameter (#84)
+- Adjust `scoreDef@xml:id` (#72)
+- Split staffDef (#77)
+- Implement staffDef@label (#83)
+- Move @decls (#81)
+- Implement 'renumberStaves' parameter (#84)
+- Update unit tests with new parameters syntax (#79)
+
+### 4.0.0 (2024-08-28)
+- Changed parameter format for defining staves and layers to extract from string to XML (#3).
+- Large refactoring of the code base (#10, #15, #17, #18, #19).
+
 ### 3.1.0 (2024-07-08)
 - Set up extract-parts as a separate project (dme/dime/project-management/#38).
 - Moved documentation to Markdown.

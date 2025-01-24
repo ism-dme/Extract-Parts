@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scoreDef key.mode="major" key.pname="f" keysig="1f" meter.count="4" meter.sym="common" meter.unit="4" optimize="true" xml:id="scoreDef_01-A">
+  <staffGrp bar.thru="false" xml:id="staffGrp_01-A">
+    <staffGrp symbol="bracket" xml:id="staffGrp_02-A">
+      <staffDef clef.line="2" clef.shape="G" dme.parts="1,2" lines="5" n="1" xml:id="staffDef_P1-A">
+        <label xml:id="label_staffDef_P1-A">Oboe I, II</label>
+        <labelAbbr xml:id="labelAbbr_staffDef_P1-A">Ob</labelAbbr>
+        <layerDef decls="#perfRes_01" n="1" xml:id="layerDef_Ob1-A"/>
+        <layerDef decls="#perfRes_01" n="2" xml:id="layerDef_Ob2-A"/>
+      </staffDef>
+    </staffGrp>
+    <staffGrp symbol="bracket" xml:id="staffGrp_03-A">
+      <staffDef clef.line="2" clef.shape="G" dme.parts="3,4" keysig="0" lines="5" n="2" trans.diat="-4" trans.semi="-7" xml:id="staffDef_P2-A">
+        <label xml:id="label_staffDef_P2-A">Corno I, II<lb xml:id="lb_label_StaffDef_P2-A"/>in Fa</label>
+        <labelAbbr xml:id="labelAbbr_staffDef_P2-A">Cor (Fa)</labelAbbr>
+        <layerDef decls="#perfRes_02" n="1" xml:id="layerDef_Cor1-A"/>
+        <layerDef decls="#perfRes_02" n="2" xml:id="layerDef_Cor2-A"/>
+      </staffDef>
+    </staffGrp>
+    <staffGrp bar.thru="true" symbol="bracket" xml:id="staffGrp_04-A">
+      <staffGrp symbol="brace" xml:id="staffGrp_05-A">
+        <staffDef clef.line="2" clef.shape="G" decls="#perfRes_03" dme.parts="5" lines="5" n="3" xml:id="staffDef_P3-A">
+          <label xml:id="label_staffDef_P3-A">Violino I</label>
+          <labelAbbr xml:id="labelAbbr_staffDef_P3-A">Vl I</labelAbbr>
+        </staffDef>
+        <staffDef clef.line="2" clef.shape="G" decls="#perfRes_03" dme.parts="6" lines="5" n="4" xml:id="staffDef_P4-A">
+          <label xml:id="label_staffDef_P4-A">Violino II</label>
+          <labelAbbr xml:id="labelAbbr_StaffDef_P4-A">Vl II</labelAbbr>
+        </staffDef>
+      </staffGrp>
+      <staffDef clef.line="3" clef.shape="C" decls="#perfRes_04" dme.parts="7,12" lines="5" n="5" xml:id="staffDef_P5-A">
+        <label xml:id="label_staffP5-A">Viola I, II</label>
+        <labelAbbr xml:id="labelAbbrP5-A">Va.</labelAbbr>
+      </staffDef>
+    </staffGrp>
+    <staffDef clef.line="2" clef.shape="G" decls="#perfRes_05" dme.parts="8" lines="5" n="6" xml:id="staffDef_P6-A">
+      <label xml:id="label_staffP6-A">Soprano</label>
+      <labelAbbr xml:id="labelAbbrP6-A">S</labelAbbr>
+    </staffDef>
+    <staffGrp symbol="bracket" xml:id="staffGrp_06-A">
+      <staffDef clef.line="4" clef.shape="F" decls="#perfRes_06 #perfRes_07 #perfRes_08" dme.parts="9,10,11" lines="5" n="7" xml:id="staffDef_P7-A">
+        <label xml:id="label_staffP7-A">Violoncello, Basso <!--<lb xml:id="lb_P7-A"/>--> ed Organo</label>
+        <labelAbbr xml:id="labelAbbrP7-A">Vc./Bs./Org.</labelAbbr>
+      </staffDef>
+    </staffGrp>
+  </staffGrp>
+</scoreDef>

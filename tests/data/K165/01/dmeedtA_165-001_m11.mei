@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0">
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title label="NMA digital" type="unit">Test data based on W. A. Mozart, K. 165/01.</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <title>Digital Mozart Edition</title>
+        </edition>
+      </editionStmt>
+      <pubStmt>
+        <publisher>
+          <corpName>Mozarteum</corpName>
+          <ptr target="https://www.mozarteum.at"/>
+        </publisher>
+        <availability>
+          <useRestrict label="license">CC BY-NC-SA 4.0</useRestrict>
+        </availability>
+      </pubStmt>
+    </fileDesc>
+    <workDesc>
+      <work>
+        <perfMedium>
+          <perfResList auth="marcmusperf"
+            auth.uri="https://www.loc.gov/standards/valuelist/marcmusperf.html"
+            xmlns:mei="http://www.music-encoding.org/ns/mei">
+            <perfRes codedval="ba" n="2" trans.diat="-4" trans.semi="-7" xml:id="perfRes_02"
+              >Corno</perfRes>
+          </perfResList>
+        </perfMedium>
+      </work>
+    </workDesc>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv n="1" xml:id="mdiv_165001-A">
+        <score xml:id="score_165001-A">
+          <scoreDef key.mode="major" key.pname="f" keysig="1f" meter.count="4" meter.unit="2" n="1"
+            optimize="true" xml:id="scoreDef_01-A">
+            <staffGrp bar.thru="false" xml:id="scoreDef_01_staffGrp_01-A">
+              <staffGrp symbol="bracket" xml:id="scoreDef_01_staffGrp_03-A">
+                <staffDef clef.line="2" clef.shape="G" keysig="0" lines="5" n="1" trans.diat="-4"
+                  trans.semi="-7" xml:id="scoreDef_01_staffDef_02-A">
+                  <label xml:id="label_02-A">Corno I, II<lb xml:id="lb_02-A"/>in Fa</label>
+                  <labelAbbr xml:id="labelAbbr_02-A">Cor (Fa)</labelAbbr>
+                  <layerDef decls="#perfRes_02" n="1" type="part"
+                    xml:id="scoreDef_01_layerDef_Cor1-A"/>
+                  <layerDef decls="#perfRes_02" n="2" type="part"
+                    xml:id="scoreDef_01_layerDef_Cor2-A"/>
+                </staffDef>
+              </staffGrp>
+            </staffGrp>
+          </scoreDef>
+
+          <section xml:id="section_allegro-A">
+            <measure n="11" xml:id="m11_k165_001-A">
+              <staff dme.parts="3,4" n="1" xml:id="staff_4587-A">
+                <layer n="1" xml:id="layer_4590-A">
+                  <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_4593-A"/>
+                  <rest dur="4" tstamp="2" xml:id="rest_4596-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_4602-A">
+                  <note dur="4" oct="4" pname="c" stem.sameas="#note_4593-A" tstamp="1"
+                    xml:id="note_4605-A"/>
+                  <rest sameas="#rest_4596-A" tstamp="2" xml:id="rest_4608-A"/>
+                </layer>
+              </staff>
+            </measure>
+          </section>
+        </score>
+      </mdiv>
+    </body>
+  </music>
+</mei>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
   <meiHead>
     <fileDesc>
@@ -277,17 +277,17 @@
               <dynam doxml.id="d27e6820" staff="8" startid="#note_34464" xml:id="dynam_34752">f</dynam>
               <dynam doxml.id="d27e6824" staff="8" startid="#note_34470" xml:id="dynam_34764">p</dynam>
               <slur endid="#note_34926" staff="1" startid="#note_34050" xml:id="slur_34836"/>
-              <slur endid="#note_34080" staff="2" startid="#note_34068" xml:id="slur_34842"/>
-              <slur endid="#note_34980" staff="2" startid="#note_34104" xml:id="slur_34848"/>
-              <slur endid="#note_35010" staff="3" startid="#note_34128" xml:id="slur_34854"/>
-              <slur endid="#note_34152" staff="3" startid="#note_34140" xml:id="slur_34860"/>
+              <slur endid="#note_34080" layer="1" staff="2" startid="#note_34068" xml:id="slur_34842"/>
+              <slur endid="#note_34980" layer="2" staff="2" startid="#note_34104" xml:id="slur_34848"/>
+              <slur endid="#note_35010" layer="1" staff="3" startid="#note_34128" xml:id="slur_34854"/>
+              <slur endid="#note_34152" layer="2" staff="3" startid="#note_34140" xml:id="slur_34860"/>
               <slur endid="#note_34254" staff="5" startid="#note_34236" xml:id="slur_34866"/>
               <slur endid="#note_35118" staff="5" startid="#note_34272" xml:id="slur_34872"/>
               <tie endid="#note_34050" staff="1" startid="#note_34044" xml:id="tie_34873"/>
-              <tie endid="#note_34104" staff="2" startid="#note_34098" xml:id="tie_34874"/>
-              <tie endid="#note_34128" staff="3" startid="#note_34122" xml:id="tie_34875"/>
-              <tie endid="#note_35058" staff="4" startid="#note_34182" xml:id="tie_34878"/>
-              <tie endid="#note_35076" staff="4" startid="#note_34206" xml:id="tie_34890"/>
+              <tie endid="#note_34104" layer="2" staff="2" startid="#note_34098" xml:id="tie_34874"/>
+              <tie endid="#note_34128" layer="1" staff="3" startid="#note_34122" xml:id="tie_34875"/>
+              <tie endid="#note_35058" layer="1" staff="4" startid="#note_34182" xml:id="tie_34878"/>
+              <tie endid="#note_35076" layer="2" staff="4" startid="#note_34206" xml:id="tie_34890"/>
               <tie endid="#note_34236" staff="5" startid="#note_34224" xml:id="tie_34891"/>
               <tie endid="#note_34272" staff="5" startid="#note_34260" xml:id="tie_34892"/>
               <tie endid="#note_35106" staff="5" startid="#note_34278" xml:id="tie_34896"/>

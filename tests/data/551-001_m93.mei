@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
   <meiHead>
     <fileDesc>
@@ -232,7 +232,7 @@
               <dir layer="1 2" place="above" staff="5" tstamp="3" xml:id="dir_50274">
                 <rend fontstyle="normal" xml:id="rend_50280">a&#8198;2</rend>
               </dir>
-              <slur endid="#note_49824" staff="2" startid="#note_49812" xml:id="slur_50292"/>
+              <slur endid="#note_49824" layer="2" staff="2" startid="#note_49812" xml:id="slur_50292"/>
               <slur endid="#note_50004" staff="7" startid="#note_49986" xml:id="slur_50298"/>
               <slur endid="#note_50028" staff="7" startid="#note_50010" xml:id="slur_50304"/>
             </measure>

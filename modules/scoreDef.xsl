@@ -6,9 +6,9 @@
       <xd:p/>
     </xd:desc>
   </xd:doc>
-  <template match="scoreDef[not(ancestor::app) (:special case K. 550:)]" mode="step_one">
+  <template match="scoreDef[not(ancestor::app) (:special case K. 550:) and not(preceding::scoreDef)]" mode="step_one">
     <variable as="element()" name="delete.staffDefs">
-      <apply-templates mode="m.delete.staffDefs" select="."/>
+      <apply-templates mode="process.staffDef" select="."/>
     </variable>
     <variable as="element()" name="clean.staffGrps">
       <apply-templates mode="m.adjust.staffGrps" select="$delete.staffDefs"/>
@@ -18,35 +18,101 @@
 
 
   <xd:doc>
-    <xd:p>Processes staffDef depending if the whole staffDef is requested for extraction or one of the layerDefs.</xd:p>
+    <xd:p>Processes staffDef depending if the whole staff is requested for extraction or one of the layers.</xd:p>
     <xd:p>Deletes staves (mei:staffDef) which do not match the requested part number.</xd:p>
   </xd:doc>
-  <template match="staffDef" mode="m.delete.staffDefs">
+  <template match="staffDef" mode="process.staffDef" name="process.staffDef">
     <choose>
-      <!--One or more of the layerDefs-->
+      <!--Split staff-->
+      <when test="$REQUESTED_PARTS//dme:part[@staff = current()/@n]/@split">
+        <call-template name="split.staffDef"/>
+      </when>
+      <!--One or more layerDefs-->
       <when test="
-          some $staff in $REQ_STAVES_EXTRACT_LAYERS
+          some $staff in $REQ_PARTS_EXTRACT_LAYERS
             satisfies $staff = @n">
-        <copy>
-          <apply-templates select="@*"/>
-
-          <variable name="layer.n" select="map:get(dme:requested-staves-layers(), current()/@n)"/>
-
-          <call-template name="instrument.name.extracted.layer">
-            <with-param name="pLayerDef" select="layerDef[@n = $layer.n]" tunnel="yes"/>
-          </call-template>
-
-        </copy>
+        <call-template name="resolve.layerDef"/>
       </when>
       <!--Whole staff-->
       <when test="
-          some $staff in $REQ_STAVES_COMPLETE
+          some $staff in $REQ_PARTS_EXTRACT_STAVES
             satisfies $staff = @n">
         <!--        <call-template name="instrument.name.extracted.staff"/>-->
-        <copy-of select="."/>
+        <copy>
+          <call-template name="renumber.staffdef"/>
+          <apply-templates select="node()"/>
+        </copy>
       </when>
-      <!--Other staffDefs are deleted.-->
+      <!--Other staffDefs will be deleted.-->
     </choose>
+  </template>
+
+
+  <template name="resolve.layerDef">
+    <copy>
+      <call-template name="renumber.staffdef"/>
+      <variable as="attribute(layer)" name="layerN" select="$REQUESTED_PARTS//dme:part[@staff eq current()/@n]/@layer"/>
+      <attribute name="decls" select=".//layerDef[@n = $layerN]/@decls"/>
+      
+      <!--<message>
+        <value-of select="@xml:id"/>
+      </message>-->
+      
+      <!--TODO: Add @decls-->
+      <call-template name="get.part.labels">
+        <with-param as="element(layerDef)" name="pLayerDef" select="layerDef[@n = $layerN]" tunnel="yes"/>
+        <with-param as="element(staffDef)" name="pStaffDef" select="." tunnel="yes"/>
+      </call-template>
+    </copy>
+  </template>
+
+
+  <xd:doc>
+    <xd:desc>
+      <xd:p>Generates new staffDef elements based on the number of the layerDef elements</xd:p>
+    </xd:desc>
+  </xd:doc>
+  <template name="split.staffDef">
+
+    <variable as="element(mei:staffDef)" name="currentStaffDef" select="."/>
+
+    <iterate select="layerDef">
+      <element name="staffDef" namespace="http://www.music-encoding.org/ns/mei">
+
+        <apply-templates select="$currentStaffDef/@*"/>
+        <attribute name="decls" select="$currentStaffDef//layerDef[@n = current()/@n]/@decls"/>
+
+        <variable as="xs:integer" name="newStaffNumber">
+          <call-template name="get.new.staff.number">
+            <with-param as="xs:integer" name="staffN" select="xs:integer($currentStaffDef/@n)"/>
+            <with-param as="xs:integer" name="layerN" select="xs:integer(@n)"/>
+          </call-template>
+        </variable>
+
+        <attribute name="n" select="$newStaffNumber"/>
+        <attribute name="xml:id" select="$currentStaffDef/@xml:id || '_' || $newStaffNumber"/>
+
+        <call-template name="get.part.labels">
+          <with-param as="element(layerDef)" name="pLayerDef" select="." tunnel="yes"/>
+          <with-param as="element(mei:staffDef)" name="pStaffDef" select="$currentStaffDef" tunnel="yes"/>
+          <with-param as="xs:integer" name="pNewStaffDefNumber" select="$newStaffNumber"/>
+        </call-template>
+
+      </element>
+    </iterate>
+
+  </template>
+
+  <xd:doc>
+    <xd:desc>
+      <xd:p>Copies attributes. Renumbers staffDef@n if required.</xd:p>
+    </xd:desc>
+  </xd:doc>
+  <template name="renumber.staffdef">
+    <apply-templates select="@*"/>
+    <if test="$USER_PARAMETERS//dme:renumberStaves = 'yes' or $REQUESTED_PARTS//@split">
+      <attribute name="n" select="map:get($NEW_STAVES_NUMBERING, xs:integer(@n))"/>
+    </if>
   </template>
 
   <xd:doc>
@@ -99,55 +165,86 @@
     <xd:desc>
       <xd:p>Returns new label text, e. g. "Clarinetti" => 'Clarinetto I'</xd:p>
     </xd:desc>
-    <xd:param name="pLayerDef"/>
+    <xd:param name="pLayerDef">mei:layerDef of the mei:layer to be extracted</xd:param>
+    <xd:param name="pStaffDef">Current mei:staffDef.</xd:param>
+    <xd:param name="pNewStaffDefNumber">New number of the created staff. Optional parameter. It is passed in the context of split staves feature only.</xd:param>
   </xd:doc>
-  <template name="instrument.name.extracted.layer">
+  <template name="get.part.labels">
     <param name="pLayerDef" tunnel="yes"/>
+    <param as="element(mei:staffDef)" name="pStaffDef" tunnel="yes"/>
+    <param as="xs:integer?" name="pNewStaffDefNumber"/>
 
-    <variable as="element()" name="itemPerfRes" select="id(substring-after($pLayerDef/@decls, '#'))"/>
+    <variable as="element()" name="itemPerfRes" select="
+        let $perfResId := substring-after($pLayerDef/@decls, '#')
+        return
+          $P_GLOBAL_CONTEXT_ITEM/id($perfResId)"/>
     <variable as="xs:string" name="instrumentNamePerfRes" select="$itemPerfRes/text() => normalize-space()"/>
-
-    <variable as="document-node()" name="instrumentsList" select="doc($LIB_PATH || 'lists/instruments.xml')"/>
+    <variable as="document-node()" name="instrumentsList" select="doc($P_LIB_PATH || '/lists/instruments.xml')"/>
     <!--    TODO: The variable may be not optional later.-->
     <variable as="element()?" name="itemInstrumentsList" select="$instrumentsList/id($instrumentNamePerfRes)"/>
-
     <variable as="xs:string" name="instrumentName" select="$itemInstrumentsList/dme:name[@xml:lang = $P_LANGUAGE]/text() => normalize-space()"/>
     <variable as="xs:string" name="instrumentNameAbbr" select="$itemInstrumentsList/dme:name[@xml:lang = $P_LANGUAGE]/@label.abbr => normalize-space()"/>
+
     <variable as="map(xs:string, item()*)?" name="transposition">
-
-      <choose>
-        <when test="$itemPerfRes[@trans.diat and @trans.semi]">
-          <variable as="element()" name="itemTransposition" select="$itemInstrumentsList/dme:transposition[@trans.semi = $itemPerfRes/@trans.semi and @trans.diat = $itemPerfRes/@trans.diat]"/>
-
-          <variable as="element()" name="transpositionLabel" select="$itemTransposition/dme:label[@xml:lang = $P_LANGUAGE]"/>
-
-          <sequence select="
-              map {
-                'label': ' ' || $transpositionLabel/text() => normalize-space(),
-                'labelAbbr:': ' ' || $transpositionLabel/@label.abbr
-              }"/>
-        </when>
-        <otherwise>
-          <sequence select="map {}"/>
-        </otherwise>
-      </choose>
-
+      <call-template name="get.instruments.transposition">
+        <with-param name="itemPerfRes" select="$itemPerfRes"/>
+        <with-param name="itemInstrumentsList" select="$itemInstrumentsList"/>
+      </call-template>
     </variable>
 
     <variable as="xs:string" name="romanInteger">
       <call-template name="roman.integer"/>
     </variable>
 
+    <variable as="xs:string?" name="newIdSuffix">
+      <choose>
+        <when test="$pNewStaffDefNumber instance of xs:integer">
+          <value-of select="'_' || $pNewStaffDefNumber"/>
+        </when>
+        <otherwise>
+          <value-of select="''"/>
+        </otherwise>
+      </choose>
+    </variable>
 
     <label xmlns="http://www.music-encoding.org/ns/mei">
-      <xsl:attribute name="xml:id" select="label/@xml:id"/>
-      <xsl:value-of select="$instrumentName || $romanInteger || $transposition('label')"/>
+      <xsl:attribute name="xml:id" select="$pStaffDef/label/@xml:id || $newIdSuffix"/>
+      <xsl:value-of select="$instrumentName || $romanInteger || $transposition?label"/>
     </label>
 
     <labelAbbr xmlns="http://www.music-encoding.org/ns/mei">
-      <xsl:attribute name="xml:id" select="label/@xml:id"/>
-      <xsl:value-of select="$instrumentNameAbbr || $transposition('labelAbbr')"/>
+      <xsl:attribute name="xml:id" select="$pStaffDef/labelAbbr/@xml:id || $newIdSuffix"/>
+      <xsl:value-of select="$instrumentNameAbbr || $transposition?labelAbbr"/>
     </labelAbbr>
+
+  </template>
+
+  <template name="get.instruments.transposition">
+    <param as="element()" name="itemPerfRes"/>
+    <param as="element()?" name="itemInstrumentsList"/>
+
+    <choose>
+      <when test="$itemPerfRes[@trans.diat and @trans.semi]">
+        <variable as="element()" name="itemTransposition" select="$itemInstrumentsList/dme:transposition[@trans.semi = $itemPerfRes/@trans.semi and @trans.diat = $itemPerfRes/@trans.diat]"/>
+
+        <variable as="element()" name="transpositionLabel" select="$itemTransposition/dme:label[@xml:lang = $P_LANGUAGE]"/>
+        <!--TODO: The transpositionLable might be empty. Cf.    <item dme.db="b" loc.codedval="sd" xml:id="Basso">
+      <name label.abbr="Bs" xml:lang="IT">Basso</name>
+      <name label.abbr="Bs" xml:lang="DE">Kontrabass</name>
+      <name label.abbr="Bs" xml:lang="EN">Double Bass</name>
+      <transposition trans.diat="-7" trans.semi="-12"/>
+    </item>-->
+
+        <sequence select="
+            map {
+              'label': ' ' || $transpositionLabel/text() => normalize-space(),
+              'labelAbbr': ' ' || $transpositionLabel/@label.abbr
+            }"/>
+      </when>
+      <otherwise>
+        <sequence select="map {}"/>
+      </otherwise>
+    </choose>
   </template>
 
 
@@ -160,9 +257,10 @@
   </xd:doc>
   <template name="roman.integer">
     <param name="pLayerDef" tunnel="yes"/>
+    <param name="pStaffDef" tunnel="yes"/>
 
     <variable as="xs:boolean" name="sameTypeInstruments">
-      <variable as="xs:integer" name="declsCount" select=".//layerDef/@decls => distinct-values() => count()"/>
+      <variable as="xs:integer" name="declsCount" select="$pStaffDef//layerDef/@decls => distinct-values() => count()"/>
       <sequence select="
           if ($declsCount > 1) then
             false()

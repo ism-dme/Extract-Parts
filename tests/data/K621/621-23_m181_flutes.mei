@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0"
+  xml:id="ud1718ff9-0105-400d-9652-62e4c93dd7e2">
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title label="NMA digital" type="unit">Test data based on W. A. Mozart, K. 621/23.</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <title>Digital Mozart Edition</title>
+        </edition>
+      </editionStmt>
+      <pubStmt>
+        <publisher>
+          <corpName>Mozarteum</corpName>
+          <ptr target="https://www.mozarteum.at"/>
+        </publisher>
+        <availability>
+          <useRestrict label="license">CC BY-NC-SA 4.0</useRestrict>
+        </availability>
+      </pubStmt>
+    </fileDesc>
+    <workDesc>
+      <work>
+        <perfMedium>
+          <perfResList xmlns:mei="http://www.music-encoding.org/ns/mei" auth="marcmusperf"
+            auth.uri="https://www.loc.gov/standards/valuelist/marcmusperf.html">
+            <perfRes codedval="wa" n="1" xml:id="perfRes_01">Flauto</perfRes>
+          </perfResList>
+        </perfMedium>
+      </work>
+    </workDesc>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv n="2" type="movement_part" xml:id="mdiv_621023_02">
+        <score xml:id="score_621023_02">
+          <scoreDef key.mode="major" key.pname="f" keysig="1f" meter.count="3" meter.unit="8" n="1"
+            optimize="true" xml:id="scoreDef_01">
+            <staffGrp bar.thru="true" symbol="none" xml:id="staffGrp_08">
+              <staffDef clef.line="2" clef.shape="G" lines="5" n="1" xml:id="staffDef_P11">
+                <label xml:id="label_p01b">Flauto I, II</label>
+                <labelAbbr xml:id="labelAbbr_03">Fl</labelAbbr>
+                <layerDef decls="#perfRes_01" n="1" xml:id="layerDef_309"/>
+                <layerDef decls="#perfRes_01" n="2" xml:id="layerDef_312"/>
+              </staffDef>
+            </staffGrp>
+          </scoreDef>
+          <section xml:id="section">
+            <measure n="181" xml:id="m181_k621_023">
+              <!--<tempo doxml.id="d28e45" n="6" place="above" staff="1" tstamp="1" xml:id="tempo_01"
+                  >Andante maestoso</tempo>-->
+              <staff n="1" xml:id="staff_390">
+                <layer n="1" xml:id="layer_393">
+                  <rest dur="4" tstamp="1" xml:id="rest_396"/>
+                  <beam xml:id="beam_399">
+                    <note dots="1" dur="8" oct="6" pname="d" tstamp="1.5" xml:id="note_402"/>
+                    <note dur="16" oct="6" pname="d" tstamp="1.875" xml:id="note_405"/>
+                  </beam>
+                  <note dur="4" oct="6" pname="d" tstamp="2" xml:id="note_408"/>
+                  <note dur="4" oct="6" pname="d" tstamp="2.5" xml:id="note_411"/>
+                </layer>
+                <layer n="2" xml:id="layer_414">
+                  <rest sameas="#rest_396" tstamp="1" xml:id="rest_417"/>
+                  <beam xml:id="beam_420">
+                    <note dots="1" dur="8" oct="5" pname="g" tstamp="1.5" xml:id="note_423"/>
+                    <note dur="16" oct="5" pname="g" tstamp="1.875" xml:id="note_426"/>
+                  </beam>
+                  <note dur="4" oct="5" pname="g" tstamp="2" xml:id="note_429"/>
+                  <note dur="4" oct="5" pname="g" tstamp="2.5" xml:id="note_432"/>
+                </layer>
+              </staff>
+              <dynam layer="1 2" staff="1" startid="#note_402" xml:id="dynam_690">f</dynam>
+            </measure>
+          </section>
+        </score>
+      </mdiv>
+    </body>
+  </music>
+</mei>

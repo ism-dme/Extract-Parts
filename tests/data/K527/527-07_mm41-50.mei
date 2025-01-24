@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-model href="https://dme.mozarteum.at/DME/schemata/mei-DME-4.0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://dme.mozarteum.at/DME/schemata/mei-DME-4.0.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <mei meiversion="4.0.1" xmlns="http://www.music-encoding.org/ns/mei">
@@ -229,9 +229,9 @@
                 </supplied>
                 <!-- startid="#note_25470"  -->
                 <slur endid="#note_26145" staff="1" startid="#note_25434" xml:id="slur_26061"/>
-                <slur endid="#note_26181" staff="2" startid="#note_25470" xml:id="slur_26067"/>
-                <slur endid="#note_26217" staff="3" startid="#note_25527" xml:id="slur_26073"/>
-                <slur endid="#note_26244" staff="3" startid="#note_25554" xml:id="slur_26079"/>
+                <slur endid="#note_26181" layer="1" staff="2" startid="#note_25470" xml:id="slur_26067"/>
+                <slur endid="#note_26217" layer="1" staff="3" startid="#note_25527" xml:id="slur_26073"/>
+                <slur endid="#note_26244" layer="2" staff="3" startid="#note_25554" xml:id="slur_26079"/>
                 <slur endid="#note_26304" staff="5" startid="#note_25614" xml:id="slur_26085"/>
                 <slur endid="#note_26343" staff="6" startid="#note_25653" xml:id="slur_26094"/>
                 <slur endid="#note_25806" staff="8" startid="#note_25779" xml:id="slur_26100"/>
@@ -347,9 +347,9 @@
                   </layer>
                 </staff>
                 <slur endid="#note_26760" staff="1" startid="#note_26157" xml:id="slur_26661"/>
-                <slur endid="#note_26796" staff="2" startid="#note_26193" xml:id="slur_26670"/>
-                <slur endid="#note_26832" staff="3" startid="#note_26229" xml:id="slur_26676"/>
-                <slur endid="#note_26859" staff="3" startid="#note_26256" xml:id="slur_26682"/>
+                <slur endid="#note_26796" layer="1" staff="2" startid="#note_26193" xml:id="slur_26670"/>
+                <slur endid="#note_26832" layer="1" staff="3" startid="#note_26229" xml:id="slur_26676"/>
+                <slur endid="#note_26859" layer="2" staff="3" startid="#note_26256" xml:id="slur_26682"/>
                 <slur endid="#note_26946" staff="5" startid="#note_26316" xml:id="slur_26688"/>
                 <slur endid="#note_26985" staff="6" startid="#note_26355" xml:id="slur_26694"/>
                 <slur endid="#note_26448" staff="8" startid="#note_26421" xml:id="slur_26700"/>
@@ -473,17 +473,17 @@
                 <dynam doxml.id="d28e4832" layer="1 2" staff="4" startid="#note_26901" xml:id="dynam_27303">p</dynam>
                 <!--<dir xml:id="dir_27315" staff="2" startid="#note_26796" doxml.id="d28e4714" place="above"/>-->
                 <slur endid="#note_27423" staff="1" startid="#note_26772" xml:id="slur_27321"/>
-                <slur endid="#note_27453" staff="2" startid="#note_26808" xml:id="slur_27327"/>
-                <slur endid="#note_27483" staff="3" startid="#note_26844" xml:id="slur_27333"/>
-                <slur endid="#note_27504" staff="3" startid="#note_26871" xml:id="slur_27339"/>
+                <slur endid="#note_27453" layer="1" staff="2" startid="#note_26808" xml:id="slur_27327"/>
+                <slur endid="#note_27483" layer="1" staff="3" startid="#note_26844" xml:id="slur_27333"/>
+                <slur endid="#note_27504" layer="2" staff="3" startid="#note_26871" xml:id="slur_27339"/>
                 <slur endid="#note_27585" staff="5" startid="#note_26958" xml:id="slur_27345"/>
                 <slur endid="#note_27639" staff="6" startid="#note_26997" xml:id="slur_27354"/>
                 <slur endid="#note_27090" staff="8" startid="#note_27063" xml:id="slur_27360"/>
                 <slur endid="#note_27186" staff="8" startid="#note_27159" xml:id="slur_27366"/>
                 <slur endid="#note_27228" staff="8" startid="#note_27201" xml:id="slur_27372"/>
                 <slur endid="#note_27891" staff="10" startid="#note_27291" xml:id="slur_27378"/>
-                <tie endid="#note_27534" staff="4" startid="#note_26901" xml:id="tie_27384"/>
-                <tie endid="#note_27555" staff="4" startid="#note_26922" xml:id="tie_27386"/>
+                <tie endid="#note_27534" layer="1" staff="4" startid="#note_26901" xml:id="tie_27384"/>
+                <tie endid="#note_27555" layer="2" staff="4" startid="#note_26922" xml:id="tie_27386"/>
                 <tie endid="#note_27690" staff="7" startid="#note_27033" xml:id="tie_27393"/>
               </measure>
               <measure n="46" xml:id="m46_k527_007">
@@ -849,7 +849,7 @@
                 </staff>
                 <fermata doxml.id="d28e4681" staff="1" startid="#rest_28902" xml:id="fermata_29196"/>
                 <fermata doxml.id="d28e4740" layer="1 2" staff="2" startid="#note_28926" xml:id="fermata_29205"/>
-               <!-- <supplied xml:id="supplied_29211">
+                <!-- <supplied xml:id="supplied_29211">
                   <fermata doxml.id="d28e4744" layer="2" place="below" staff="2" startid="#note_28941" xml:id="fermata_29211"/>
                 </supplied>-->
                 <fermata doxml.id="d28e4794" layer="1 2" staff="3" startid="#note_28965" xml:id="fermata_29217"/>
@@ -958,7 +958,7 @@
                 </supplied>
                 <!-- startid="#note_29367"  -->
                 <slur endid="#note_29760" staff="1" startid="#note_29319" xml:id="slur_29691"/>
-                <slur endid="#note_29826" staff="3" startid="#note_29367" xml:id="slur_29700"/>
+                <slur endid="#note_29826" layer="1" staff="3" startid="#note_29367" xml:id="slur_29700"/>
                 <slur endid="#note_29892" staff="5" startid="#note_29415" xml:id="slur_29706"/>
                 <slur endid="#note_30624" staff="6" startid="#note_29442" xml:id="slur_29712"/>
               </measure>

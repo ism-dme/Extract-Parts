@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description run-as="external" stylesheet="add-@layer-@staff.xsl" xmlns:dme="http://www.mozarteum.at/ns/dme" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:test-helper="x-urn:tutorial:helper:ws-only-text:test-helper" xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!--DEBUG: Output files for XSpec (SchXslt-scenario):  C:\Users\sapov\WORKSPACE\DEVELOPMENT\DIME\DEBUG\xspec_out-->
+
+
+  <x:import href="../../tests/modules/test-data-vars.xspec"/>
+
+  <x:scenario label="slur">
+    <x:scenario label="slur@layer='2'">
+      <x:context select="$K550-003_mm_8-21"/>
+      <x:expect label="Added @layer" select="2" test="id('slur_9468')/@layer/xs:integer(.)"/>
+    </x:scenario>
+
+    <x:scenario label="slur@layer='1'">
+      <x:context select="$K550-003_mm_8-21"/>
+      <x:expect label="Added @layer." select="1" test="id('slur_9474')/@layer/xs:integer(.)"/>
+    </x:scenario>
+
+    <x:scenario label="slur[not(@layer)]">
+      <x:context select="$K550-003_mm_8-21"/>
+      <x:expect label="No @layer added." select="()" test="id('slur_9486')/@layer"/>
+    </x:scenario>
+  </x:scenario>
+
+
+  <x:scenario label="fermata">
+    <x:scenario label="No @staff.">
+      <x:context select="$dmeref_551-001_m23_m313"/>
+      <x:expect label="Added @staff." select="6" test="id('fermata_20496')/@staff/xs:integer(.)"/>
+      <x:expect label="No @layer added ." select="()" test="id('fermata_20496')/@layer"/>
+    </x:scenario>
+    <x:scenario label="@part=%all.">
+      <x:context select="$dmeref_551-001_m23_m313"/>
+      <x:expect label="No @layer added ." select="()" test="id('fermata_167136')/@layer"/>
+    </x:scenario>
+  </x:scenario>
+
+</x:description>

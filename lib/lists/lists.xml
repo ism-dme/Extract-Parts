@@ -46,6 +46,7 @@
     <item>tie</item>
     <item>slur</item>
     <item>turn</item>
+    <item>harm</item>
   </list>
   <list used-by="extractVoice.xsl" xml:id="dynams_1">
     <item>p</item>

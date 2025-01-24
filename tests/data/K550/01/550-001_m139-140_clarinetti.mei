@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0">
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title label="NMA digital" type="unit">Test data based on W. A. Mozart, K. 550/03.</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <title>Digital Mozart Edition</title>
+        </edition>
+      </editionStmt>
+      <pubStmt>
+        <publisher>
+          <corpName>Mozarteum</corpName>
+          <ptr target="https://www.mozarteum.at"/>
+        </publisher>
+        <availability>
+          <useRestrict label="license">CC BY-NC-SA 4.0</useRestrict>
+        </availability>
+      </pubStmt>
+    </fileDesc>
+    <workDesc>
+      <work>
+        <perfMedium>
+          <perfResList xmlns:mei="http://www.music-encoding.org/ns/mei" auth="marcmusperf"
+            auth.uri="https://www.loc.gov/standards/valuelist/marcmusperf.html">
+            <perfRes codedval="wc" n="3" trans.diat="-1" trans.semi="-2" xml:id="perfRes_03"
+              >Clarinetto</perfRes>
+          </perfResList>
+        </perfMedium>
+      </work>
+    </workDesc>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv n="1" xml:id="mdiv_550001">
+        <score xml:id="score_550001">
+          <scoreDef key.mode="minor" key.pname="g" key.sig="2f" meter.count="2" meter.sym="cut"
+            meter.unit="2" optimize="false" xml:id="scoreDef_01-02">
+            <staffGrp barthru="false" xml:id="staffGrp_01-02">
+              <staffDef clef.line="2" clef.shape="G" keysig="0" lines="5" n="3" trans.diat="-1" trans.semi="-2" xml:id="scoreDef_01-02_staffDef_03">
+                <label xml:id="label_03">Clarinetto I, II<lb xml:id="lb_01"/>in Si♭</label>
+                <labelAbbr xml:id="labelAbbr_03">Cl</labelAbbr>
+                <layerDef decls="#perfRes_03" n="1" type="part" xml:id="scoreDef_01-02_layerDef_Cl1"/>
+                <layerDef decls="#perfRes_03" n="2" type="part" xml:id="scoreDef_01-02_layerDef_Cl2"/>
+              </staffDef>
+            </staffGrp>
+          </scoreDef>
+          <section xml:id="section_molto_allegro">
+            <measure n="139" xml:id="m139_k550_001">
+              <staff n="3" xml:id="staff_83754">
+                <layer n="1" xml:id="layer_83760">
+                  <rest dur="2" tstamp="1" xml:id="rest_83766"/>
+                  <rest dur="4" tstamp="2" xml:id="rest_83772"/>
+                  <beam xml:id="beam_83778">
+                    <note accid="f" dur="8" oct="5" pname="e" tstamp="2.5" xml:id="note_83784"/>
+                    <note dur="8" oct="5" pname="d" tstamp="2.75" xml:id="note_83790"/>
+                  </beam>
+                </layer>
+                <layer n="2" xml:id="layer_83796">
+                  <mRest tstamp="1" xml:id="mRest_83802"/>
+                </layer>
+              </staff>
+              <dynam layer="1" place="above" staff="3" startid="#note_83784" xml:id="dynam_84024"
+                >p</dynam>
+              <slur layer="1" endid="#note_83790" staff="3" startid="#note_83784"
+                xml:id="slur_84114"/>
+            </measure>
+            <measure n="140" xml:id="m140_k550_001">
+              <staff n="3" xml:id="staff_84300">
+                <layer n="1" xml:id="layer_84306">
+                  <note dur="4" oct="5" pname="d" tstamp="1" xml:id="note_84312"/>
+                  <beam xml:id="beam_84318">
+                    <note dur="8" oct="5" pname="e" tstamp="1.5" xml:id="note_84324">
+                      <supplied resp="#NMA-editors" xml:id="supplied_84330">
+                        <accid accid="f" xml:id="accid_84336"/>
+                      </supplied>
+                    </note>
+                    <note dur="8" oct="5" pname="d" tstamp="1.75" xml:id="note_84342"/>
+                  </beam>
+                  <note dur="4" oct="5" pname="d" tstamp="2" xml:id="note_84348"/>
+                  <note dur="4" oct="5" pname="d" tstamp="2.5" xml:id="note_84354"/>
+                </layer>
+                <layer n="2" xml:id="layer_84360">
+                  <note dur="1" oct="4" pname="g" tstamp="1" xml:id="note_84366"/>
+                </layer>
+              </staff>
+              <dynam layer="2" staff="3" startid="#note_84312" xml:id="dynam_84564">p</dynam>
+              <slur layer="1" endid="#note_84342" staff="3" startid="#note_84324"
+                xml:id="slur_84696"/>
+            </measure>
+          </section>
+        </score>
+      </mdiv>
+    </body>
+  </music>
+</mei>

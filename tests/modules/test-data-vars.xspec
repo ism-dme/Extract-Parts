@@ -9,14 +9,25 @@
   <x:variable as="document-node()" href="../data/550-003_mm_8-21.mei" name="K550-003_mm_8-21" select="test-helper:remove-whitespace-only-text(/)"/>
   <x:variable as="document-node()" href="../data/550-004_m86.mei" name="K550-004_m86" select="/"/>
   <x:variable as="document-node()" href="../data/551-001_m93.mei" name="K551-001_m93" select="/"/>
-  <x:variable as="document-node()" href="../data/621-23_m187_flutes.mei" name="K621-23" select="test-helper:remove-whitespace-only-text(/)"/>
-  <x:variable as="document-node()" href="../data/dmeedtA_165-001_m1.mei" name="K165-001_edtA" select="test-helper:remove-whitespace-only-text(/)"/>
-  <x:variable as="document-node()" href="../data/527-07_mm4-5_8-9_fagotti.mei" name="K527-07_mm4-5_8-9_fagotti" select="test-helper:remove-whitespace-only-text(/)"/>
-  <x:variable as="document-node()" href="../data/527-07_mm41-50.mei" name="K527-07_mm41-50" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K621/621-23_m187_flutes.mei" name="K621-23" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K527/527-07_mm8-9_fagotto12.mei" name="K527-07_mm4-5_8-9_fagotti" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K527/527-07_mm41-50.mei" name="K527-07_mm41-50" select="test-helper:remove-whitespace-only-text(/)"/>
   <x:variable as="document-node()" href="../data/dmeref_551-001_m23_m313.mei" name="dmeref_551-001_m23_m313" select="test-helper:remove-whitespace-only-text(/)"/>
   <x:variable as="document-node()" href="../data/550-003_Trio_m42.mei" name="K550-003_Trio_m42" select="test-helper:remove-whitespace-only-text(/)"/>
   <x:variable as="document-node()" href="../data/551-002_m51.mei" name="K551-002_m51" select="test-helper:remove-whitespace-only-text(/)"/>
-  <x:variable as="document-node()" href="../data/dmeedtA_165-001_m28.mei" name="dmeedtA_165-001_m28" select="test-helper:remove-whitespace-only-text(/)"/>
   <x:variable as="document-node()" href="../data/550-001.mei" name="K550-001" select="test-helper:remove-whitespace-only-text(/)"/>
+
+  <!--  K. 165-->
+  <x:variable as="document-node()" href="../data/K165/01/dmeedtA_165-001.mei" name="dmeedtA_165-001" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K165/01/dmeedtA_165-001_m1.mei" name="dmeedtA_165-001_m1" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K165/01/dmeedtA_165-001_m28_(1-split_manual)-(2-1)-(6).mei" name="dmeedtA_165-001_m28_1-split_manual-2-1-6" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K165/01/dmeedtA_165-001_m28.mei" name="dmeedtA_165-001_m28" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K165/01/dmeedtA_165-001_mm63-66.mei" name="dmeedtA_165-001_mm63-66.mei" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K165/01/dmeedtA_165-001_mm91-93.mei" name="dmeedtA_165-001_mm91-93" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K165/01/dmeedtA_165-001_mm123-126.mei" name="dmeedtA_165-001_mm123-126" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K165/01/dmeedtA_165-004_m156-159.mei" name="dmeedtA_165-004_m156-159" select="test-helper:remove-whitespace-only-text(/)"/>
+  <x:variable as="document-node()" href="../data/K165/dmeedtA_165-004.mei" name="dmeedtA_165-004" select="test-helper:remove-whitespace-only-text(/)"/>
+
+
 
 </x:description>

@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href="https://raw.githubusercontent.com/ism-dme/DIME-tools/main/validate/schemas/mei-DME-5.0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/ism-dme/DIME-tools/main/validate/schemas/mei-DME-5.0.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei meiversion="5.0" xmlns="http://www.music-encoding.org/ns/mei" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!--<xi:include href="../meiHead.mei" xpointer="element(/1/1)"/>-->
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title label="NMA digital" type="unit">Test data based on W. A. Mozart, K. 165/01, m. 28.</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <title>Digital Mozart Edition</title>
+        </edition>
+      </editionStmt>
+      <pubStmt>
+        <publisher>
+          <corpName>Mozarteum</corpName>
+          <ptr target="https://www.mozarteum.at"/>
+        </publisher>
+        <availability>
+          <useRestrict label="license">CC BY-NC-SA 4.0</useRestrict>
+        </availability>
+      </pubStmt>
+    </fileDesc>
+    <workDesc>
+      <work>
+        <perfMedium>
+          <perfResList auth="marcmusperf" auth.uri="https://www.loc.gov/standards/valuelist/marcmusperf.html">
+            <perfRes codedval="wb" n="1" xml:id="perfRes_01">Oboe</perfRes>
+            <perfRes codedval="ba" n="2" trans.diat="-5" trans.semi="-9" xml:id="perfRes_02">Corno</perfRes>
+            <perfRes codedval="sa" n="3" xml:id="perfRes_03">Violino</perfRes>
+            <perfRes codedval="sb" n="4" xml:id="perfRes_04">Viola</perfRes>
+            <perfRes codedval="va" n="5" xml:id="perfRes_05">Soprano</perfRes>
+            <perfRes codedval="sc" n="6" xml:id="perfRes_06">Violoncello</perfRes>
+            <perfRes codedval="sd" n="7" trans.diat="-7" trans.semi="-12" xml:id="perfRes_07">Basso</perfRes>
+            <perfRes codedval="kb" n="8" xml:id="perfRes_08">Organo</perfRes>
+          </perfResList>
+        </perfMedium>
+      </work>
+    </workDesc>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv n="1" xml:id="mdiv_165001-A">
+        <score xml:id="score_165001-A">
+          <scoreDef key.mode="major" key.pname="f" keysig="1f" meter.count="4" meter.sym="common" meter.unit="4" optimize="true" xml:id="scoreDef_01-A">
+            <staffGrp bar.thru="false" xml:id="staffGrp_01-A">
+              <staffGrp symbol="bracket" xml:id="staffGrp_02-A">
+                <staffDef clef.line="2" clef.shape="G" dme.parts="1,2" lines="5" n="1" xml:id="staffDef_P1-A">
+                  <label xml:id="label_staffDef_P1-A">Oboe I, II</label>
+                  <labelAbbr xml:id="labelAbbr_staffDef_P1-A">Ob</labelAbbr>
+                  <layerDef decls="#perfRes_01" n="1" xml:id="layerDef_Ob1-A"/>
+                  <layerDef decls="#perfRes_01" n="2" xml:id="layerDef_Ob2-A"/>
+                </staffDef>
+              </staffGrp>
+              <staffGrp symbol="bracket" xml:id="staffGrp_03-A">
+                <staffDef clef.line="2" clef.shape="G" dme.parts="3,4" keysig="0" lines="5" n="2" trans.diat="-4" trans.semi="-7" xml:id="staffDef_P2-A">
+                  <label xml:id="label_staffDef_P2-A">Corno I, II<lb xml:id="lb_label_StaffDef_P2-A"/>in Fa</label>
+                  <labelAbbr xml:id="labelAbbr_staffDef_P2-A">Cor (Fa)</labelAbbr>
+                  <layerDef decls="#perfRes_02" n="1" xml:id="layerDef_Cor1-A"/>
+                  <layerDef decls="#perfRes_02" n="2" xml:id="layerDef_Cor2-A"/>
+                </staffDef>
+              </staffGrp>
+              <staffGrp bar.thru="true" symbol="bracket" xml:id="staffGrp_04-A">
+                <staffGrp symbol="brace" xml:id="staffGrp_05-A">
+                  <staffDef clef.line="2" clef.shape="G" decls="#perfRes_03" dme.parts="5" lines="5" n="3" xml:id="staffDef_P3-A">
+                    <label xml:id="label_staffDef_P3-A">Violino I</label>
+                    <labelAbbr xml:id="labelAbbr_staffDef_P3-A">Vl I</labelAbbr>
+                  </staffDef>
+                  <staffDef clef.line="2" clef.shape="G" decls="#perfRes_03" dme.parts="6" lines="5" n="4" xml:id="staffDef_P4-A">
+                    <label xml:id="label_staffDef_P4-A">Violino II</label>
+                    <labelAbbr xml:id="labelAbbr_StaffDef_P4-A">Vl II</labelAbbr>
+                  </staffDef>
+                </staffGrp>
+                <staffDef clef.line="3" clef.shape="C" decls="#perfRes_04" dme.parts="7,12" lines="5" n="5" xml:id="staffDef_P5-A">
+                  <label xml:id="label_staffP5-A">Viola I, II</label>
+                  <labelAbbr xml:id="labelAbbrP5-A">Va.</labelAbbr>
+                </staffDef>
+              </staffGrp>
+              <staffDef clef.line="2" clef.shape="G" decls="#perfRes_05" dme.parts="8" lines="5" n="6" xml:id="staffDef_P6-A">
+                <label xml:id="label_staffP6-A">Soprano</label>
+                <labelAbbr xml:id="labelAbbrP6-A">S</labelAbbr>
+              </staffDef>
+              <staffGrp symbol="bracket" xml:id="staffGrp_06-A">
+                <staffDef clef.line="4" clef.shape="F" decls="#perfRes_06 #perfRes_07 #perfRes_08" dme.parts="9,10,11" lines="5" n="7" xml:id="staffDef_P7-A">
+                  <label xml:id="label_staffP7-A">Violoncello, Basso <!--<lb xml:id="lb_P7-A"/>--> ed Organo</label>
+                  <labelAbbr xml:id="labelAbbrP7-A">Vc./Bs./Org.</labelAbbr>
+                </staffDef>
+              </staffGrp>
+            </staffGrp>
+          </scoreDef>
+          <section xml:id="section_allegro-A">
+            <measure n="123" xml:id="m123_k165_001-A">
+              <staff dme.parts="1,2" n="1" xml:id="staff_28200-A">
+                <layer n="1" xml:id="layer_28203-A">
+                  <note dur="2" oct="5" pname="c" tstamp="1" xml:id="note_28206-A"/>
+                  <rest dur="2" tstamp="3" xml:id="rest_28209-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_28203a-A">
+                  <choice xml:id="choice_28206a-A">
+                    <reg resp="#DME-editors" type="doubling" xml:id="reg_28206a-A">
+                      <note dur="2" oct="5" pname="c" tstamp="1" xml:id="note_28206a-A"/>
+                      <rest sameas="#rest_28209-A" tstamp="3" xml:id="rest_28209a-A"/>
+                    </reg>
+                    <orig xml:id="orig_28206a-A"/>
+                  </choice>
+                </layer>
+              </staff>
+              <staff dme.parts="3,4" n="2" xml:id="staff_28212-A">
+                <layer n="1" xml:id="layer_28215-A">
+                  <note dur="2" oct="4" pname="g" tstamp="1" xml:id="note_28218-A"/>
+                  <rest dur="2" tstamp="3" xml:id="rest_28221-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_28215a-A">
+                  <note dur="2" oct="4" pname="g" tstamp="1" xml:id="note_28218a-A"/>
+                  <rest sameas="#rest_28221-A" tstamp="3" xml:id="rest_28221a-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="5" n="3" xml:id="staff_28224-A">
+                <layer n="1" xml:id="layer_28227-A">
+                  <note dur="2" oct="4" pname="c" tstamp="1" xml:id="note_28230-A"/>
+                  <rest dur="2" tstamp="3" xml:id="rest_28233-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="6" n="4" xml:id="staff_28236-A">
+                <layer n="1" xml:id="layer_28239-A">
+                  <choice xml:id="choice_28242-A">
+                    <reg resp="#DME-editors" type="doubling" xml:id="reg_28242-A">
+                      <note dur="2" oct="4" pname="c" tstamp="1" xml:id="note_28242-A"/>
+                      <rest dur="2" tstamp="3" xml:id="rest_28245-A"/>
+                    </reg>
+                    <orig xml:id="orig_28242-A"/>
+                  </choice>
+                </layer>
+              </staff>
+              <staff dme.parts="7,12" n="5" xml:id="staff_28248-A">
+                <layer n="1" xml:id="layer_28251-A">
+                  <choice xml:id="choice_28254-A">
+                    <reg resp="#DME-editors" type="doubling" xml:id="reg_28254-A">
+                      <note dur="2" oct="4" pname="c" tstamp="1" xml:id="note_28254-A"/>
+                      <rest dur="2" tstamp="3" xml:id="rest_28257-A"/>
+                    </reg>
+                    <orig xml:id="orig_28254-A"/>
+                  </choice>
+                </layer>
+              </staff>
+              <staff dme.parts="8" n="6" xml:id="staff_28260-A">
+                <layer n="1" xml:id="layer_28263-A">
+                  <note dots="1" dur="4" oct="4" pname="f" tstamp="1" xml:id="note_28266-A">
+                    <verse xml:id="verse_28269-A">
+                      <syl con="d" wordpos="i" xml:id="syl_28272-A">ae</syl>
+                    </verse>
+                  </note>
+                  <note dur="8" oct="4" pname="g" tstamp="2.5" xml:id="note_28278-A">
+                    <verse xml:id="verse_28281-A">
+                      <syl con="d" wordpos="m" xml:id="syl_28284-A">the</syl>
+                    </verse>
+                  </note>
+                  <note dots="1" dur="4" oct="4" pname="g" tstamp="3" xml:id="note_28290-A">
+                    <verse xml:id="verse_28293-A">
+                      <syl wordpos="t" xml:id="syl_28296-A">ra</syl>
+                    </verse>
+                  </note>
+                  <note dur="8" oct="4" pname="f" tstamp="4.5" xml:id="note_28302-A">
+                    <verse xml:id="verse_28305-A">
+                      <syl xml:id="syl_28308-A">cum</syl>
+                    </verse>
+                  </note>
+                </layer>
+              </staff>
+              <staff dme.parts="9,10,11" n="7" xml:id="staff_28314-A">
+                <layer n="1" xml:id="layer_28317-A">
+                  <note dur="2" oct="3" pname="c" tstamp="1" xml:id="note_28320-A"/>
+                  <rest dur="2" tstamp="3" xml:id="rest_28323-A"/>
+                </layer>
+              </staff>
+              <fermata layer="1 2" place="above" staff="1" startid="#rest_28209-A" xml:id="fermata_28326-A"/>
+              <fermata layer="1 2" place="above" staff="2" startid="#rest_28221-A" xml:id="fermata_28329-A"/>
+              <fermata place="above" staff="3" startid="#rest_28233-A" xml:id="fermata_28332-A"/>
+              <fermata place="above" staff="4" tstamp="3.175" xml:id="fermata_28335-A"/>
+              <!--<choice xml:id="choice_28335-A">
+                <reg resp="#DME-editors" type="doubling" xml:id="reg_28335-A">
+                  <fermata place="above" staff="4" startid="#rest_28245-A" xml:id="fermata_28335-A"/>
+                </reg>
+                <orig xml:id="orig_28335-A">
+                  <fermata place="above" staff="4" tstamp="3"  xml:id="fermata_28335a-A"/>
+                </orig>
+              </choice>-->
+              <!-- IC: Die Fermata kann in <orig> nicht kodiert werden, wenn sie auf @startid bezogen ist, denn sie ist im Autograph in einem leeren Notensystem über ca. @tstamp="3.2" notiert. Die Kodierung mit <choice> ist nur ein Behelf und sollte vermieder werden, um eine Verdopplung zu vermeiden. @type="?", doubling eher nicht. Eine einzige Fermata mit tstamp zu kodieren ist problematisch beim edierten Text, da die Fermata nicht mehr auf die entsprechende @startid der Pause bezogen wird. Im Moment mit @tstamp="3.2" als Notlösung kodiert. -->
+              <!--<choice xml:id="choice_28341-A">
+                <reg resp="#DME-editors" type="doubling" xml:id="reg_28341-A">
+                  <fermata place="above" staff="5" startid="#rest_28257-A" xml:id="fermata_28341-A"/>
+                </reg>
+                <orig xml:id="orig_28341-A">
+                  <fermata place="above" staff="5" tstamp="3" xml:id="fermata_28341a-A"/>
+                </orig>
+              </choice>-->
+              <fermata place="above" staff="5" tstamp="3.175" xml:id="fermata_28341-A"/>
+              <fermata place="above" staff="6" startid="#note_28290-A" xml:id="fermata_28344-A"/>
+              <fermata place="above" staff="7" startid="#rest_28323-A" xml:id="fermata_28347-A"/>
+              <choice xml:id="choice_28347a">
+                <reg resp="#DME-editors" type="editorial_normalization" xml:id="reg_28347a"/>
+                <orig xml:id="orig_28347a">
+                  <fermata place="below" staff="7" startid="#rest_28323-A" xml:id="fermata_28347a-A"/>
+                </orig>
+              </choice>
+              <!-- IC: Zweite Fermata im Bass überflüssig, gestrichen, Kodierung noch zu definieren für überflüssige Notation, z.B. durch @type oder @evidence="redundant" Evtl. nur Regularization statt editorischem Eingriff. -->
+              <trill staff="6" startid="#note_28290-A" xml:id="trill_28350-A"/>
+            </measure>
+            <measure n="124" xml:id="m124_k165_001-A">
+              <staff dme.parts="1,2" n="1" xml:id="staff_28359-A">
+                <layer n="1" xml:id="layer_28362-A">
+                  <note dur="2" oct="5" pname="f" tstamp="1" xml:id="note_28365-A"/>
+                  <note dur="4" oct="5" pname="e" tstamp="3" xml:id="note_28368-A"/>
+                  <note dur="4" oct="5" pname="d" tstamp="4" xml:id="note_28371-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_28374-A">
+                  <choice xml:id="choice_28377-A">
+                    <reg resp="#DME-editors" type="doubling" xml:id="reg_28377-A">
+                      <note dur="2" oct="5" pname="f" tstamp="1" xml:id="note_28377-A"/>
+                      <note dur="4" oct="5" pname="e" tstamp="3" xml:id="note_28380-A"/>
+                      <note dur="4" oct="5" pname="d" tstamp="4" xml:id="note_28383-A"/>
+                    </reg>
+                    <orig xml:id="orig_28377-A"/>
+                  </choice>
+                </layer>
+              </staff>
+              <staff dme.parts="3,4" n="2" xml:id="staff_28386-A">
+                <layer n="1" xml:id="layer_28389-A">
+                  <note dur="1" oct="5" pname="c" tstamp="1" xml:id="note_28392-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_28395-A">
+                  <note dur="1" oct="4" pname="c" tstamp="1" xml:id="note_28398-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="5" n="3" xml:id="staff_28401-A">
+                <layer n="1" xml:id="layer_28404-A">
+                  <chord dur="4" tstamp="1" xml:id="chord_28407-A">
+                    <note dur="4" oct="5" pname="f" xml:id="note_28410-A"/>
+                    <note dur="4" oct="4" pname="a" xml:id="note_28413-A"/>
+                  </chord>
+                  <beam xml:id="beam_28416-A">
+                    <note dur="16" oct="5" pname="f" tstamp="2" xml:id="note_28419-A"/>
+                    <note dur="16" oct="5" pname="g" tstamp="2.25" xml:id="note_28422-A"/>
+                    <note dur="16" oct="5" pname="a" tstamp="2.5" xml:id="note_28425-A"/>
+                    <note dur="16" oct="5" pname="f" tstamp="2.75" xml:id="note_28428-A"/>
+                  </beam>
+                  <note dur="4" oct="5" pname="e" tstamp="3" xml:id="note_28431-A"/>
+                  <beam xml:id="beam_28434-A">
+                    <note dur="16" oct="5" pname="d" tstamp="4" xml:id="note_28437-A"/>
+                    <note dur="16" oct="5" pname="e" tstamp="4.25" xml:id="note_28440-A"/>
+                    <note dur="16" oct="5" pname="f" tstamp="4.5" xml:id="note_28443-A"/>
+                    <note dur="16" oct="5" pname="d" tstamp="4.75" xml:id="note_28446-A"/>
+                  </beam>
+                </layer>
+              </staff>
+              <staff dme.parts="6" n="4" xml:id="staff_28449-A">
+                <layer n="1" xml:id="layer_28452-A">
+                  <choice xml:id="choice_28455-A">
+                    <reg resp="#DME-editors" type="doubling" xml:id="reg_28455-A">
+                      <chord dur="4" tstamp="1" xml:id="chord_28455-A">
+                        <note dur="4" oct="5" pname="f" xml:id="note_28458-A"/>
+                        <note dur="4" oct="4" pname="a" xml:id="note_28461-A"/>
+                      </chord>
+                      <beam xml:id="beam_28464-A">
+                        <note dur="16" oct="5" pname="f" tstamp="2" xml:id="note_28467-A"/>
+                        <note dur="16" oct="5" pname="g" tstamp="2.25" xml:id="note_28470-A"/>
+                        <note dur="16" oct="5" pname="a" tstamp="2.5" xml:id="note_28473-A"/>
+                        <note dur="16" oct="5" pname="f" tstamp="2.75" xml:id="note_28476-A"/>
+                      </beam>
+                      <note dur="4" oct="5" pname="e" tstamp="3" xml:id="note_28479-A"/>
+                      <beam xml:id="beam_28482-A">
+                        <note dur="16" oct="5" pname="d" tstamp="4" xml:id="note_28485-A"/>
+                        <note dur="16" oct="5" pname="e" tstamp="4.25" xml:id="note_28488-A"/>
+                        <note dur="16" oct="5" pname="f" tstamp="4.5" xml:id="note_28491-A"/>
+                        <note dur="16" oct="5" pname="d" tstamp="4.75" xml:id="note_28494-A"/>
+                      </beam>
+                    </reg>
+                    <orig xml:id="orig_28455-A"/>
+                  </choice>
+                </layer>
+              </staff>
+              <staff dme.parts="7,12" n="5" xml:id="staff_28497-A">
+                <layer n="1" xml:id="layer_28500-A">
+                  <note dur="8" oct="4" pname="f" tstamp="1" xml:id="note_28503-A"/>
+                  <note dur="4" oct="4" pname="f" tstamp="1.5" xml:id="note_28506-A"/>
+                  <note dur="4" oct="4" pname="f" tstamp="2.5" xml:id="note_28509-A"/>
+                  <note dur="4" oct="4" pname="f" tstamp="3.5" xml:id="note_28512-A"/>
+                  <note dur="8" oct="4" pname="f" tstamp="4.5" xml:id="note_28515-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="8" n="6" xml:id="staff_28518-A">
+                <layer n="1" xml:id="layer_28521-A">
+                  <note dur="4" oct="4" pname="f" tstamp="1" xml:id="note_28524-A">
+                    <verse xml:id="verse_28527-A">
+                      <syl xml:id="syl_28530-A">me.</syl>
+                    </verse>
+                  </note>
+                  <rest dur="4" tstamp="2" xml:id="rest_28536-A"/>
+                  <rest dur="2" tstamp="3" xml:id="rest_28539-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="9,10,11" n="7" xml:id="staff_28542-A">
+                <layer n="1" xml:id="layer_28545-A">
+                  <beam xml:id="beam_28548-A">
+                    <note dur="8" oct="3" pname="f" tstamp="1" xml:id="note_28551-A"/>
+                    <note dur="8" oct="3" pname="f" tstamp="1.5" xml:id="note_28554-A"/>
+                    <note dur="8" oct="4" pname="d" tstamp="2" xml:id="note_28557-A"/>
+                    <note dur="8" oct="4" pname="d" tstamp="2.5" xml:id="note_28560-A"/>
+                  </beam>
+                  <beam xml:id="beam_28563-A">
+                    <note dur="8" oct="4" pname="c" tstamp="3" xml:id="note_28566-A"/>
+                    <note dur="8" oct="4" pname="c" tstamp="3.5" xml:id="note_28569-A"/>
+                    <note accid.ges="f" dur="8" oct="3" pname="b" tstamp="4" xml:id="note_28572-A"/>
+                    <note accid.ges="f" dur="8" oct="3" pname="b" tstamp="4.5" xml:id="note_28575-A"/>
+                  </beam>
+                </layer>
+              </staff>
+              <tie endid="#note_28629-A" layer="1" staff="2" startid="#note_28392-A" xml:id="tie_28578-A"/>
+              <tie endid="#note_28635-A" layer="2" staff="2" startid="#note_28398-A" xml:id="tie_28578a-A"/>
+              <tie endid="#note_28752-A" staff="5" startid="#note_28515-A" xml:id="tie_28581-A"/>
+              <harm place="below" staff="7" tstamp="2" xml:id="harm_28542-A">
+                <fb xml:id="fb_28542-A">
+                  <f xml:id="f_28542-A">3</f>
+                </fb>
+              </harm>
+              <supplied evidence="internal" resp="#DME-editors" xml:id="supplied_28543-A">
+                <harm place="below" staff="7" tstamp="2.5" xml:id="harm_28543-A">
+                  <fb xml:id="fb_28543-A">
+                    <f xml:id="f_28543-A">-</f>
+                  </fb>
+                </harm>
+              </supplied>
+              <harm place="below" staff="7" tstamp="3" xml:id="harm_28544-A">
+                <fb xml:id="fb_28544-A">
+                  <f xml:id="f_28544-A">4</f>
+                  <f xml:id="f_28544a-A">3</f>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="3.5" xml:id="harm_28545-A">
+                <fb xml:id="fb_28545-A">
+                  <f xml:id="f_28545-A">-</f>
+                  <supplied evidence="internal" resp="#DME-editors" xml:id="supplied_28545a-A">
+                    <f xml:id="f_28545a-A">-</f>
+                  </supplied>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="4" xml:id="harm_28546-A">
+                <fb xml:id="fb_28546-A">
+                  <f xml:id="f_28546-A">5</f>
+                  <f xml:id="f_28546a-A">3</f>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="4.5" xml:id="harm_28547-A">
+                <fb xml:id="fb_28547-A">
+                  <f xml:id="f_28547-A">-</f>
+                  <supplied evidence="internal" resp="#DME-editors" xml:id="supplied_28547a-A">
+                    <f xml:id="f_28547a-A">-</f>
+                  </supplied>
+                </fb>
+              </harm>
+            </measure>
+            <measure n="125" xml:id="m125_k165_001-A">
+              <staff dme.parts="1,2" n="1" xml:id="staff_28590-A">
+                <layer n="1" xml:id="layer_28593-A">
+                  <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28596-A"/>
+                  <note dur="4" oct="5" pname="f" tstamp="2" xml:id="note_28599-A"/>
+                  <note dur="4" oct="5" pname="e" tstamp="3" xml:id="note_28602-A"/>
+                  <note dur="4" oct="5" pname="d" tstamp="4" xml:id="note_28605-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_28608-A">
+                  <choice xml:id="choice_28611-A">
+                    <reg resp="#DME-editors" type="doubling" xml:id="reg_28611-A">
+                      <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28611-A"/>
+                      <note dur="4" oct="5" pname="f" tstamp="2" xml:id="note_28614-A"/>
+                      <note dur="4" oct="5" pname="e" tstamp="3" xml:id="note_28617-A"/>
+                      <note dur="4" oct="5" pname="d" tstamp="4" xml:id="note_28620-A"/>
+                    </reg>
+                    <orig xml:id="orig_28611-A"/>
+                  </choice>
+                </layer>
+              </staff>
+              <staff dme.parts="3,4" n="2" xml:id="staff_28623-A">
+                <layer n="1" xml:id="layer_28626-A">
+                  <note dur="1" oct="5" pname="c" tstamp="1" xml:id="note_28629-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_28632-A">
+                  <note dur="1" oct="4" pname="c" tstamp="1" xml:id="note_28635-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="5" n="3" xml:id="staff_28638-A">
+                <layer n="1" xml:id="layer_28641-A">
+                  <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28644-A"/>
+                  <beam xml:id="beam_28647-A">
+                    <note dur="16" oct="5" pname="f" tstamp="2" xml:id="note_28650-A"/>
+                    <note dur="16" oct="5" pname="g" tstamp="2.25" xml:id="note_28653-A"/>
+                    <note dur="16" oct="5" pname="a" tstamp="2.5" xml:id="note_28656-A"/>
+                    <note dur="16" oct="5" pname="f" tstamp="2.75" xml:id="note_28659-A"/>
+                  </beam>
+                  <beam xml:id="beam_28662-A">
+                    <note dur="16" oct="5" pname="e" tstamp="3" xml:id="note_28665-A"/>
+                    <note dur="16" oct="5" pname="f" tstamp="3.25" xml:id="note_28668-A"/>
+                    <note dur="16" oct="5" pname="g" tstamp="3.5" xml:id="note_28671-A"/>
+                    <note dur="16" oct="5" pname="e" tstamp="3.75" xml:id="note_28674-A"/>
+                  </beam>
+                  <beam xml:id="beam_28677-A">
+                    <note dur="16" oct="5" pname="d" tstamp="4" xml:id="note_28680-A"/>
+                    <note dur="16" oct="5" pname="e" tstamp="4.25" xml:id="note_28683-A"/>
+                    <note dur="16" oct="5" pname="f" tstamp="4.5" xml:id="note_28686-A"/>
+                    <note dur="16" oct="5" pname="d" tstamp="4.75" xml:id="note_28689-A"/>
+                  </beam>
+                </layer>
+              </staff>
+              <staff dme.parts="6" n="4" xml:id="staff_28692-A">
+                <layer n="1" xml:id="layer_28695-A">
+                  <choice xml:id="choice_28698-A">
+                    <reg resp="#DME-editors" type="doubling" xml:id="reg_28698-A">
+                      <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28698-A"/>
+                      <beam xml:id="beam_28701-A">
+                        <note dur="16" oct="5" pname="f" tstamp="2" xml:id="note_28704-A"/>
+                        <note dur="16" oct="5" pname="g" tstamp="2.25" xml:id="note_28707-A"/>
+                        <note dur="16" oct="5" pname="a" tstamp="2.5" xml:id="note_28710-A"/>
+                        <note dur="16" oct="5" pname="f" tstamp="2.75" xml:id="note_28713-A"/>
+                      </beam>
+                      <beam xml:id="beam_28716-A">
+                        <note dur="16" oct="5" pname="e" tstamp="3" xml:id="note_28719-A"/>
+                        <note dur="16" oct="5" pname="f" tstamp="3.25" xml:id="note_28722-A"/>
+                        <note dur="16" oct="5" pname="g" tstamp="3.5" xml:id="note_28725-A"/>
+                        <note dur="16" oct="5" pname="e" tstamp="3.75" xml:id="note_28728-A"/>
+                      </beam>
+                      <beam xml:id="beam_28731-A">
+                        <note dur="16" oct="5" pname="d" tstamp="4" xml:id="note_28734-A"/>
+                        <note dur="16" oct="5" pname="e" tstamp="4.25" xml:id="note_28737-A"/>
+                        <note dur="16" oct="5" pname="f" tstamp="4.5" xml:id="note_28740-A"/>
+                        <note dur="16" oct="5" pname="d" tstamp="4.75" xml:id="note_28743-A"/>
+                      </beam>
+                    </reg>
+                    <orig xml:id="orig_28698-A"/>
+                  </choice>
+                </layer>
+              </staff>
+              <staff dme.parts="7,12" n="5" xml:id="staff_28746-A">
+                <layer n="1" xml:id="layer_28749-A">
+                  <note dur="8" oct="4" pname="f" tstamp="1" xml:id="note_28752-A"/>
+                  <note dur="4" oct="4" pname="f" tstamp="1.5" xml:id="note_28755-A"/>
+                  <note dur="4" oct="4" pname="f" tstamp="2.5" xml:id="note_28758-A"/>
+                  <note dur="4" oct="4" pname="f" tstamp="3.5" xml:id="note_28761-A"/>
+                  <note dur="8" oct="4" pname="f" tstamp="4.5" xml:id="note_28764-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="8" n="6" xml:id="staff_28767-A">
+                <layer n="1" xml:id="layer_28770-A">
+                  <mRest tstamp="1" xml:id="mRest_28773-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="9,10,11" n="7" xml:id="staff_28776-A">
+                <layer n="1" xml:id="layer_28779-A">
+                  <beam xml:id="beam_28782-A">
+                    <note dur="8" oct="3" pname="a" tstamp="1" xml:id="note_28785-A"/>
+                    <note dur="8" oct="3" pname="a" tstamp="1.5" xml:id="note_28788-A"/>
+                    <note dur="8" oct="4" pname="d" tstamp="2" xml:id="note_28791-A"/>
+                    <note dur="8" oct="4" pname="d" tstamp="2.5" xml:id="note_28794-A"/>
+                  </beam>
+                  <beam xml:id="beam_28797-A">
+                    <note dur="8" oct="4" pname="c" tstamp="3" xml:id="note_28800-A"/>
+                    <note dur="8" oct="4" pname="c" tstamp="3.5" xml:id="note_28803-A"/>
+                    <note accid.ges="f" dur="8" oct="3" pname="b" tstamp="4" xml:id="note_28806-A"/>
+                    <note accid.ges="f" dur="8" oct="3" pname="b" tstamp="4.5" xml:id="note_28809-A"/>
+                  </beam>
+                </layer>
+              </staff>
+              <tie endid="#note_28851-A" layer="1" staff="2" startid="#note_28629-A" xml:id="tie_28812-A"/>
+              <tie endid="#note_28863-A" layer="2" staff="2" startid="#note_28635-A" xml:id="tie_28812a-A"/>
+              <harm place="below" staff="7" tstamp="1" xml:id="harm_28776-A">
+                <fb xml:id="fb_28776-A">
+                  <f xml:id="f_28776-A">6</f>
+                  <f xml:id="f_28776a-A">3</f>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="1.5" xml:id="harm_28777-A">
+                <fb xml:id="fb_28777-A">
+                  <f xml:id="f_28777-A">-</f>
+                  <supplied evidence="internal" resp="#DME-editors" xml:id="supplied_28777a-A">
+                    <f xml:id="f_28777a-A">-</f>
+                  </supplied>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="2" xml:id="harm_28778-A">
+                <fb xml:id="fb_28778-A">
+                  <f xml:id="f_28778-A">3</f>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="2.5" xml:id="harm_28779-A">
+                <fb xml:id="fb_28779-A">
+                  <f xml:id="f_28779-A">-</f>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="3" xml:id="harm_28780-A">
+                <fb xml:id="fb_28780-A">
+                  <f xml:id="f_28780-A">4</f>
+                  <f xml:id="f_28780a-A">3</f>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="3.5" xml:id="harm_28781-A">
+                <fb xml:id="fb_28781-A">
+                  <f xml:id="f_28781-A">-</f>
+                  <supplied evidence="internal" resp="#DME-editors" xml:id="supplied_28781a-A">
+                    <f xml:id="f_28781a-A">-</f>
+                  </supplied>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="4" xml:id="harm_28782-A">
+                <fb xml:id="fb_28782-A">
+                  <f xml:id="f_28782-A">5</f>
+                  <f xml:id="f_28782a-A">3</f>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="4.5" xml:id="harm_28783-A">
+                <fb xml:id="fb_28783-A">
+                  <f xml:id="f_28783-A">-</f>
+                  <supplied evidence="internal" resp="#DME-editors" xml:id="supplied_28783a-A">
+                    <f xml:id="f_28783a-A">-</f>
+                  </supplied>
+                </fb>
+              </harm>
+            </measure>
+            <measure n="126" xml:id="m126_k165_001-A">
+              <staff dme.parts="1,2" n="1" xml:id="staff_28818-A">
+                <layer n="1" xml:id="layer_28821-A">
+                  <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28824-A"/>
+                  <note dur="4" oct="5" pname="a" tstamp="2" xml:id="note_28827-A"/>
+                  <note dur="2" oct="5" pname="g" tstamp="3" xml:id="note_28830-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_28833-A">
+                  <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28836-A"/>
+                  <note dur="2" oct="5" pname="f" tstamp="2" xml:id="note_28839-A"/>
+                  <note dur="4" oct="5" pname="e" tstamp="4" xml:id="note_28842-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="3,4" n="2" xml:id="staff_28845-A">
+                <layer n="1" xml:id="layer_28848-A">
+                  <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28851-A"/>
+                  <note dur="4" oct="5" pname="e" tstamp="2" xml:id="note_28854-A"/>
+                  <note dur="2" oct="5" pname="d" tstamp="3" xml:id="note_28857-A"/>
+                </layer>
+                <layer n="2" xml:id="layer_28860-A">
+                  <note dur="4" oct="4" pname="c" stem.sameas="#note_28851-A" tstamp="1" xml:id="note_28863-A"/>
+                  <note dur="2" oct="5" pname="c" tstamp="2" xml:id="note_28866-A"/>
+                  <note dur="4" oct="4" pname="g" tstamp="4" xml:id="note_28869-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="5" n="3" xml:id="staff_28872-A">
+                <layer n="1" xml:id="layer_28875-A">
+                  <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28878-A"/>
+                  <beam xml:id="beam_28881-A">
+                    <note dots="1" dur="8" oct="5" pname="f" tstamp="2" xml:id="note_28884-A"/>
+                    <note dur="16" oct="5" pname="g" tstamp="2.75" xml:id="note_28887-A"/>
+                  </beam>
+                  <note dur="2" oct="5" pname="g" tstamp="3" xml:id="note_28890-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="6" n="4" xml:id="staff_28893-A">
+                <layer n="1" xml:id="layer_28896-A">
+                  <note dur="4" oct="5" pname="c" tstamp="1" xml:id="note_28899-A"/>
+                  <note dur="2" oct="5" pname="f" tstamp="2" xml:id="note_28902-A"/>
+                  <note dur="4" oct="5" pname="e" tstamp="4" xml:id="note_28905-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="7,12" n="5" xml:id="staff_28908-A">
+                <layer n="1" xml:id="layer_28911-A">
+                  <note dur="4" oct="4" pname="f" tstamp="1" xml:id="note_28914-A"/>
+                  <note dur="4" oct="4" pname="a" tstamp="2" xml:id="note_28917-A"/>
+                  <beam xml:id="beam_28920-A">
+                    <note dur="8" oct="4" pname="d" tstamp="3" xml:id="note_28923-A"/>
+                    <note dur="8" oct="4" pname="d" tstamp="3.5" xml:id="note_28926-A"/>
+                    <note dur="8" oct="4" pname="c" tstamp="4" xml:id="note_28929-A"/>
+                    <note accid.ges="f" dur="8" oct="3" pname="b" tstamp="4.5" xml:id="note_28932-A"/>
+                  </beam>
+                </layer>
+              </staff>
+              <staff dme.parts="8" n="6" xml:id="staff_28935-A">
+                <layer n="1" xml:id="layer_28938-A">
+                  <mRest tstamp="1" xml:id="mRest_28941-A"/>
+                </layer>
+              </staff>
+              <staff dme.parts="9,10,11" n="7" xml:id="staff_28944-A">
+                <layer n="1" xml:id="layer_28947-A">
+                  <beam xml:id="beam_28950-A">
+                    <note dur="8" oct="3" pname="a" tstamp="1" xml:id="note_28953-A"/>
+                    <note dur="8" oct="3" pname="a" tstamp="1.5" xml:id="note_28956-A"/>
+                    <note dur="8" oct="3" pname="d" tstamp="2" xml:id="note_28959-A"/>
+                    <note dur="8" oct="3" pname="d" tstamp="2.5" xml:id="note_28962-A"/>
+                  </beam>
+                  <beam xml:id="beam_28965-A">
+                    <note accid.ges="f" dur="8" oct="2" pname="b" tstamp="3" xml:id="note_28968-A"/>
+                    <note accid.ges="f" dur="8" oct="2" pname="b" tstamp="3.5" xml:id="note_28971-A"/>
+                    <note dur="8" oct="3" pname="c" tstamp="4" xml:id="note_28974-A"/>
+                    <note dur="8" oct="3" pname="c" tstamp="4.5" xml:id="note_28977-A"/>
+                  </beam>
+                </layer>
+              </staff>
+              <trill layer="1" staff="1" startid="#note_28830-A" xml:id="trill_28980-A"/>
+              <trill staff="3" startid="#note_28890-A" xml:id="trill_28983-A"/>
+              <harm place="below" staff="7" tstamp="1" xml:id="harm_28944-A">
+                <fb xml:id="fb_28944-A">
+                  <f xml:id="f_28944-A">6</f>
+                  <f xml:id="f_28944a-A">3</f>
+                </fb>
+              </harm>
+              <harm place="below" staff="7" tstamp="1.5" xml:id="harm_28945-A">
+                <fb xml:id="fb_28945-A">
+                  <f xml:id="f_28945-A">-</f>
+                  <supplied evidence="internal" resp="#DME-editors" xml:id="supplied_28945a-A">
+                    <f xml:id="f_28945a-A">-</f>
+                  </supplied>
+                </fb>
+              </harm>
+              <choice xml:id="choice_28946-A">
+                <corr resp="#DME-editors" type="positioning" xml:id="corr_28946-A">
+                  <harm place="below" staff="7" tstamp="2" xml:id="harm_28946-A">
+                    <fb xml:id="fb_28946-A">
+                      <f xml:id="f_28946-A">5</f>
+                    </fb>
+                  </harm>
+                </corr>
+                <orig xml:id="orig_28946-A">
+                  <harm place="below" staff="7" tstamp="2" xml:id="harm_28946a-A">
+                    <fb xml:id="fb_28946b-A">
+                      <f xml:id="f_28946c-A"/>
+                      <f xml:id="f_28946d-A">5</f>
+                    </fb>
+                  </harm>
+                </orig>
+              </choice>
+              <harm place="below" staff="7" tstamp="3" xml:id="harm_28947-A">
+                <fb xml:id="fb_28947-A">
+                  <f xml:id="f_28947-A">6</f>
+                  <f xml:id="f_28947a-A">5</f>
+                </fb>
+              </harm>
+              <supplied evidence="internal" resp="#DME-editors" xml:id="supplied_28948-A">
+                <harm place="below" staff="7" tstamp="3.5" xml:id="harm_28948-A">
+                  <fb xml:id="fb_28948-A">
+                    <f xml:id="f_28948-A">-</f>
+                    <f xml:id="f_28948a-A">-</f>
+                  </fb>
+                </harm>
+              </supplied>
+            </measure>
+          </section>
+        </score>
+      </mdiv>
+    </body>
+  </music>
+</mei>

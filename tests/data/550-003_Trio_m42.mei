@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
   <meiHead>
     <fileDesc>
@@ -153,7 +153,7 @@
                     <rest doxml.id="d28e6529" dur="4" tstamp="2" xml:id="rest_31686"/>
                   </layer>
                 </staff>
-                <dir part="%all" doxml.id="d28e5844" place="below" staff="8" tstamp="2.9" type="repeat_instruction" xml:id="dir_31398">
+                <dir doxml.id="d28e5844" part="%all" place="below" staff="8" tstamp="2.9" type="repeat_instruction" xml:id="dir_31398">
                   <rend fontstyle="normal" halign="right" xml:id="rend_31398">
                     <ref target="#mdiv_550003a" xml:id="ref_16638">D.&#8198;C. Menuetto</ref>
                   </rend>

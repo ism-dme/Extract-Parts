@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
   <meiHead>
     <fileDesc>
@@ -235,16 +235,16 @@
                 <app xml:id="app_33666">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg2_33666"/>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg1_33666">
-                    <slur endid="#note_33474a" staff="2" startid="#note_33462a" xml:id="slur_33666"/>
+                    <slur endid="#note_33474a" layer="1" staff="2" startid="#note_33462a" xml:id="slur_33666"/>
                   </rdg>
                 </app>
                 <app xml:id="app_40380">
                   <rdg corresp="#ISMIDW6309" label="version-2_6309" n="2" source="#source_2 #source_4" xml:id="rdg2_40380">
-                    <slur endid="#note_40188" staff="3" startid="#note_40176" xml:id="slur_40380"/>
+                    <slur endid="#note_40188" layer="1" staff="3" startid="#note_40176" xml:id="slur_40380"/>
                   </rdg>
                   <rdg corresp="#ISMIDW6318" label="version-1_6318" n="1" source="#source_1 #source_3" xml:id="rdg1_40380"/>
                 </app>
-                <slur endid="#note_40236" staff="4" startid="#note_40224" xml:id="slur_40386"/>
+                <slur endid="#note_40236" layer="1" staff="4" startid="#note_40224" xml:id="slur_40386"/>
               </measure>
             </section>
           </section>

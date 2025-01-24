@@ -1,40 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<x:description run-as="external" stylesheet="../../main.xsl" xmlns:dme="http://www.mozarteum.at/ns/dme" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:test-helper="x-urn:tutorial:helper:ws-only-text:test-helper" xmlns:x="http://www.jenitennison.com/xslt/xspec">
+<x:description run-as="external" stylesheet="../../main.xsl" xmlns:dme="http://www.mozarteum.at/ns/dme" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:test-helper="x-urn:tutorial:helper:ws-only-text:test-helper" xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<x:import href="test-data-vars.xspec"/>
+  <x:import href="test-data-vars.xspec"/>
 
   <x:scenario label="scoreDef">
 
-    <x:scenario label="Extract Oboe II ( |2.2| )">
-      <x:param name="P_REQUESTED_PARTS">|2.2|</x:param>
+    <x:scenario label="Delete empty mei:staffGrp">
+      <x:param as="element(dme:parameters)" name="P_USER_PARAMETERS">
+        <parameters xmlns="http://www.mozarteum.at/ns/dme">
+          <parts>
+            <part layer="2" staff="2"/>
+          </parts>
+          <!--   <language>IT</language>
+          <outputPath>./</outputPath>
+          <shrinkMeasures>yes</shrinkMeasures>-->
+          <renumberStaves>yes</renumberStaves>
+        </parameters>
+      </x:param>
 
       <x:context select="$K551-001_m93"/>
-      <x:expect label="staffGrp with no staffDef is deleted." select="$code-snippets//dme:output//dme:item[@n = 1]/mei:scoreDef" test="//mei:scoreDef"/>
+      <x:expect label="staffGrp with no staffDef is deleted." test="//mei:scoreDef/mei:staffGrp[count(descendant::mei:staffGrp) eq 1] => boolean()"/>
     </x:scenario>
 
-    <x:scenario label="Extract Oboe II, Corni, Violino I ( |2.2|4|7| )">
-      <x:param name="P_REQUESTED_PARTS">|2.2|4|7|</x:param>
-
+    <x:scenario label="Modify @symbol">
+      <x:param as="element(dme:parameters)" name="P_USER_PARAMETERS">
+        <parameters xmlns="http://www.mozarteum.at/ns/dme">
+          <parts>
+            <part layer="2" staff="2"/>
+            <part staff="4"/>
+            <part staff="7"/>
+          </parts>
+          <!--   <language>IT</language>
+          <outputPath>./</outputPath>
+          <shrinkMeasures>yes</shrinkMeasures>-->
+          <renumberStaves>yes</renumberStaves>
+        </parameters>
+      </x:param>
       <x:context select="$K551-001_m93"/>
-      <x:expect label="Oboe: @symbol=none, Corni: symbol=bracket, Violino: parent staffGrp deleted, @symbol=none" select="$code-snippets//dme:output/dme:item[@n = 2]/mei:scoreDef" test="//mei:scoreDef"/>
+      <x:expect label="Oboe: @symbol=none" test="//mei:scoreDef/mei:staffGrp/mei:staffGrp[1][@symbol='none'] => boolean()"/>
+      <x:expect label="Corni: symbol=bracket" test="//mei:scoreDef/mei:staffGrp/mei:staffGrp[2][@symbol='bracket'] => boolean()"/>
+      <x:expect label="Violino: @symbol=none" test="//mei:scoreDef/mei:staffGrp/mei:staffGrp[3][@symbol='none'] => boolean()"/>
+      <x:expect label="Violino: parent staffGrp deleted" test="//mei:scoreDef/mei:staffGrp/mei:staffGrp[3][count(ancestor::mei:staffGrp) eq 1] => boolean()"/>
     </x:scenario>
 
-    <x:scenario label="Extract Fagott I.">
-      <x:param name="P_REQUESTED_PARTS">|3.1|</x:param>
+    <x:scenario label="Test langauge parameter">
+      <x:param as="element(dme:parameters)" name="P_USER_PARAMETERS">
+        <parameters xmlns="http://www.mozarteum.at/ns/dme">
+          <parts>
+            <part layer="1" staff="3"/>
+          </parts>
+          <!--   <language>IT</language>
+          <outputPath>./</outputPath>
+          <shrinkMeasures>yes</shrinkMeasures>-->
+          <renumberStaves>yes</renumberStaves>
+        </parameters>
+      </x:param>
       <x:param name="P_LANGUAGE">DE</x:param>
 
       <x:context select="$K551-001_m93"/>
-      <x:expect label="Fagott (deutsche Bezeichnung)" select="$code-snippets//dme:output/dme:item[@n = 3]/mei:scoreDef" test="//mei:scoreDef"/>
+      <x:expect label="Fagott (deutsche Bezeichnung)" select="'Fagott I'" test="//mei:label/text()/string()"/>
     </x:scenario>
 
-    <x:scenario label="Extract Violoncello.">
-      <x:param name="P_REQUESTED_PARTS">|10.1|</x:param>
+    <x:scenario label="Creation of instrument numerals">
+      <x:param as="element(dme:parameters)" name="P_USER_PARAMETERS"><parameters xmlns="http://www.mozarteum.at/ns/dme">
+          <parts>
+            <part layer="1" staff="10"/>
+          </parts>
+          <!--   <language>IT</language>
+          <outputPath>./</outputPath>
+          <shrinkMeasures>yes</shrinkMeasures>-->
+          <renumberStaves>yes</renumberStaves>
+        </parameters></x:param>
 
       <x:context select="$K551-001_m93"/>
-      <x:expect label="Violoncello (no Roman integer)" select="$code-snippets//dme:output/dme:item[@n = 4]/mei:scoreDef" test="//mei:scoreDef"/>
+      <x:expect label="Violoncello (no Roman integer)" select="'Violoncello'" test="//mei:label/text()/string()"/>
     </x:scenario>
 
+    <x:scenario label="Split staves: Oboi (split), corno I, Soprano.">
+      <x:param as="element(dme:parameters)" name="P_USER_PARAMETERS"><parameters xmlns="http://www.mozarteum.at/ns/dme">
+          <parts>
+            <part split="yes" staff="1"/>
+            <part layer="1" staff="2"/>
+            <part staff="6"/>
+          </parts>
+          <!--   <language>IT</language>
+          <outputPath>./</outputPath>
+          <shrinkMeasures>yes</shrinkMeasures>-->
+          <renumberStaves>yes</renumberStaves>
+        </parameters></x:param>
 
+      <x:context select="$dmeedtA_165-001_m28"/>
+
+      <x:expect label="Move @decls for Oboe." test="//mei:staffDef[@n=(1, 2)][@decls='#perfRes_01'] => boolean()"/>
+      <x:expect label="Move @decls Corno II." test="//mei:staffDef[@n=3][@decls='#perfRes_02'] => boolean()"/>
+      <x:expect label="Preserve @decls for Soprano." test="//mei:staffDef[@n=4][@decls='#perfRes_05'] => boolean()"/>
+      <x:expect label="Renumber staffDef@n." select="($dmeedtA_165-001_m28_1-split_manual-2-1-6//mei:scoreDef//mei:staffDef)[position() = (1,2,3,4)]/@n" test="//mei:scoreDef//mei:staffDef/@n"/>
+      <x:expect label="Adjust @xml:ids" select="$dmeedtA_165-001_m28_1-split_manual-2-1-6//mei:scoreDef//mei:staffDef[@n=1]/@xml:id" test="//mei:scoreDef//mei:staffDef[@n=1]/@xml:id"/>
+      <x:expect label="staffDef: Oboe I" select="$dmeedtA_165-001_m28_1-split_manual-2-1-6//mei:scoreDef//mei:staffDef[@n=1]" test="//mei:scoreDef//mei:staffDef[@n=1]"/>
+      <x:expect label="staffDef: Oboe II" select="$dmeedtA_165-001_m28_1-split_manual-2-1-6//mei:scoreDef//mei:staffDef[@n=2]" test="//mei:scoreDef//mei:staffDef[@n=2]"/>
+    </x:scenario>
+
+    <x:scenario label="Renumber staves.">
+      <x:scenario label="@split and renumberStaves='no'">
+        <x:param as="element(dme:parameters)" name="P_USER_PARAMETERS"><parameters xmlns="http://www.mozarteum.at/ns/dme">
+            <parts>
+              <part split="yes" staff="1"/>
+              <part layer="1" staff="2"/>
+              <part staff="6"/>
+            </parts>
+            <!--   <language>IT</language>
+          <outputPath>./</outputPath>
+          <shrinkMeasures>yes</shrinkMeasures>-->
+            <renumberStaves>no</renumberStaves>n </parameters></x:param>
+        <x:context select="$dmeedtA_165-001_m28"/>
+        <x:expect label="Renumbered staffDef@n." select="(1,2,3,4)" test="for $n in //mei:scoreDef//mei:staffDef/@n  return $n cast as xs:integer"/>
+
+      </x:scenario>
+
+      <x:scenario label="renumberStaves='no'">
+        <x:param as="element(dme:parameters)" name="P_USER_PARAMETERS"><parameters xmlns="http://www.mozarteum.at/ns/dme">
+            <parts>
+              <part staff="1"/>
+              <part layer="1" staff="2"/>
+              <part staff="6"/>
+            </parts>
+            <!--   <language>IT</language>
+          <outputPath>./</outputPath>
+          <shrinkMeasures>yes</shrinkMeasures>-->
+            <renumberStaves>no</renumberStaves>
+          </parameters></x:param>
+        <x:context select="$dmeedtA_165-001_m28"/>
+        <x:expect label="Did not renumber staffDef@n." test="//mei:scoreDef//mei:staffDef[@n = (1,2,6)] => boolean() "/>
+      </x:scenario>
+    </x:scenario>
 
   </x:scenario>
 </x:description>

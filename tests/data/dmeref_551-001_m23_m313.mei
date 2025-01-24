@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
   <meiHead>
     <fileDesc>
@@ -171,16 +171,16 @@
                 </layer>
                 <layer n="2" sameas="#layer_20448" xml:id="layer_20448b"/>
               </staff>
-              <fermata doxml.id="d27e2812" startid="#note_20220" xml:id="fermata_20460"/>
-              <fermata doxml.id="d27e2927" layer="1 2" startid="#note_20238" xml:id="fermata_20472"/>
-              <fermata doxml.id="d27e3048" layer="1 2" startid="#note_20268" xml:id="fermata_20478"/>
-              <fermata doxml.id="d27e3146" layer="1 2" startid="#note_20298" xml:id="fermata_20484"/>
-              <fermata doxml.id="d27e3268" layer="1 2" startid="#note_20328" xml:id="fermata_20490"/>
-              <fermata doxml.id="d27e3326" startid="#note_20358" xml:id="fermata_20496"/>
-              <fermata doxml.id="d27e3408" startid="#note_20382" xml:id="fermata_20502"/>
-              <fermata doxml.id="d27e3525" startid="#note_20412" xml:id="fermata_20508"/>
-              <fermata doxml.id="d27e3633" startid="#note_20436" xml:id="fermata_20514"/>
-              <fermata doxml.id="d27e3707" layer="1 2" startid="#note_20454" xml:id="fermata_20520"/>
+              <fermata doxml.id="d27e2812" staff="1" startid="#note_20220" xml:id="fermata_20460"/>
+              <fermata doxml.id="d27e2927" layer="1 2" staff="2" startid="#note_20238" xml:id="fermata_20472"/>
+              <fermata doxml.id="d27e3048" layer="1 2" staff="3" startid="#note_20268" xml:id="fermata_20478"/>
+              <fermata doxml.id="d27e3146" layer="1 2" staff="4" startid="#note_20298" xml:id="fermata_20484"/>
+              <fermata doxml.id="d27e3268" layer="1 2" staff="5" startid="#note_20328" xml:id="fermata_20490"/>
+              <fermata doxml.id="d27e3326" staff="6" startid="#note_20358" xml:id="fermata_20496"/>
+              <fermata doxml.id="d27e3408" staff="7" startid="#note_20382" xml:id="fermata_20502"/>
+              <fermata doxml.id="d27e3525" staff="8" startid="#note_20412" xml:id="fermata_20508"/>
+              <fermata doxml.id="d27e3633" staff="9" startid="#note_20436" xml:id="fermata_20514"/>
+              <fermata doxml.id="d27e3707" layer="1 2" staff="10" startid="#note_20454" xml:id="fermata_20520"/>
             </measure>
             <measure n="313" right="end" xml:id="m313_k551_001">
               <mNum>313</mNum>

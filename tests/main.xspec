@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<x:description run-as="external" stylesheet="../main.xsl" xmlns:test-helper="x-urn:tutorial:helper:ws-only-text:test-helper" xmlns:dme="http://www.mozarteum.at/ns/dme" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:x="http://www.jenitennison.com/xslt/xspec">
+<x:description run-as="external" stylesheet="../main.xsl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dme="http://www.mozarteum.at/ns/dme" xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:test-helper="x-urn:tutorial:helper:ws-only-text:test-helper" xmlns:x="http://www.jenitennison.com/xslt/xspec">
+  <!--DEBUG: Output files for XSpec (SchXslt-scenario):  C:\Users\sapov\WORKSPACE\DEVELOPMENT\DIME\DEBUG\xspec_out-->
 
+  <!--TODO: Rename modules/test-data-vars.xspec to variables.xspec-->
   <x:import href="modules/test-data-vars.xspec"/>
   <x:import href="modules/scoreDef.xspec"/>
   <x:import href="modules/global.xspec"/>

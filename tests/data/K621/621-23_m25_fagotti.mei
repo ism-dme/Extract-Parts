@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0">
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title label="NMA digital" type="unit">Test data based on W. A. Mozart, K. 621/23.</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <title>Digital Mozart Edition</title>
+        </edition>
+      </editionStmt>
+      <pubStmt>
+        <publisher>
+          <corpName>Mozarteum</corpName>
+          <ptr target="https://www.mozarteum.at"/>
+        </publisher>
+        <availability>
+          <useRestrict label="license">CC BY-NC-SA 4.0</useRestrict>
+        </availability>
+      </pubStmt>
+    </fileDesc>
+    <workDesc>
+      <work>
+        <perfMedium>
+          <perfResList xmlns:mei="http://www.music-encoding.org/ns/mei" auth="marcmusperf"
+            auth.uri="https://www.loc.gov/standards/valuelist/marcmusperf.html">
+            <perfRes codedval="wd" n="4" xml:id="perfRes_04">Fagotto</perfRes>
+          </perfResList>
+        </perfMedium>
+      </work>
+    </workDesc>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv n="1" xml:id="mdiv_rondo">
+        <score xml:id="score_621023-1">
+          <scoreDef key.mode="major" key.pname="f" key.sig="1f" meter.count="3" meter.unit="8" n="1"
+            optimize="false" xml:id="scoreDef_01">
+            <staffGrp barthru="true" symbol="none" xml:id="staffGrp_02">
+              <staffDef clef.line="4" clef.shape="F" lines="5" n="4"
+                xml:id="scoreDef_01-02_staffDef_04">
+                <label xml:id="label_04">Fagotto I, II</label>
+                <labelAbbr xml:id="labelAbbr_04">Fag</labelAbbr>
+                <layerDef decls="#perfRes_04" n="1" type="part"
+                  xml:id="scoreDef_01-02_layerDef_Fag1"/>
+                <layerDef decls="#perfRes_04" n="2" type="part"
+                  xml:id="scoreDef_01-02_layerDef_Fag2"/>
+              </staffDef>
+            </staffGrp>
+          </scoreDef>
+          <section xml:id="section_rondo">
+            <section xml:id="section_A_m1-43">
+              <measure n="25" xml:id="m25_k621_023">
+                <staff n="4" xml:id="staff_13140">
+                  <layer n="1" xml:id="layer_15669">
+                    <beam xml:id="beam_13152">
+                      <note dur="8" oct="4" pname="c" stem.dir="down" tstamp="1" xml:id="note_13158"/>
+                      <note dur="16" oct="4" pname="e" stem.dir="down" tstamp="2"
+                        xml:id="note_13164"/>
+                      <note dur="16" oct="4" pname="c" stem.dir="down" tstamp="2.5"
+                        xml:id="note_13170"/>
+                      <note dur="16" oct="3" pname="g" stem.dir="down" tstamp="3"
+                        xml:id="note_13176"/>
+                      <note dur="16" oct="3" pname="e" stem.dir="down" tstamp="3.5"
+                        xml:id="note_13182"/>
+                    </beam>
+                  </layer>
+                  <layer n="2" sameas="#layer_15669" xml:id="layer_15714"/>
+                </staff>
+                <dynam layer="1 2" staff="4" startid="#note_13158" xml:id="dynam_13566">p</dynam>
+                <dir type="staff" layer="1 2" place="above" staff="4" tstamp="1" xml:id="dir_13584">
+                  <rend fontstyle="normal" xml:id="rend-13586">a&#8198;2</rend>
+                </dir>
+                <slur endid="#note_13182" layer="1 2" staff="4" startid="#note_13158"
+                  xml:id="slur_13608"/>
+              </measure>
+            </section>
+          </section>
+        </score>
+      </mdiv>
+    </body>
+  </music>
+</mei>

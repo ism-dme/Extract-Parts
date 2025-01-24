@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0"
+  xml:id="u6c7e6315-c9fa-4644-b239-f1230f9c366e">
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title label="NMA digital" type="unit">Test data based on W. A. Mozart, K. 551-002.</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <title>Digital Mozart Edition</title>
+        </edition>
+      </editionStmt>
+      <pubStmt>
+        <publisher>
+          <corpName>Mozarteum</corpName>
+          <ptr target="https://www.mozarteum.at"/>
+        </publisher>
+        <availability>
+          <useRestrict label="license">CC BY-NC-SA 4.0</useRestrict>
+        </availability>
+      </pubStmt>
+    </fileDesc>
+    <workDesc>
+      <work>
+        <perfMedium>
+          <perfResList analog="marc:048"
+            auth.uri="https://www.loc.gov/standards/valuelist/marcmusperf.html" auth="marcmusperf">
+            <perfRes codedval="wd" n="3" xml:id="instrVoice_4">Fagotto</perfRes>
+          </perfResList>
+        </perfMedium>
+      </work>
+    </workDesc>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv n="2" xml:id="mdiv_551002">
+        <score xml:id="score_551002">
+          <scoreDef key.mode="major" key.pname="f" keysig="1f" meter.count="3" meter.unit="4" n="1"
+            optimize="true" xml:id="scoreDef_01">
+            <staffGrp bar.thru="false" xml:id="scoreDef_01_staffGrp_01">
+              <staffDef clef.line="4" clef.shape="F" lines="5" n="3" xml:id="staffDef_P3">
+                <labelAbbr xml:id="labelAbbr_P3">Fag.</labelAbbr>
+                <label xml:id="label_P3">Fagotto I, II</label>
+                <layerDef decls="#instrVoice_4" n="1" xml:id="layerDef_Fag1"/>
+                <layerDef decls="#instrVoice_4" n="2" xml:id="layerDef_Fag2"/>
+              </staffDef>
+            </staffGrp>
+          </scoreDef>
+          <section xml:id="section_andante_cantabile">
+            <measure n="21" xml:id="m21_k551_002">
+              <staff n="3" xml:id="staff_14424">
+                <layer n="1" xml:id="layer_14430">
+                  <note dots="1" dur="2" oct="4" pname="d" tstamp="1" xml:id="note_14436"/>
+                </layer>
+                <layer n="2" xml:id="layer_14442">
+                  <note accid="n" dots="1" dur="2" oct="3" pname="b" tstamp="1" xml:id="note_14448"
+                  />
+                </layer>
+              </staff>
+              <dynam layer="1 2" staff="3" startid="#note_14436" xml:id="dynam_14754">sfp</dynam>
+              <slur endid="#note_15102" layer="1" staff="3" startid="#note_14436"
+                xml:id="slur_14904"/>
+              <slur endid="#note_15144" layer="2" staff="3" startid="#note_14448"
+                xml:id="slur_14910"/>
+            </measure>
+            <measure n="22" xml:id="m22_k551_002">
+              <staff n="3" xml:id="staff_15090">
+                <layer n="1" xml:id="layer_15096">
+                  <note accid="f" dur="4" oct="4" pname="e" tstamp="1" xml:id="note_15102"/>
+                  <rest dur="8" tstamp="2" xml:id="rest_15108"/>
+                  <beam xml:id="beam_15114">
+                    <note accid.ges="f" dur="8" oct="4" pname="e" tstamp="2.5" xml:id="note_15120"/>
+                    <note dur="8" oct="4" pname="c" tstamp="3" xml:id="note_15126"/>
+                    <note dur="8" oct="3" pname="g" tstamp="3.5" xml:id="note_15132"/>
+                  </beam>
+                </layer>
+                <layer n="2" xml:id="layer_15138">
+                  <note dur="4" oct="4" pname="c" tstamp="1" xml:id="note_15144"/>
+                  <rest sameas="#rest_15108" tstamp="2" xml:id="rest_15150"/>
+                  <beam xml:id="beam_15156">
+                    <note dur="8" oct="4" pname="c" stem.sameas="#note_15120" tstamp="2.5"
+                      xml:id="note_15162"/>
+                    <note dur="8" oct="3" pname="g" stem.sameas="#note_15126" tstamp="3"
+                      xml:id="note_15168"/>
+                    <note accid="f" dur="8" oct="3" pname="e" stem.sameas="#note_15132" tstamp="3.5"
+                      xml:id="note_15174"/>
+                  </beam>
+                </layer>
+              </staff>
+              <slur endid="#note_15132" layer="1 2" staff="3" startid="#note_15120"
+                xml:id="slur_15714"/>
+            </measure>
+          </section>
+        </score>
+      </mdiv>
+    </body>
+  </music>
+</mei>

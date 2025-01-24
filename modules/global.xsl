@@ -7,28 +7,17 @@
   </xd:doc>
   <template name="perform.extraction">
 
-    <!--Currently, works only for whole staff extraction, e.g. '2', '6', but not for '2.1, '6.2', etc.-->
-    <variable as="xs:string*" name="partsToExtract" select="$partsList[not(. = $partExists?nonAvailableParts)]"/>
-
-    <call-template name="create.message.extracting.parts">
-      <with-param name="partsToExtract" select="$partsToExtract"/>
-      <with-param name="partExists" select="$partExists"/>
-    </call-template>
+    <call-template name="create.message.extracting.parts"/>
 
     <variable name="extractedEvents">
       <apply-templates mode="step_one" select="$P_GLOBAL_CONTEXT_ITEM//mei:music"/>
     </variable>
 
-
-    <!--<result-document href="{'../debug/extracted-events.xml'}" indent="yes" method="xml">
-      <copy-of select="$extractedEvents"/>
-    </result-document>-->
-
     <variable name="extractedControlEvents">
-      <variable as="xs:boolean" name="onePartRequested" select="count($partsToExtract) eq 1"/>
 
       <choose>
-        <when test="$onePartRequested and $P_SHRINK_MEASURES">
+        <when test="$SHRINK_MEASURES">
+
           <variable as="element()" name="multiRestMeasures">
             <call-template name="calculate.multirest.measures">
               <with-param name="pDocNode" select="$extractedEvents"/>
@@ -55,13 +44,23 @@
       </mei>
     </variable>
 
+    <!--DEBUG-->
+    <!--     <variable as="xs:string" name="meiFileName" select="tokenize(base-uri(), '/')[last()]"/>
+    <variable name="outputPath" select="$P_OUTPUT_PATH || substring-before($meiFileName, '.') || '_' || string-join($PARTS_TO_EXTRACT_MSG, '-') || '_extractedControlEvents' ||  '.mei'"/>
+    <result-document href="{$outputPath}" indent="yes" method="xml">
+      <mei  meiversion="5.0" xmlns="http://www.music-encoding.org/ns/mei">
+        <xsl:copy-of select="$extractedControlEvents"/>
+      </mei>
+    </result-document>-->
+
     <!--Used for XSpec-->
     <choose>
-      <when test="$P_XSPEC_TEST or $P_MOVI">
+      <when test="$P_XSPEC_TEST or $P_OVERWRITE_FILE">
         <copy-of select="$output"/>
       </when>
       <otherwise>
-        <variable name="outputPath" select="$P_OUTPUT_PATH || substring-before($XML_FILE_NAME, '.') || '_' || string-join($partsToExtract, '-') || '.mei'"/>
+        <variable as="xs:string" name="meiFileName" select="tokenize(base-uri(), '/')[last()]"/>
+        <variable name="outputPath" select="$P_OUTPUT_PATH || substring-before($meiFileName, '.') || '_' || string-join($PARTS_TO_EXTRACT_MSG, '-') || '.mei'"/>
         <result-document href="{$outputPath}" indent="yes" method="xml">
           <copy-of select="$output"/>
         </result-document>
@@ -72,75 +71,13 @@
 
   <xd:doc>
     <xd:desc>
-      <xd:p>Returns options passed to the GUI as map.</xd:p>
+      <xd:p>Returns configuration XML.</xd:p>
     </xd:desc>
   </xd:doc>
-  <template name="options.gui">
-    <variable as="element()*" name="parameters.values" select="doc($OPTIONS_PATH)//id('extract_parts')/dme:parameters"/>
-
-    <variable as="xs:string*" name="req.parts" select="
-        for $p in $parameters.values/dme:parameter/data()
-        return
-          string($p)"/>
-
-    <choose>
-      <when test="
-          every $entry in $req.parts
-            satisfies $entry = ''">
-        <sequence select="''"/>
-      </when>
-      <otherwise>
-        <sequence select="
-            '|' || string-join($req.parts, '|') || '|'"/>
-      </otherwise>
-    </choose>
-
-
+  <template as="element(dme:parameters)" name="configXml">
+    <sequence select="doc($CONFIG_PATH)/dme:parameters"/>
   </template>
 
-  <!--An additional variable is neede, as $parts can be also passed via command line. Otherwise it would be sufficient to use $parameters.values from GUI.-->
-  <variable as="xs:string*" name="partsList" select="
-      for $n in
-      tokenize($P_REQUESTED_PARTS, '\|')
-      return
-        if ($n != '') then
-          $n
-        else
-          ()"/>
-
-  <variable as="xs:boolean" name="allPartsRequested">
-    <variable as="xs:string*" name="staffDefN" select="//staffDef/@n => distinct-values()"/>
-    <sequence select="functx:sequence-deep-equal($partsList, $staffDefN)"/>
-  </variable>
-
-  <xd:doc>
-    <xd:desc/>
-  </xd:doc>
-  <template match="sb[not(contains($P_REQUESTED_PARTS, concat('|', @n, '|')))]" mode="step_one">
-    <if test="$allPartsRequested">
-      <copy>
-        <apply-templates select="@*"/>
-      </copy>
-    </if>
-  </template>
-
-  <xd:doc>
-    <xd:desc/>
-  </xd:doc>
-  <template match="pb[not(contains($P_REQUESTED_PARTS, concat('|', @n, '|')))]" mode="step_one">
-    <if test="$allPartsRequested">
-      <copy>
-        <apply-templates select="@*"/>
-      </copy>
-    </if>
-  </template>
-
-
-
-
-  <xd:doc>
-    <xd:desc/>
-  </xd:doc>
 
   <xd:doc>
     <xd:desc/>
@@ -148,174 +85,186 @@
   </xd:doc>
   <template name="get.config.items">
     <param as="xs:string" name="id"/>
-    <copy-of select="doc($LIB_PATH || 'lists/lists.xml')/id($id)/dme:item/data()"/>
+    <copy-of select="doc($P_LIB_PATH || '/lists/lists.xml')/id($id)/dme:item/data()"/>
   </template>
-
-
 
 
   <xd:doc>
     <xd:desc>
-      <xd:p>Used only in the context of the layer extraction</xd:p>
-      <xd:p>Expected syntax for $P_REQUESTED_PARTS is |{staffNumber}.{layerNumber}|. Multiple entries are possible.</xd:p>
+      <xd:p>Outputs the layer number which is supposed to be extracted for a given staff number.</xd:p>
     </xd:desc>
-    <xd:param name="mode">Values: <xd:ul>
-        <xd:li>staff: returns <xd:b>staff</xd:b> number(s) where the whole staff is required, e.g. |6| => ('6').</xd:li>
-        <xd:li>layer: returns <xd:b>staff</xd:b> number(s) where a layer is required, e. g. |5.1| => ('5')</xd:li>
-        <xd:li>all: both cases, e.g. |5.1|6| => ('5', '6').</xd:li>
-      </xd:ul>
-    </xd:param>
+    <xd:param name="staffN">staff number</xd:param>
   </xd:doc>
-  <function as="xs:string*" name="dme:requested-staves">
-    <param name="mode"/>
-
-    <!--example value: "1", "2.2"-->
-    <variable name="voicesInput" select="
-        for $n in
-        tokenize($P_REQUESTED_PARTS, '\|')
-        return
-          if ($n != '') then
-            $n
-          else
-            ()"/>
-
-    <for-each select="$voicesInput">
-      <choose>
-        <when test="$mode = 'staff'">
-          <!-- Complete staves (no layer extraction requested): e.g. |5|-->
-          <if test="not(contains(., '.'))">
-            <sequence select="."/>
-          </if>
-        </when>
-        <when test="$mode = 'layer'">
-          <!-- only those which do have dot: e.g. |5.1| and not |5| -->
-          <if test="contains(., '.')">
-            <sequence select="substring-before(., '.')"/>
-          </if>
-        </when>
-        <when test="$mode = 'any'">
-          <sequence select="functx:substring-before-if-contains(., '.')"/>
-        </when>
-      </choose>
-    </for-each>
-
+  <function as="xs:string" name="dme:requested-layer">
+    <param as="xs:integer" name="staffN"/>
+    <sequence select="$REQUESTED_PARTS//dme:part[@staff = $staffN]/@layer/xs:string(.)"/>
   </function>
 
 
   <xd:doc>
     <xd:desc>
-      <xd:p>Maps the @n-attribute of staves and their respective layer which are requested. </xd:p>
-      <xd:p>Example: for the input |2.1|3|, the map will contain the key '2' (staff/@n) and the value '1' (layer/@n), the value '3' is omitted as no layer is required to be extracted. </xd:p>
+      <xd:p>Adds attributes to the XML passed as P_REQUESTED_PARTS.</xd:p>
+      <xd:p>dme:parts@allPartsRequested: Specifies whether the requested parts match all available staves in the MEI. In this case, the file would not be processed at all.</xd:p>
+      <xd:p>dme:parts@available: This attribute is calculated for each dme:part element. It defines whether the rquested dme:parts@staff is available in the current MEI.</xd:p>
     </xd:desc>
   </xd:doc>
-  <function name="dme:requested-staves-layers">
-    <map>
-      <choose>
-        <when test="contains($P_REQUESTED_PARTS, '.')">
-          <for-each select="
-              for $n in
-              tokenize($P_REQUESTED_PARTS, '\|')
-              return
-                if ($n != '') then
-                  $n
-                else
-                  ()">
-            <if test="contains(., '.')">
-              <map-entry key="substring-before(., '.')" select="substring-after(., '.')"/>
-            </if>
-          </for-each>
-        </when>
-        <otherwise/>
-      </choose>
-    </map>
-  </function>
-  <!--
-  <template name="t.startid.pointer">
-    <sequence select="$global.context.item/id(substring-after(current(), '#'))"/>
-  </template>
--->
-
-  <variable as="map(xs:string, item()*)" name="partExists">
-    <call-template name="check.part.existence"/>
-  </variable>
-
-  <xd:doc>
-    <xd:desc/>
-  </xd:doc>
-  <template name="check.part.existence">
-
-    <variable as="xs:string+" name="availableStaffN">
+  <template name="enhance.requested.parts">
+    <variable as="xs:integer+" name="availableStaves">
       <try>
-        <sequence select="$P_GLOBAL_CONTEXT_ITEM//mei:staff/@n => distinct-values()"/>
+        <sequence select="$SCORE_DEF//mei:staffDef/@n ! xs:integer(.)"/>
         <catch>
-          <message>The file does not contain any mei:staff/@n</message>
+          <message>The file does not contain any staves!</message>
         </catch>
       </try>
     </variable>
 
-    <variable as="xs:string*" name="requestedStaves" select="
-        for $part in $partsList
-        return
-          functx:substring-before-if-contains($part, '.')"/>
+    <variable as="element(dme:parts)" name="requestedParts" select="$USER_PARAMETERS//dme:parts"/>
 
-    <variable as="xs:boolean" name="partExistsLocal">
-      <variable as="xs:string*" name="temp">
-        <for-each select="$requestedStaves">
-          <if test="functx:is-value-in-sequence(., $availableStaffN)">
-            <sequence select="."/>
-          </if>
-        </for-each>
-      </variable>
-      <sequence select="(count($temp) > 0)"/>
-      <!--      <sequence select="
-          if (count($temp) > 0) then
-            true()
-          else
-            if (count($temp) eq 1) then
-              (:check empty string:)
-              boolean($temp[1])
-            else
-              false()"/>-->
-    </variable>
+    <sequence>
+      <dme:parts>
+        <attribute name="allPartsRequested">
+          <choose>
+            <when test="$requestedParts//dme:part/@layer or $requestedParts//dme:part/@split">
+              <value-of select="'no'"/>
+            </when>
+            <otherwise>
+              <value-of select="
+                  if (functx:sequence-deep-equal($requestedParts//dme:part/@staff ! xs:integer(.), $availableStaves)) then
+                    'yes'
+                  else
+                    'no'"/>
+            </otherwise>
+          </choose>
+        </attribute>
 
-    <variable as="xs:string*" name="nonAvailableParts">
-      <for-each select="$requestedStaves">
-        <if test="functx:is-value-in-sequence(., $availableStaffN) => not()">
-          <sequence select="."/>
-        </if>
-      </for-each>
-    </variable>
+        <iterate select="$requestedParts/*">
+          <copy>
+            <attribute name="available">
+              <choose>
+                <when test="functx:is-value-in-sequence(@staff, $availableStaves)">yes</when>
+                <otherwise>no</otherwise>
+              </choose>
+            </attribute>
+            <apply-templates select="@*"/>
+          </copy>
+        </iterate>
+      </dme:parts>
 
-
-    <sequence select="
-        map {
-          'partExists': $partExistsLocal,
-          'nonAvailableParts': $nonAvailableParts
-        }"/>
-    <!--DBG:-->
-    <!--    <sequence select="true(), ('10')"/>-->
+    </sequence>
   </template>
 
   <xd:doc>
     <xd:desc/>
-    <xd:param name="partsToExtract"/>
-    <xd:param name="partExists"/>
   </xd:doc>
   <template name="create.message.extracting.parts">
-    <param name="partsToExtract"/>
-    <param name="partExists"/>
-    <message>Extracting the requested parts: <value-of select="string-join($partsToExtract, ', ')"/>. <if test="count($partExists?nonAvailableParts) > 0">Note that the following requested staves are not available in the current MEI: <value-of select="string-join($partExists?nonAvailableParts, ', ')"/>.</if>
+
+    <!--TODO: maybe refactor this to a function as the only difference is @available[. = 'yes|no']-->
+
+    <variable as="xs:string*" name="notAvailableParts" select="
+        for $part in $REQUESTED_PARTS//dme:part[@available[. = 'no']]
+        return
+          '(' || string-join(($part/@staff, $part/@layer), '-') || ')'"/>
+
+    <message>Extracting requested parts <value-of select="string-join($PARTS_TO_EXTRACT_MSG, ', ')"/>. <if test="$REQUESTED_PARTS//dme:part[@available[. = 'no']]">Note that the following requested staves are not available in the current MEI: <value-of select="string-join($notAvailableParts, ', ')"/>.</if>
     </message>
   </template>
 
   <xd:doc>
     <xd:desc/>
-    <xd:param name="partExists"/>
   </xd:doc>
   <template name="create.message.parts.nonavailable">
-    <param name="partExists"/>
-    <message><value-of select="'The requested part(s) (' || string-join($partExists?nonAvailableParts, ', ') || ') is/are not available in the MEI file or no parts were requested!'"/>. NB: No extraction was performed.</message>
+    <!--TODO: add here info for requested layer-->
+    <message><value-of select="'The requested part(s) ' || string-join($PARTS_TO_EXTRACT_MSG, ', ') || 'is/are not available in the MEI file or no parts were requested!'"/>. NB: No extraction was performed.</message>
   </template>
 
+
+  <xd:doc>
+    <xd:desc>
+      <xd:p>Returns a map. The key is the original staffDef@n, the value is the new staffDef@n with respect to the new scoring.</xd:p>
+      <xd:p>The number of split staves is calculated dynamically from the number of layerDefs of the staffDef in question.</xd:p>
+    </xd:desc>
+  </xd:doc>
+  <template as="map(xs:integer, xs:integer)" name="new.staves.numbering">
+    <map>
+      <iterate select="$REQUESTED_PARTS//dme:part">
+        <param as="xs:integer" name="pCounter" select="1"/>
+
+        <variable as="xs:integer" name="preceedingSiblingCount">
+          <variable as="element(dme:part)?" name="precedingSibling" select="(preceding-sibling::dme:part)[last()]"/>
+          <choose>
+            <when test="$precedingSibling[@split]">
+              <sequence select="$SCORE_DEF//staffDef[@n = $precedingSibling/@staff]//layerDef => count()"/>
+            </when>
+            <otherwise>
+              <sequence select="count($precedingSibling)"/>
+            </otherwise>
+          </choose>
+        </variable>
+
+        <variable as="xs:integer" name="newCount" select="$preceedingSiblingCount + $pCounter"/>
+        <map-entry key="xs:integer(@staff)" select="$newCount"/>
+        <next-iteration>
+          <with-param as="xs:integer" name="pCounter" select="$newCount"/>
+        </next-iteration>
+      </iterate>
+    </map>
+  </template>
+
+  <xd:doc>
+    <xd:desc>Adds suffix to the current @xml:id. This is needed to avoid id duplicates when splitting staves.</xd:desc>
+    <xd:param name="currentLayerN"/>
+  </xd:doc>
+  <template match="@xml:id" mode="adjustIdsForSplitElements">
+    <param as="xs:integer" name="pCurrentLayerN" tunnel="yes"/>
+    <attribute name="xml:id" select=". || '_' || string($pCurrentLayerN)"/>
+  </template>
+
+
+  <xd:doc>
+    <xd:desc>
+      <xd:p>Calculates the new staff number, whem staves are extracted or split.</xd:p>
+    </xd:desc>
+    <xd:param name="staffN"/>
+    <xd:param name="layerN"/>
+  </xd:doc>
+  <template as="xs:integer" name="get.new.staff.number">
+    <param as="xs:integer" name="staffN"/>
+    <param as="xs:integer?" name="layerN"/>
+    <!--DEBUG-->
+    <!--<message>$staffN: <value-of select="$staffN"/>, $layerN: <value-of select="$layerN"/></message>-->
+
+    <choose>
+      <when test="$RENUMBER_STAVES">
+
+        <variable as="xs:integer" name="newFirstStaffDefNumber" select="map:get($NEW_STAVES_NUMBERING, $staffN)"/>
+        <choose>
+          <when test="$REQUESTED_PARTS//dme:part[@staff = $staffN]/@split => not()">
+            <sequence select="$newFirstStaffDefNumber"/>
+          </when>
+          <!--First staff to split is stored in the map.-->
+          <when test="$layerN = 1">
+            <sequence select="$newFirstStaffDefNumber"/>
+          </when>
+          <otherwise>
+            <!-- Other staves have to be calculated-->
+            <sequence select="
+                let $indexOfLayer :=
+                xs:integer($layerN)
+                return
+                  $indexOfLayer + $newFirstStaffDefNumber - 1"/>
+          </otherwise>
+        </choose>
+      </when>
+      <otherwise>
+        <sequence select="$staffN"/>
+      </otherwise>
+    </choose>
+
+  </template>
+  
+  <template match="pb|sb" mode="step_one"/>
+    
+  
+  
 
 </stylesheet>

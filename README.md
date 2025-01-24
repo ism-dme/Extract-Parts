@@ -1,56 +1,104 @@
-﻿# Extract-parts
+﻿# Extract Parts: A Parts Extraction Tool for Musical Scores Encoded in the Music Encoding Initiative (MEI) Format
 
-The tool extracts one or more parts from a musical score such as _clarinet I. + basson II_., etc.. 
-
-## Usage
-
-For testing purposes, you can first try the data in `./tests/data/*`. 
-
-For example, let's extract a first clarinet from the Symphonie by W. A. Mozart, K. 550 (`./tests/data/550-001.mei`):
-
-<img width="700" alt="K. 550-001" src="https://github.com/user-attachments/assets/bd269f87-4cc1-4b5f-bd8b-8cbfce093827">
-
-Select the `3.1` option in `./config/config.xml` (third `<staff>`, second `<layer>`).
-
-<img width="700" alt="config.xml" src="https://github.com/user-attachments/assets/8a661ab1-62ec-4c84-90f2-3ce8e04d9df8">
-
-Apply the transformation scenario `extract-parts` on the file `550-001.mei`:
-
-<img width="700" alt="Configure transformation scenario." src="https://github.com/user-attachments/assets/d3a35d50-4aa5-477b-865d-6bcff4a864ac">
-
-The output will be a file `550-001_3.1.mei` in the same repository:
-
-<img width="700" alt="Clarinetto I" src="https://github.com/user-attachments/assets/53a693f3-2c9c-43ee-a1a3-03a304f895c6">
+- [Features Overview](#features-overview)
+- [Installation and Usage](#installation-and-usage)
+- [Test Data](#test-data)
+- [Limitations](#limitations)
 
 
+## Features Overview
+
+The parts extraction tool facilitates the creation of parts from a full orchestral score encoded in MEI format, provided that the data structure adheres to the specific encoding guidelines. For instance, you can extract the first violin part from a symphonic score.
 
 
-## Parameters:
+<img width="400" alt="Extraction of the first violin part." src="./docs/img/extractVioline.png">
 
-- `P_GLOBAL_CONTEXT_ITEM and P_XSPEC_TEST`
-  Both parameters are used in the context of XSpec unit testing only.
+The major benefit of the tool is the ability to extract parts that share a staff. Consider the following example, where the first and second oboes are notated on the same staff. Using _Extract Parts_, you can create separate parts for the first and second oboes.
 
-- `P_LANGUAGE`  
-  Language for displaying instrument names. Possible values: 'IT' (default), 'EN', 'DE'.
+<img width="400" alt="Extraction of the first and second oboe parts." src="./docs/img/extractOboi.png">
 
 
-- `P_MOVI` 
-  The parameter should be set to `true()` if the stylesheet is called from MoVi or any other web application.
+In addition to the standard single-voice parts, it is possible to create custom score reductions. For example, the user may wish to extract the accompanying parts only.
 
-- `P_OUTPUT_PATH`
+<img width="400" alt="Creating custom score reductions." src="./docs/img/accompVoices_K165-001.png">
 
-- `P_REQUESTED_PARTS`  
-  The parameter can be passed either via CLI or by utilizing the GUI implemented in oXygen XML Editor. To access the GUI, open the file `/config/config.xml` in Author mode. The syntax of the parameter is as follows: *|&lt;staffNumber>[.&lt;layerNumber>]?|*. For instance, *|2.2|* refers to the second staff, second layer. Note that the layer-part is optional. If you want to extract the second staff completely, you have to pass *|2|*. Multiple combinations are possible, e.g. *|2.2.|4.1|5|*. If all parts contained in the score are requested, e.g. *|1|2|3|4|* for a string quartet, the file will be simply copied.
 
-- `P_SHRINK_MEASURES`  
-  Enables the feature of creating `<multiRest>`s. Default is `true()`.
+## Installation and Usage
 
-<hr>
+The tool is written in XSLT. If you are using the oXygen XML Editor, the repository provides a project file called `extract-parts.xpr` that contains the corresponding transformation scenario and the required settings. This can be opened by double-clicking in the file explorer or by opening it from the project view in the oXygen XML editor.
 
-**Notes:**
+To illustrate, I will describe the process of extracting a first oboe part from a previously shown score. First, open the configuration file (`./config/config.xml`). Here you can select the parts you need by adding the element `<dme:part/>` as child of `<dme:parts/>`. Using the attributes `@dme:layer` and `@dme:staff` you can specify the staves and layers yuo want to extract.
+```xml
+<parameters xmlns="http://www.mozarteum.at/ns/dme">
+  <parts>
+    <part staff="1" layer="1"/>
+  </parts>  
+</parameters>
+```
 
+Then, apply the transformation scenario `extract-parts` to the file `./tests/data/K165/01/dmeedtA_165-001.mei`.
+
+<img width="400" alt="Selecting the transformation scenario." src="./docs/img/transformationScenario.png">
+
+
+After applying the transformation scenario, a new MEI file `dmeedtA_165-001_(1-1).mei` is created in the same folder. The suffix `(1-1)` in the file name indicates the part that have been extracted.
+
+<img width="400" alt="Rendering ot the extracted oboe part." src="./docs/img/oboe1_k165-001.png">
+
+Some of the default behaviour of the tool can be controlled by setting parameters. In the oXygen XML editor, this can be done by double-clicking on the transformation scenario and selecting the parameters dialogue box. You may also wish to make a copy of the original transformation scenario.
+
+<img width="400" alt="Parameters dialogue box." src="./docs/img/parametersDialogueBox.png">
+
+
+`P_LANGUAGE`  
+The language of the instrument names and abbreviations generated by the tool is Italian by default. Other languages such as English and German are available. The language can be changed by setting the parameter to 'EN' or 'DE'.
+
+<img width="400" alt="Setting German as language for instrument labels." src="./docs/img/P_LANGUAGE.png">
+
+
+For this feature, _Extract Parts_ uses an XML configuration file located in `./lib/lists/instruments`.xml. The file contains a comprehensive list of names and abbreviations and their transpositions for common instruments and voices.
+
+
+`P_OUTPUT_PATH` and `P_OVERWRITE_FILE` 
+
+The default output path of the file is in the same folder as the MEI file (`./`). You can change this by setting the parameter using the relative path syntax. For instance, if you want to output the MEI file to a different folder you can set the parameter as follows: `./output/`. Additionally, if you set `P_OVERWRITE_FILE` to `true()` you can use the save as option available in oXygen. and specify a different path or filename.
+
+
+`P_SHRINK_MEASURES`  
+  If the extracted part contains more then four measures with a rest, a multirest measure is created. If you have very good reasons, you can regulate this behaviour by setting the parameter to `true()` (default) or false(). Note that the `Evaluate as XPath` checkbox have to be enabled. This option is available for a single-part extraction only.
+
+
+`P_GLOBAL_CONTEXT_ITEM and P_XSPEC_TEST`
+Both parameters are used in the context of XSpec unit testing only.
+
+
+P_LIB_PATH`
+Relative of absulute path to the `lib` folder: `/path/to/the/lib`. Default: `lib`.
+
+`P_USER_PARAMETERS`  
+  This parameter defines which staves and layers are requested for extraction. This is an XML element defined in `/config/config.xml`. If all the parts in the score are requested, the file will be copied without processing.
+
+## Test Data
+_Extract Parts_ expects a specific data structure. Examples can be found in the `./tests/data` folder. However, not all data may be up to date. The following data is currently approved to be compliant with this version of the tool.
+- `./tests/data/K165/01/dmeedtA_165-001.mei`
+- `./tests/data/K165/01/dmeedtA_165-001_m11.mei`
+- `./tests/data/K550/03/550-003_m9_(2).mei`
+- `./tests/data/K621/621-23_m187_flutes.mei`
+- `./tests/data/K621/621-23_m25_fagotti.mei`
+- `./tests/data/290-001_m5_(3).mei`
+- `./tests/data/K543/01/543-01_mm109-111_viola.mei`
+- `./tests/data/K527/527-07_mm8-9_fagotto12.mei`
+- `./tests/data/K550/01/550-001_m139-140_clarinetti.mei`
+- `./tests/data/K621/621-23_m181_flutes.mei`
+
+
+
+
+## Limitations 
 - If the MEI file contains multiple `<scoreDef>`s with a different number of staves, the tool might not work properly. The workaround is to temporarily comment out the score portions.
+- The handling of variants encoded using `<mei:choice/>` and `<mei:app/>` elements is a challenging area of development, as many combinations, including nesting, are possible. The current version of the tool partially supports variants, but it can make mistakes.
+- To use the extracted parts for performance, you may need to make some modifications, such as adjusting line and page beginnings, adding cue notes, etc. 
 
-**Current version**: _3.1.0_. For details see the CHANGELOG.
+**Current version**: _5.1.1_. For details see the CHANGELOG.
 
 **Author**: oleksii.sapov-erlinger@mozarteum.at

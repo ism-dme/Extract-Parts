@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0"
+  xml:id="u7a45db01-d57c-4183-abab-bf54a7f79dac">
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title label="NMA digital" type="unit">Test data based on W. A. Mozart, K. 550/03.</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <title>Digital Mozart Edition</title>
+        </edition>
+      </editionStmt>
+      <pubStmt>
+        <publisher>
+          <corpName>Mozarteum</corpName>
+          <ptr target="https://www.mozarteum.at"/>
+        </publisher>
+        <availability>
+          <useRestrict label="license">CC BY-NC-SA 4.0</useRestrict>
+        </availability>
+      </pubStmt>
+    </fileDesc>
+    <workDesc>
+      <work>
+        <perfMedium>
+          <perfResList xmlns:mei="http://www.music-encoding.org/ns/mei" auth="marcmusperf"
+            auth.uri="https://www.loc.gov/standards/valuelist/marcmusperf.html">
+            <perfRes codedval="wb" n="1" xml:id="perfRes_02">Oboe</perfRes>
+          </perfResList>
+        </perfMedium>
+      </work>
+    </workDesc>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv n="3" type="movement" xml:id="mdiv_550003">
+        <mdiv n="1" type="movement_part" xml:id="mdiv_550003_01">
+          <score xml:id="score_550003_01">
+            <scoreDef key.mode="minor" key.pname="g" keysig="2f" meter.count="3" meter.unit="4"
+              n="2" optimize="true" xml:id="scoreDef_01-02">
+              <staffGrp bar.thru="false" xml:id="scoreDef_01-02_staffGrp_01">
+                <staffDef clef.line="2" clef.shape="G" lines="5" n="1"
+                  xml:id="scoreDef_01-02_staffDef_02">
+                  <label xml:id="label_02">Oboe I, II</label>
+                  <labelAbbr xml:id="labelAbbr_02">Ob</labelAbbr>
+                  <layerDef n="1" type="part" xml:id="scoreDef_01-02_layerDef_Ob1"/>
+                  <layerDef n="2" type="part" xml:id="scoreDef_01-02_layerDef_Ob2"/>
+                </staffDef>
+              </staffGrp>
+            </scoreDef>
+            <section xml:id="section_menuetto">
+              <measure n="9" xml:id="m9_k550_003_a">
+                <staff n="1" xml:id="staff_7578">
+                  <layer n="1" xml:id="layer_7584">
+                    <note dur="4" oct="5" pname="f" tstamp="1" xml:id="note_7590"/>
+                    <beam xml:id="beam_7596">
+                      <note accid="n" dur="8" oct="5" pname="e" tstamp="2" xml:id="note_7602"/>
+                      <note dur="8" oct="5" pname="d" tstamp="2.5" xml:id="note_7608"/>
+                      <note accid="s" dur="8" oct="5" pname="c" tstamp="3" xml:id="note_7614"/>
+                      <note accid.ges="n" dur="8" oct="5" pname="e" tstamp="3.5" xml:id="note_7620"
+                      />
+                    </beam>
+                  </layer>
+                  <layer n="2" xml:id="layer_7626">
+                    <note dur="4" oct="5" pname="f" tstamp="1" xml:id="note_7632"/>
+                    <beam xml:id="beam_7638">
+                      <note accid="n" dur="8" oct="5" pname="e" tstamp="2" xml:id="note_7644"/>
+                      <note dur="8" oct="5" pname="d" tstamp="2.5" xml:id="note_7650"/>
+                      <note accid="s" dur="8" oct="5" pname="c" tstamp="3" xml:id="note_7656"/>
+                      <note accid.ges="n" dur="8" oct="5" pname="e" tstamp="3.5" xml:id="note_7662"
+                      />
+                    </beam>
+                  </layer>
+                </staff>
+              </measure>
+            </section>
+          </score>
+        </mdiv>
+      </mdiv>
+    </body>
+  </music>
+</mei>
