@@ -62,11 +62,14 @@ For this feature, _Extract Parts_ uses an XML configuration file located in `./l
 
 `P_OUTPUT_PATH` and `P_OVERWRITE_FILE` 
 
-The default output path of the file is in the same folder as the MEI file (`./`). You can change this by setting the parameter using the relative path syntax. For instance, if you want to output the MEI file to a different folder you can set the parameter as follows: `./output/`. Additionally, if you set `P_OVERWRITE_FILE` to `true()` you can use the save as option available in oXygen. and specify a different path or filename.
+The default output path of the file is in the same folder as the MEI file (`./`). You can change
+this by setting the parameter using the relative path syntax. For instance, if you want to output the MEI file to a different folder, you can set the parameter as follows: `./output/`. Additionally, if you set `P_OVERWRITE_FILE` to `true()` you can use the save as option available in oXygen. and specify a different path or filename.
 
 
 `P_SHRINK_MEASURES`  
-  If the extracted part contains more than four measures with a rest, a multirest measure is created. If you have very good reasons, you can override this behaviour by setting the parameter to `true()` (default) or false(). Note that the `Evaluate as XPath` checkbox must be enabled. This option is only available for single part extraction.
+  If the extracted part contains more than four measures with a rest, a multirest measure is
+  created. If you have very good reasons, you can override this behaviour by setting the parameter
+  to `true()` (default) or `false()`. Note that the `Evaluate as XPath` checkbox must be enabled. This option is only available for single part extraction.
 
 
 `P_GLOBAL_CONTEXT_ITEM and P_XSPEC_TEST`
@@ -83,6 +86,7 @@ This parameter defines which staves and layers are requested for extraction. Thi
 _Extract Parts_ expects a specific data structure. Examples can be found in the `./tests/data` folder. However, not all data may be up to date. The following data is currently approved to be compliant with this version of the tool.
 - `./tests/data/K165/01/dmeedtA_165-001.mei`
 - `./tests/data/K165/01/dmeedtA_165-001_m11.mei`
+- `./tests/data/K165/dmeedtA_165-004.mei`
 - `./tests/data/K550/03/550-003_m9_(2).mei`
 - `./tests/data/K621/621-23_m187_flutes.mei`
 - `./tests/data/K621/621-23_m25_fagotti.mei`
